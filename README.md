@@ -74,7 +74,7 @@ git config --global user.email email@codejr.com.br
 
 
 
-### Quando estiver tudo prontinho - **com autorização do SCRUM Master**
+### Quando estiver tudo prontinho *(com autorização do SCRUM Master)*
 
 * Volte para a main: `git checkout main`
 

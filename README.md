@@ -44,7 +44,7 @@ git config --global user.email email@codejr.com.br
 ```
 
 
-\
+###
 ### Primeira Configuração
 
 * Pelo terminal entre na pasta onde irá guardar o projeto: cd /caminho/para/a/pasta, depois inicialize o git na pasta com o comando: `git init`

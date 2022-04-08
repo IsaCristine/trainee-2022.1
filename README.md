@@ -44,7 +44,7 @@ git config --global user.email email@codejr.com.br
 ```
 
 
-
+\
 ### Primeira Configuração
 
 * Pelo terminal entre na pasta onde irá guardar o projeto: cd /caminho/para/a/pasta, depois inicialize o git na pasta com o comando: `git init`
@@ -53,27 +53,27 @@ git config --global user.email email@codejr.com.br
 
 * Crie um clone do repositório: `git clone https://github.com/IsaCristine/trainee-2022.1`
 
-* Entre na pasta criada pelo comando clone: `cd /caminho/para/a/pasta/nova`
+* Entre na pasta criada pelo comando clone: cd /caminho/para/a/pasta/nova
 
-* Crie sua branch usando como o padrão o nome da feature que você está a desenvolver: `git checkout -b frontend_painel_adm`
+* Crie sua branch usando como o padrão o nome da feature que você está a desenvolver: `git checkout -b nome_da_feature`
 
 * Após criada a branch você será redirecionado automaticamente a ela, neste espaço que você desenvolverá sua parte do projteto
 
 
 
-
+\
 ### Rotina
 
 * Adicione as alterações feitas: `git add .`
 
-* Cheque em qual branch está e quais alterações foram adicionadas: `git status`
+* Cheque em qual branch você está e quais alterações foram adicionadas: `git status`
 
 * Dê um commit com uma mensagem especificando as alterações realizadas: `git commit -m "mensagem especificando o que foi feito"`
 
 * Envie o commit feito para sua branch: `git push origin suabranch`
 
 
-
+\
 ### Quando estiver tudo prontinho *(com autorização do SCRUM Master)*
 
 * Volte para a main: `git checkout main`
@@ -95,7 +95,7 @@ git config --global user.email email@codejr.com.br
 * Confirme o merge (apenas quando solicitado pelo Scrum Master): `git push origin main`
 
 
-
+\
 ### Comandos Básicos
 
 * Para atualizar a main: `git pull`
@@ -110,6 +110,6 @@ git config --global user.email email@codejr.com.br
 
 * Adicionar alteração específica: `git add arquivo-especifico`
 
-* Para mesclar sua branch com a master (estando dentro da sua branch): `git merge main`
+* Para mesclar sua branch com a main (estando dentro da sua branch): `git merge main`
 
 * Para confirmar o merge: `git push origin suabranch`

@@ -7,10 +7,10 @@
 #### Desenvolvedores:
 
 * Guilherme Monteiro de Souza;
-* Matheus Leal Costa;
+* Jonatas Dias Machado Costa;
 * Kayan Martins de Freitas;
 * Lucas Henrique de Arruda Ferreira;
-* Jonatas Dias Machado Costa;
+* Matheus Leal Costa;
 
 #### Scrum Master:
 

@@ -61,7 +61,7 @@ git config --global user.email email@codejr.com.br
 
 
 
-\
+###
 ### Rotina
 
 * Adicione as alterações feitas: `git add .`
@@ -73,7 +73,7 @@ git config --global user.email email@codejr.com.br
 * Envie o commit feito para sua branch: `git push origin suabranch`
 
 
-\
+###
 ### Quando estiver tudo prontinho *(com autorização do SCRUM Master)*
 
 * Volte para a main: `git checkout main`
@@ -95,7 +95,7 @@ git config --global user.email email@codejr.com.br
 * Confirme o merge (apenas quando solicitado pelo Scrum Master): `git push origin main`
 
 
-\
+###
 ### Comandos Básicos
 
 * Para atualizar a main: `git pull`

@@ -1,3 +1,75 @@
+body{
+	font-family: Bangers;
+	margin-left: 5%;
+	margin-right: 5%;
+	background: #DFDDDD;
+	margin-top: 30px;
+}
+
 .quem_somos{
 	color: #BD8E01;
+}
+
+body p{
+	color: #323132;
+}
+
+.quem_somos h1{
+	font-weight: bold;
+	text-align: center;
+}
+
+.quem_somos p{
+	text-align: center;
+	margin-top: 50px;
+	font-size: 22px;
+}
+
+.quem_somos img{
+	float: left;
+}
+
+.foto_exemplo hr{
+	color: #9D0101;
+	height: 5px;
+	opacity: 1;
+
+}
+
+.foto_exemplo img{
+	text-align: center;
+
+}
+
+.vmv{
+	text-align: center;
+	margin-top: 100px;
+}
+
+.vmv h2{
+	font-weight: bold;
+	color: #001862;
+	font-size: 35px;
+}
+
+.visao{
+	width: 300px;
+    display: inline-block;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.missao{
+	width: 300px;
+    display: inline-block;
+    margin-right: 50px;
+    margin-left: 50px;
+
+}
+
+.valores{
+	width: 300px;
+    display: inline-block;
+    margin-right: 50px;
+    margin-left: 50px;
 }

@@ -1,0 +1,21 @@
+/**********CARROSSEL**********/
+#area-carousel{   
+    background-color: #8d8e01;
+}
+
+#carousel{
+    padding-top:3vh;
+    padding-bottom:3vh;
+}
+
+.carousel-img{
+    height: 35vh;
+    border:2px solid #DFDDDD;
+}
+
+
+@media(max-width:768px){
+    .carousel-img{
+        height:20vh;
+    }
+}

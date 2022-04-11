@@ -3,6 +3,8 @@ html, body{
     padding: 0;
 }
 
+
+
 .content div{
     display: inline-block;
     height: 500px;
@@ -10,37 +12,46 @@ html, body{
 
 
 
-.page-title{
+.left{
+    width: 70%;
+    display: block;
+    background-color: aqua;
+}
+
+.left-content{
     vertical-align: top;
-    margin-left: 10px;
+    margin-left: 30px;
     margin-right: 10px;
 }
 
-.page-title h1{
+.left-content h1{
     margin-top: 0;
     font-size: 60px;
 }
 
-.page-title p{
+.left-content p{
     font-size: 16px;
 }
 
-
-
-.left-text{
-    width: 70%;
-    background-color: coral;
+.formulary{
+    margin-top: 30px;
 }
 
-.right-text{
+
+
+.right{
     width: 29%;
-    background-color: grey;
     vertical-align: top;
+    background-color: orange;
+}
+
+.right-content{
+    margin-left: 10px;
 }
 
 .mapa{
     width: 100%;
-    text-align: center;
+    text-align: left;
 }
 
 iframe{

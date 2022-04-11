@@ -36,7 +36,8 @@ body p{
 
 }
 
-.foto_exemplo img{
+.foto_exemplo{
+	width: 100%;
 	text-align: center;
 
 }
@@ -44,6 +45,7 @@ body p{
 .vmv{
 	text-align: center;
 	margin-top: 100px;
+	margin-bottom: 200px;
 }
 
 .vmv h2{

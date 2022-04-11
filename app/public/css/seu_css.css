@@ -25,6 +25,8 @@ html, body{
     font-size: 16px;
 }
 
+
+
 .left-text{
     width: 70%;
     background-color: coral;
@@ -34,15 +36,6 @@ html, body{
     width: 29%;
     background-color: grey;
     vertical-align: top;
-}
-
-.mapouter{
-    position: relative;
-}
-
-.gmap_canvas {
-    overflow: hidden;
-    background: none!important;
 }
 
 .mapa{

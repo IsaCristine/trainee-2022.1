@@ -25,6 +25,7 @@
     text-align:center;
     background-color: #323132;
     color:#DFDDDD;
+    padding-bottom:20px;
 }
 
 .products-title{
@@ -58,4 +59,44 @@
     cursor:pointer;
 }
 
+/**********CALL TO ACTIONS**********/
+
+#area-call-to-actions{
+    background-color: #001862;
+}
+
+.content{
+    margin: 0 auto;
+}
+
+.left{
+    text-align:center;
+    padding-top:120px;
+    padding-bottom:120px;
+}
+
+.right{
+    width: 400px;
+    padding-top:100px;
+    padding-bottom:100px;
+}
+
+.call-text{
+    color: white;
+    display:inline-block;
+}
+
+.call-text span{
+    color:#ffc107;
+}
+
+@media(max-width:1399px){
+    .left{
+        padding-bottom:20px;
+    }
+    .right{
+        padding-top:0;
+
+    }
+}
 

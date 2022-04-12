@@ -54,4 +54,8 @@
     min-height:176px;
 }
 
+.products label{
+    cursor:pointer;
+}
+
 

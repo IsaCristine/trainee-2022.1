@@ -5,15 +5,7 @@ html, body{
     width: 100%;
 }
 
-.content{
-    width: 100%;
-    height: 100%;
-    background-color: #dfdddd;
-}
 
-.left{
-    width: 70%;
-}
 
 .left-content{
     vertical-align: top;
@@ -31,15 +23,33 @@ html, body{
     font-size: 16px;
 }
 
-.right{
-    width: 29%;
-    vertical-align: top;
+.texto-contate p{
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
+
+.texto-contate{
+    margin-bottom: 10px;
+}
+
 
 .right-content{
     margin-top: 20px;
     margin-left: 10px;
 }
+
+
+
+.container-fluid{
+    height: 100%;
+    background-color: lightgray;
+}
+
+.row{
+    height: 100%;
+}
+
+
 
 .mapa{
     width: 100%;
@@ -51,6 +61,8 @@ iframe{
     width: 350px;
     height: 350px;
 }
+
+
 
 form{
     display: inline-block;
@@ -70,15 +82,3 @@ form{
     padding-bottom: 10px;
 }
 
-.test{
-    display: inline-block; 
-}
-
-.texto-contate p{
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-
-.texto-contate{
-    margin-bottom: 10px;
-}

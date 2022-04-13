@@ -4,14 +4,6 @@ html, body{
 }
 
 
-
-.content div{
-    display: inline-block;
-    height: 500px;
-}
-
-
-
 .left{
     width: 70%;
     display: block;
@@ -32,12 +24,6 @@ html, body{
 .left-content p{
     font-size: 16px;
 }
-
-.formulary{
-    margin-top: 30px;
-}
-
-
 
 .right{
     width: 29%;
@@ -61,4 +47,24 @@ iframe{
 
 form{
     display: inline-block;
+    background-color: yellow;
+}
+
+
+.form-group label{
+    display: inline-block;
+}
+
+.form-row{
+    display: flex;
+}
+
+.form-group{
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.test{
+    display: inline-block; 
+    height: 650px;
 }

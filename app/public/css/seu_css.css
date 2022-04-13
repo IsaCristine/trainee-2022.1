@@ -3,6 +3,7 @@ html, body{
     padding: 0;
     height: 100%;
     width: 100%;
+    background-color: lightgray;
 }
 
 
@@ -82,3 +83,23 @@ form{
     padding-bottom: 10px;
 }
 
+
+@media (max-width: 768px) {
+
+h1{
+    font-size: 100px;
+}
+
+.col-md-10 > .left-content{
+    text-align: center;
+}
+    
+.col-md-10 > .right-content{
+    text-align: center;
+}
+
+.mapa{
+    text-align: center;
+}
+
+}

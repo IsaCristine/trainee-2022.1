@@ -3,17 +3,19 @@ html, body{
     padding: 0;
 }
 
+.content{
+    width: 100%;
+}
 
 .left{
     width: 70%;
-    display: block;
-    background-color: aqua;
 }
 
 .left-content{
     vertical-align: top;
     margin-left: 30px;
     margin-right: 10px;
+    margin-top: 10px;
 }
 
 .left-content h1{
@@ -28,7 +30,6 @@ html, body{
 .right{
     width: 29%;
     vertical-align: top;
-    background-color: orange;
 }
 
 .right-content{
@@ -42,13 +43,13 @@ html, body{
 }
 
 iframe{
-    width: 300px;
-    height: 300px;
+    margin-top: 10px;
+    width: 350px;
+    height: 350px;
 }
 
 form{
     display: inline-block;
-    background-color: yellow;
 }
 
 
@@ -67,5 +68,14 @@ form{
 
 .test{
     display: inline-block; 
-    height: 650px;
+    height: 600px;
+}
+
+.texto-contate p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.texto-contate{
+    margin-bottom: 10px;
 }

@@ -25,7 +25,6 @@
     text-align:center;
     background-color: #323132;
     color:#DFDDDD;
-    padding-bottom:20px;
 }
 
 .products-title{
@@ -66,19 +65,13 @@
 }
 
 .content{
-    margin: 0 auto;
+    padding-top:40px;
+    padding-bottom:40px;
+    text-align:center;
 }
 
 .left{
-    text-align:center;
-    padding-top:120px;
-    padding-bottom:120px;
-}
-
-.right{
-    width: 400px;
-    padding-top:100px;
-    padding-bottom:100px;
+    text-align: center;
 }
 
 .call-text{
@@ -90,13 +83,10 @@
     color:#ffc107;
 }
 
-@media(max-width:1399px){
-    .left{
-        padding-bottom:20px;
-    }
-    .right{
-        padding-top:0;
-
+@media(max-width:991px){
+    .contact-button{
+        margin-top:2vh;
     }
 }
+
 

@@ -10,3 +10,20 @@
 .link-edit:hover{
     color: #DFDDDD;
 }
+
+footer{
+    background-color: #BD8E01;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+}
+
+.conteudo-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}

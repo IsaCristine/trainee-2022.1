@@ -1,9 +1,9 @@
 body{
 	font-family: Bangers;
-	margin-left: 5%;
-	margin-right: 5%;
+	margin-left: 2rem;
+	margin-right: 2rem;
 	background: #DFDDDD;
-	margin-top: 30px;
+	margin-top: 2rem;
 }
 
 .quem_somos{
@@ -21,57 +21,44 @@ body p{
 
 .quem_somos p{
 	text-align: center;
-	margin-top: 50px;
-	font-size: 22px;
+	margin-top: 3rem;
+	font-size: 1.5rem;
 }
 
 .quem_somos img{
 	float: left;
+	width: 13rem;
 }
 
 .foto_exemplo hr{
 	color: #9D0101;
-	height: 5px;
+	height: 0.3rem;
 	opacity: 1;
-
 }
 
-.foto_exemplo{
-	width: 100%;
+.conteiner-1{
 	text-align: center;
-
+	margin-top: 10rem;
+	margin-bottom: 20rem;
 }
 
-.vmv{
-	text-align: center;
-	margin-top: 100px;
-	margin-bottom: 200px;
-}
-
-.vmv h2{
+.conteiner-1 h2{
 	font-weight: bold;
 	color: #001862;
-	font-size: 35px;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.conteiner-1 p{
+	text-align: center;
+	font-size: 1.3rem;
 }
 
 .visao{
-	width: 300px;
-    display: inline-block;
-    margin-right: 50px;
-    margin-left: 50px;
 }
 
 .missao{
-	width: 300px;
-    display: inline-block;
-    margin-right: 50px;
-    margin-left: 50px;
-
 }
 
 .valores{
-	width: 300px;
-    display: inline-block;
-    margin-right: 50px;
-    margin-left: 50px;
 }

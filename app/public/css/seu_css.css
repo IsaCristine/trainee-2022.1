@@ -71,6 +71,8 @@ iframe{
 
 form{
     display: inline-block;
+    width: 38rem;
+    margin: auto;
 }
 
 
@@ -109,4 +111,7 @@ form{
         background-color: lightgray;
     }
 
+    form{
+        width: 100%;
+    }
 }

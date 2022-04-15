@@ -17,7 +17,7 @@ html, body{
 
 .left-content h1{
     margin-top: 0;
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .left-content p{
@@ -83,23 +83,8 @@ form{
     padding-bottom: 10px;
 }
 
-
-@media (max-width: 768px) {
-
-h1{
-    font-size: 100px;
-}
-
-.col-md-10 > .left-content{
-    text-align: center;
-}
-    
-.col-md-10 > .right-content{
-    text-align: center;
-}
-
-.mapa{
-    text-align: center;
-}
-
+@media (max-width: 1000px){
+    .elft-content h1{
+        font-size: 50px;
+    }
 }

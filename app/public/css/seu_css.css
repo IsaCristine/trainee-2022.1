@@ -10,9 +10,9 @@ html, body{
 
 .left-content{
     vertical-align: top;
-    margin-left: 30px;
-    margin-right: 10px;
-    margin-top: 10px;
+    margin-left: 2rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
 }
 
 .left-content h1{
@@ -36,8 +36,8 @@ html, body{
 
 .right-content{
     height: 30rem;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
 }
 
 

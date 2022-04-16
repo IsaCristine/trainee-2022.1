@@ -9,15 +9,7 @@
 }
 
 .carousel-img{
-    height: 35vh;
     border:2px solid #DFDDDD;
-}
-
-
-@media(max-width:768px){
-    .carousel-img{
-        height:20vh;
-    }
 }
 
 /**********ULTIMOS PRODUTOS**********/
@@ -38,6 +30,7 @@
 }
 
 .products{
+    border:1px solid red;
     margin-top:5vh;
 }
 
@@ -50,9 +43,10 @@
 }
 
 .product-image{
-    width:100%;
-    max-height:176px;
-    min-height:176px;
+    border:1px solid red;
+    margin:0 auto;
+    width:150px;
+    height:150px;
 }
 
 .products label{

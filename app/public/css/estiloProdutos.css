@@ -1,0 +1,78 @@
+
+.container{
+    background-color: whitesmoke;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 60%;
+    
+    
+}
+/* CABECALHO: */
+.cabecalho{
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.campotxt{
+    margin-left: 4rem;
+    
+}
+
+/* CARDS: */ 
+
+.cardproduto{
+    margin-left: 1rem;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+
+.cardestilo{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 12rem;
+    height: 20rem;
+
+}
+.imgcard{
+    max-width: 10rem; max-height: 10rem;
+    min-width: 10rem; min-height: 10rem;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto; margin-right: auto; margin-bottom: auto; margin-top: auto;
+}
+
+
+/* FONTES: */ 
+
+.titulo{
+    font-size:2rem;
+    padding-bottom: 2rem;
+    padding-left: 5rem;
+}
+h5{
+    font-size: 16px;
+}
+H6{
+    font-size: 12px;
+}
+p{
+    font-size: 14px;
+}
+.txtbotao{
+    font-size: 14px;
+}
+/* PAG: */ 
+.pag{
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+       
+}
+
+
+
+/* TESTES: */ 

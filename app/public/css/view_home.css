@@ -49,7 +49,15 @@
     object-fit: fill;
 }
 
-@media(min-width:575px){
+@media(max-width:575px){
+    .products .card{
+        margin-left:10%;
+        margin-right:10%;
+    }
+
+}
+
+@media(min-width:576px){
     .product-image{
         width:150px;
         height:150px;

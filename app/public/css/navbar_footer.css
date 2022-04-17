@@ -32,6 +32,7 @@ header, .navbar{
 
 #navbar-links a{
     color: #BD8E01;
+    margin-right: 20px;
 }
 
 #navbar-links a:hover{

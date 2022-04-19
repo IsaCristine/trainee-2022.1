@@ -7,6 +7,10 @@
   cursor:pointer;
 }
 
+.sidebar-area{
+    height:100%;
+}
+
 .link{
     padding-top:10px;
     padding-bottom:10px;
@@ -34,3 +38,6 @@
 .icon{
     font-size:20px;
 }
+
+
+

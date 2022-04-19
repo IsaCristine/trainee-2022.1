@@ -20,10 +20,9 @@ body p{
 }
 
 .quem_somos p{
-	
 	margin-top: 3rem;
 	font-size: 1.5rem;
-	justify-content: center;
+	text-align: center;
 }
 
 .quem_somos img{

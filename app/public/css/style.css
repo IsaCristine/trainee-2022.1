@@ -1,0 +1,9 @@
+body{
+	margin-right: 2rem;
+	margin-left: 2rem;
+	margin-top: 10rem;
+}
+
+.card_adm{
+	display: inline-block;
+}

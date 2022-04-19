@@ -1,0 +1,36 @@
+.debug{
+    border:1px solid red;
+}
+
+
+.close-button:hover{
+  cursor:pointer;
+}
+
+.link{
+    padding-top:10px;
+    padding-bottom:10px;
+    border-radius:5px;
+}
+
+.link:hover{
+    background-color: #0d6efd;
+}
+
+.disable-link{
+    text-decoration: none;
+    color:#fff;
+    line-height:10px;
+}
+
+.disable-link:hover{
+    color:#fff;
+}
+
+.disable-link span{
+    margin-left:5px;
+}
+
+.icon{
+    font-size:20px;
+}

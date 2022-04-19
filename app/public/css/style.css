@@ -5,5 +5,14 @@ body{
 }
 
 .card_adm{
-	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2rem;
+	flex-direction: row;
+}
+
+.botao-sair{
+	display:inline-block;
+	justify-content: center;
 }

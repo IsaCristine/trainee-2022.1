@@ -6,7 +6,7 @@ html, body{
 }
 
 p{
-    text-align: justify;
+    text-align: center;
     color: white;
 }
 
@@ -78,6 +78,7 @@ form{
     display: inline-block;
     width: 38rem;
     margin: auto;
+    padding: 1rem 0;
 }
 
 
@@ -90,13 +91,13 @@ form{
 }
 
 .form-group{
-    padding-right: 10px;
     padding-bottom: 10px;
 }
 
 .bottom-text{
-    margin-left: 2rem;
+    margin-left: 1rem;
     margin-right: 1rem;
+    text-align: center;
 }
 
 .mapa {
@@ -136,6 +137,6 @@ form{
     }
 
     form{
-        width: 100%;
+        width: 90%;
     }
 }

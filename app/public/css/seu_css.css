@@ -1,0 +1,11 @@
+.product-media{
+    text-align: center;
+}
+
+.product-media img{
+    width: 75%;
+}
+
+.container-flex{
+    padding: 0 15px;
+}

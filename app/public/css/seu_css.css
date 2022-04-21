@@ -95,6 +95,7 @@ form{
 }
 
 .bottom-text{
+    padding-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
     text-align: center;
@@ -105,7 +106,6 @@ form{
     height: 25rem;
     overflow: hidden;
     text-align: center;
-    padding-top: 1rem;
     padding-bottom: 1rem;
     margin-left: 2rem;
     margin-right: 1rem;

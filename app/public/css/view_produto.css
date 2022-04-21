@@ -1,24 +1,20 @@
-.product-media{
+.product-media {
     text-align: center;
 }
 
-.product-media img{
+.product-media img {
     width: 75%;
 }
 
-.product-info-price{
-    padding-top: 1rem;
+.product-info-title {
     padding-bottom: 1rem;
 }
 
-.product-info-title{
-    padding-bottom: 1rem;
+.product-size {
+    padding: 1rem 0;
 }
 
-.product-size{
-    padding: 2rem 0;
-}
-
-.container-flex{
+.container-flex {
     padding: 1rem 1rem;
 }
+

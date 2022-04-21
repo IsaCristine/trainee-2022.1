@@ -30,12 +30,12 @@ header, .navbar{
 }
 
 
-#navbar-links a{
+#navbarToggleExternalContent a{
     color: #BD8E01;
     margin-right: 20px;
 }
 
-#navbar-links a:hover{
+#navbarToggleExternalContent a:hover{
     color: #DFDDDD;
 }
 

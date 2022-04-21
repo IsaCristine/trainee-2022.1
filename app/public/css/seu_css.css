@@ -22,6 +22,7 @@ label{
     color: white;
 }
 
+
 section{
     vertical-align: top;
     text-align: center;
@@ -37,10 +38,6 @@ section{
 
 .top-content p{
     font-size: 1rem;
-}
-
-hr{
-    color: white;
 }
 
 .texto-contate p{

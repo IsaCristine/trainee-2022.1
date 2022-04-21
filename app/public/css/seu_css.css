@@ -6,6 +6,19 @@
     width: 75%;
 }
 
+.product-info-price{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.product-info-title{
+    padding-bottom: 1rem;
+}
+
+.product-size{
+    padding: 2rem 0;
+}
+
 .container-flex{
-    padding: 0 15px;
+    padding: 1rem 1rem;
 }

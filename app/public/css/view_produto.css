@@ -18,3 +18,28 @@
     padding: 1rem 1rem;
 }
 
+.botao{
+    text-align: right;
+    float: right;
+}
+
+.botao span{
+    font-size: 1.5rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.description{
+    display: none;
+}
+
+.textjs{
+    display: contents;
+}
+
+#mais:hover{
+    cursor: pointer;
+    user-select: none;
+}
+
+
+

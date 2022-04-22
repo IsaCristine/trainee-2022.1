@@ -3,6 +3,7 @@ html, body{
     padding: 0;
     height: 100%;
     width: 100%;
+
 }
 
 p{
@@ -12,10 +13,12 @@ p{
 
 h1{
     color: white;
+    font-weight: 300;
 }
 
 h2{
     color: white;
+    font-weight: 300;
 }
 
 label{
@@ -30,11 +33,17 @@ section{
 
 #top-content{
     background-color: #323132;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
 }
 
 #bottom-content{
     background-color: #001862;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
 }
+
+
 
 .top-content p{
     font-size: 1rem;

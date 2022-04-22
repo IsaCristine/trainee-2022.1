@@ -1,11 +1,11 @@
-.debug{
-    border:1px solid red;
-}
-
+/*************SIDEBAR HEADER*************/
 
 .close-button:hover{
   cursor:pointer;
 }
+
+
+/*************SIDEBAR BODY*************/
 
 .sidebar-area{
     height:100%;
@@ -39,5 +39,27 @@
     font-size:20px;
 }
 
+/*************SIDEBAR FOOTER*************/
+
+.admin-sidebar-logo{
+    width:60px;
+    height:60px;
+    border-radius:60px;
+    object-fit: cover;
+
+}
+
+.admin-username{
+    margin-left:5px;
+}
+
+.logout-link{
+    cursor:pointer;
+}
+
+.logout-icon{
+    font-size:20px;
+    margin-left:4rem;
+}
 
 

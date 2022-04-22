@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../public/css/view_produto.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Produto</title>
 </head>
 
@@ -44,16 +45,58 @@
                         <div class="product-info">
 
                             <div class="product-info-price">
-                                <h3>R$25,00</h3>
+                                <h2 class="mt-1">
+                                    R$25,00
+                                </h2>
                             </div>
 
-                            <ul>
+                            <hr>
 
-                                <li>Tecido 100% algodão</li>
-                                <li>Estampa levemente desbotada estilo Vintage</li>
-                                <li>Costuras reforçadas no colarinho e ombros</li>
+                            <div class="product-size">
+
+                                <h4 style="font-size: 1.25rem">Tamanho</h4>
+                                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                    <option selected>Escolha um tamanho:</option>
+                                    <option value="1">P</option>
+                                    <option value="2">M</option>
+                                    <option value="3">G</option>
+                                    <option value="4">GG</option>
+                                </select>
+            
+                            </div>
+
+                            <button class="btn btn-dark btn-rounded mr-1" data-toggle="tooltip" title="" data-original-title="Add to cart">
+                                Adicione ao carrinho
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+
+                            <h3 class="box-title mt-4">Destaques</h3>
+                            <ul class="list-unstyled">
+
+                                <li>
+                                    <i class="fa fa-check text-success"></i>
+                                    Tecido 100% algodão
+                                </li>
+
+                                <li>
+                                    <i class="fa fa-check text-success"></i>
+                                    Estampa levemente desbotada estilo Vintage
+                                </li>
+
+                                <li>
+                                    <i class="fa fa-check text-success"></i>
+                                    Costuras reforçadas no colarinho e ombros
+                                </li>
+
+                                <li>
+                                    <i class="fa fa-check text-success"></i>
+                                    Frete grátis para todo o Brasil
+                                </li>
 
                             </ul>
+
+                            <h4 style="font-size: 1.25rem" class="mt-4">Descrição</h4>
+                            <p style="font-size: 1rem">Lorem Ipsum available,but the majority have suffered alteration in some form,by injected humour,or randomised words which don't look even slightly believable.but the majority have suffered alteration in some form,by injected humour</p>
 
                         </div>
 
@@ -61,27 +104,14 @@
 
                 </div>
 
-                <div class="product-size">
-
-                    <h4>Tamanho</h4>
-                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                        <option selected>Escolha um tamanho:</option>
-                        <option value="1">P</option>
-                        <option value="2">M</option>
-                        <option value="3">G</option>
-                        <option value="4">GG</option>
-                    </select>
-
-                </div>
-
-                        <div class="product-qt">
+                        <!-- <div class="product-qt">
 
                             <label for="quantity" style="padding-bottom: 0.5rem;">
                                 <h4>Quantidade</h4>
                             </label>
-                            <input type="number" min="0" name="quantity" id="quantity" class="form-control">
+                            <input type="number" min="0" name="quantity" id="quantity" class="form-control" class="">
 
-                        </div>
+                        </div> -->
 
                 </div>
 

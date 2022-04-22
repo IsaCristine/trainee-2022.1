@@ -29,6 +29,9 @@ header, .navbar{
     color: #FFF;
 }
 
+.nav-link{
+    text-align: right;
+}
 
 #navbarToggleExternalContent a{
     color: #BD8E01;

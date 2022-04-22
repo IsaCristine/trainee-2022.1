@@ -74,5 +74,7 @@ html, body{
     color: darkslategray;
 }
 
-
+.size-buttons .btn{
+    margin-right: 0.25rem;
+}
 

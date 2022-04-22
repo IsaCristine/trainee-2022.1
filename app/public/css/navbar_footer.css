@@ -35,7 +35,6 @@ header, .navbar{
 
 #navbarToggleExternalContent a{
     color: #BD8E01;
-
 }
 
 #navbarToggleExternalContent a:hover{
@@ -58,6 +57,9 @@ footer p{
     color: #DFDDDD;
 }
 
+.redes-sociais{
+    padding-right: 0;
+}
 .redes-sociais li{
     margin: 0 10px;
 }

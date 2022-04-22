@@ -14,8 +14,17 @@
     padding: 1rem 0;
 }
 
+.product-info-price span{
+    font-size: 1.5rem;
+    font-family: Arial Black;
+}
+
 .container-flex {
     padding: 1rem 1rem;
+}
+
+.btn:hover{
+    opacity: 0.8;
 }
 
 .botao{

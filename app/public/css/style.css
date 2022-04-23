@@ -1,18 +1,40 @@
 body{
 	margin-right: 2rem;
 	margin-left: 2rem;
-	margin-top: 10rem;
+	margin-top: 2rem;
+	background-color: #DFDDDD;
 }
 
-.card_adm{
+.card_ajuste{
+  width: 15rem;
+  margin: 2rem;
+  margin-left: 2rem;
+}
+
+.conteiner-ajuste{
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	margin: 2rem;
-	flex-direction: row;
+	margin-top: 3rem;
 }
 
-.botao-sair{
-	display:inline-block;
-	justify-content: center;
+.conteiner-ajuste h5{
+	color: #323132;
+}
+
+.border{
+	border-radius: 1rem;
+	border-color: #BD8E01;
+}
+
+.text-h1 h1{
+	font-size: 4rem;
+	color: #BD8E01;
+	font-family: bangers;
+	text-align: center;
+}
+
+.linhas hr{
+	color: #9D0101;
+	height: 0.3rem;
+	opacity: 1;
 }

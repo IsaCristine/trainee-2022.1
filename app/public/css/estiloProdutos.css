@@ -3,58 +3,63 @@
     background-color: whitesmoke;
     margin-top: 5%;
     margin-bottom: 5%;
-    width: 60%;
+    width: 80%;
     
     
 }
-/* CABECALHO: */
+/************ CABECALHO: ************/ 
+
 .cabecalho{
     padding-top: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     
 }
+
 .campotxt{
     margin-left: 4rem;
-    
+
 }
 
-/* CARDS: */ 
+/************ CARDS: ************/ 
+
 
 .cardproduto{
-    margin-left: 1rem;
-    display:grid;
-    grid-template-columns: repeat(4, 1fr);
+    margin-left: 3rem;
+    margin-right: 3rem;
+    
 }
-
 
 
 .cardestilo{
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    width: 12rem;
-    height: 20rem;
-
+    height: 95%;
+    margin-top: 1rem;
+    width: 95%;
+    
 }
 .imgcard{
-    max-width: 10rem; max-height: 10rem;
-    min-width: 10rem; min-height: 10rem;
-    display: block;
+    width: 10rem; height: 10rem;
     justify-content: center;
     align-items: center;
-    margin-left: auto; margin-right: auto; margin-bottom: auto; margin-top: auto;
+    margin-left: auto; margin-right: auto; margin-bottom: auto;
+    margin-top: 20px;
+    object-fit: fill;
 }
 
-
-/* FONTES: */ 
+/************ FONTES e BOTOES: ************/ 
 
 .titulo{
     font-size:2rem;
     padding-bottom: 2rem;
     padding-left: 5rem;
 }
+.categoria{
+    background-color: #A2AD91;
+    border-radius: 12%;
+    width: 60%;
+    text-align: center;
+}
 h5{
     font-size: 16px;
+    color:  white;
 }
 H6{
     font-size: 12px;
@@ -64,7 +69,10 @@ p{
 }
 .txtbotao{
     font-size: 14px;
+    
 }
+
+
 /* PAG: */ 
 .pag{
     margin-top: 2.5rem;
@@ -73,6 +81,68 @@ p{
        
 }
 
+/************ TRATAMENTO DA IMG: ************/ 
+
+@media (max-width: 1280px){
+    .imgcard{
+        width: 7rem; height: 7rem;
+    }
+
+    h5{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1000px){
+    .imgcard{
+        width: 5rem; height: 5rem;
+    }
+    .categoria{
+        width: 100%;
+        
+    }
+    .txtbotao{
+        font-size: 12px;
+        
+    }
+    
+}
+
+@media (max-width: 767px){
+    .imgcard{
+        width: 8rem; height: 8rem;
+    }
+    .cardproduto{
+        margin-top: 2rem;
+    }
+    .categoria{
+        width: 62%;
+        
+    }
+}
+@media (max-width: 600px){
+    .imgcard{
+        width: 7rem; height: 7rem;
+    }
+}
+@media (max-width: 575px){
+    .imgcard{
+        width: 10rem; height: 10rem;
+    }
+    .categoria{
+        width: 40%;
+        
+    }
+}
+@media (max-width: 415px){
+    .imgcard{
+        width: 7rem; height: 7rem;
+    }
+
+    .categoria{
+        width: 60%;
+        
+    }
+}
 
 
-/* TESTES: */ 

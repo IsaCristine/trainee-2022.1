@@ -62,4 +62,15 @@
     margin-left:4rem;
 }
 
+/****************MODAL************/
+.area-img{
+    width:250px;
+}
+
+.edit-img{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+}
 

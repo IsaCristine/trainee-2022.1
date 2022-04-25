@@ -23,12 +23,12 @@
             <div class="container-fluid">
 
                 <div class="border-button">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasNavbar">
                         <span class="navbar-toggler-icon menu-button"></span>
                     </button>
                 </div>
 
-                <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas offcanvas-start bg-dark" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">>
                     
                     <div class="d-flex flex-column p-3 text-white debug sidebar-area">
 
@@ -99,7 +99,11 @@
 
                                     <li>
 
-                                        <a class="dropdown-item text-white logout-link" href=""> <span class=" me-auto"> Editar </span></a>
+                                        <span data-bs-dismiss="offcanvas" aria-label="Close"> 
+                                            <button class="dropdown-item text-white logout-link" data-bs-toggle="modal" data-bs-target="#editModal">                                              
+                                                Editar                                            
+                                            </button>
+                                        </span>
 
                                     </li>
 
@@ -117,6 +121,60 @@
 
                     </div>
 
+                </div>
+
+                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+
+                          <h5 class="modal-title" id="exampleModalLabel">Editar Usuário</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                        </div>
+
+                        <div class="modal-body">
+
+                          <form>
+
+                            <div class="mb-3">
+                              <label for="username" class="col-form-label">Username:</label>
+                              <input type="text" class="form-control" id="username" value="Username">
+                            </div>
+
+                            <div class="mb-3">
+                              <label for="email" class="col-form-label">Email:</label>
+                              <input type="email" class="form-control" id="email" value="usermail@email.com"></input>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="password" class="col-form-label">Senha:</label>
+                                <input type="password" class="form-control" id="password"></input>
+                            </div>
+
+                            <div class="card mb-3 area-img">
+                                <div class="card-header">
+                                    Imagem
+                                </div>
+
+                                <label for="image" id="card-label">
+                                    <img src="../../public/img/Macacode.jpg" class="edit-img">
+                                </label>
+
+                                <div class="card-body">
+                                    <input type="file" name="image" accept="image/*" class="form-control" id="image">
+                                </div>
+
+                            </div>
+
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">cancelar</button>
+                          <button type="button" class="btn btn-primary">Editar</button>
+                        </div>
+                      </div>
+                    </div>
                 </div>
 
             </div>

@@ -3,6 +3,7 @@ body{
 	margin-left: 2rem;
 	margin-top: 2rem;
 	background-color: #DFDDDD;
+	display: block;	
 }
 
 .card_ajuste{
@@ -27,10 +28,9 @@ body{
 }
 
 .text-h1 h1{
-	font-size: 4rem;
 	color: #BD8E01;
-	font-family: bangers;
-	text-align: center;
+	font-family: Arial;
+	font-weight: bold;
 }
 
 .linhas hr{

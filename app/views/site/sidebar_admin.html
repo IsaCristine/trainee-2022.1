@@ -135,46 +135,53 @@
 
                         <div class="modal-body">
 
-                          <form>
+                          <form method="POST" action="">
 
-                            <div class="mb-3">
-                              <label for="username" class="col-form-label">Username:</label>
-                              <input type="text" class="form-control" id="username" value="Username">
-                            </div>
-
-                            <div class="mb-3">
-                              <label for="email" class="col-form-label">Email:</label>
-                              <input type="email" class="form-control" id="email" value="usermail@email.com"></input>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="password" class="col-form-label">Senha:</label>
-                                <input type="password" class="form-control" id="password"></input>
-                            </div>
-
-                            <div class="card mb-3 area-img">
-                                <div class="card-header">
-                                    Imagem
+                                <div class="mb-3">
+                                    <label for="username" class="col-form-label">Username:</label>
+                                    <input type="text" class="form-control" id="username" name="username" value="Username">
                                 </div>
 
-                                <label for="image" id="card-label">
-                                    <img src="../../public/img/Macacode.jpg" class="edit-img">
-                                </label>
-
-                                <div class="card-body">
-                                    <input type="file" name="image" accept="image/*" class="form-control" id="image">
+                                <div class="mb-3">
+                                    <label for="email" class="col-form-label">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" value="usermail@email.com"></input>
                                 </div>
 
-                            </div>
+                                <div class="mb-3">
+                                    <label for="password" class="col-form-label">Senha:</label>
+                                    <input type="password" class="form-control" name="password" id="password"></input>
+                                </div>
 
-                          </form>
+                                <div class="card mb-3 area-img">
+                                    <div class="card-header">
+                                        Imagem
+                                    </div>
+
+                                    <label for="image" id="card-label">
+                                        <img src="../../public/img/Macacode.jpg" class="edit-img">
+                                    </label>
+
+                                    <div class="card-body">
+                                        <input type="file" name="image" accept="image/*" class="form-control" id="image">
+                                    </div>
+
+                                </div>
+
                         </div>
+
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">cancelar</button>
-                          <button type="button" class="btn btn-primary">Editar</button>
+
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">cancelar</button>
+                            <input type="submit" name="submit" class="btn btn-primary" value="Editar"></input>
+
+                           </form>
+
                         </div>
+
                       </div>
+
                     </div>
+                    
                 </div>
 
             </div>

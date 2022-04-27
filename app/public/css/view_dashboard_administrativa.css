@@ -42,7 +42,7 @@ body{
 	opacity: 1;
 }
 
-@media ( max-width: 950px) and (min-width: 100px){
+@media ( max-width: 1000px) and (min-width: 100px){
 	.card_ajuste{
 		display: inline-block;
 		width: 12rem;

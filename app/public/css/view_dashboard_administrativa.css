@@ -10,6 +10,9 @@ body{
   width: 15rem;
   margin: 2rem;
   margin-left: 2rem;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
 }
 
 .conteiner-ajuste{
@@ -38,3 +41,11 @@ body{
 	height: 0.3rem;
 	opacity: 1;
 }
+
+@media ( max-width: 1000px) and (min-width: 100px){
+	.card_ajuste{
+		display: inline-block;
+		width: 14rem;
+	}
+}
+

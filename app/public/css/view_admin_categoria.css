@@ -1,0 +1,16 @@
+.debug{
+    border:1px solid red;
+}
+.title{
+    margin-top:5vh;
+    margin-bottom:50px;
+    
+}
+.search-area{
+    display:flex;
+    justify-content: end;
+}
+.search-form{
+    display:flex;
+    flex-flow:row;
+}

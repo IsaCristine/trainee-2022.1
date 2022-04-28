@@ -92,6 +92,10 @@ p{
     h5{
         font-size: 14px;
     }
+    .campotxt{
+        margin-left: 3rem;
+    
+    }
 }
 
 @media (max-width: 1000px){
@@ -107,7 +111,7 @@ p{
         
     }
     .campotxt{
-        margin-left: 4rem;
+        margin-left: 0rem;
     
     }
     .titulo{
@@ -127,52 +131,94 @@ p{
         width: 62%;
         
     }
+    .titulo{
+        text-align: center;
+        padding-left: 0rem;
+    }
+    .barra{
+        display: flex;
+        justify-content: center;
+    }
+    .campotxt{
+        min-width: 70%;
+    }
+ 
     
 }
+
 @media (max-width: 600px){
     .imgcard{
         width: 7rem; height: 7rem;
     }
 }
+
 @media (max-width: 575px){
     .imgcard{
-        width: 10rem; height: 10rem;
+        width: 8rem; height: 8rem;
     }
     .categoria{
-        width: 40%;
+        width: 50%;
         
     }
+    .cardestilo{
+        text-align: center;
+    }
+    .categoria{
+        justify-content: center;
+        align-items: center;
+        margin-left: auto; margin-right: auto; margin-bottom: auto;
+        object-fit: fill;
+    }
+
 }
 @media (max-width: 415px){
+    .campotxt{
+        min-width: 60%;
+        margin-left: 0.6rem;
+    }
     .imgcard{
         width: 7rem; height: 7rem;
     }
 
     .categoria{
-        width: 60%;
-        
+        width: 65%;  
     }
+    
 }
 
 @media(max-width: 380px){
     
-    h5{
-        text-align: left;
-        font-size: 15px;
-        
+    .categoria{
+        width: 75%;
+        ;
     }
     .campotxt{
-        margin-left: 0rem;
+        min-width: 0%;
+        margin-left: 1rem;
+    }
+    .cardproduto{
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
     
-    }
-    .titulo{
-        padding-left: 1rem;
-    }
     .cardestilo{
-        height: 100%;
-        margin-top: 1rem;
         width: 100%;
         
     }
+    .imgcard{
+        width: 6rem; height: 6rem;
+    }
 }
 
+@media(max-width: 310px){
+    .campotxt{
+        min-width: 0%;
+        margin-left: 0rem;
+    }
+    .cardproduto{
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+
+}

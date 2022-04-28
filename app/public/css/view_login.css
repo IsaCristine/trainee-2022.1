@@ -1,0 +1,25 @@
+
+.container{
+    font-family: 'Roboto', sans-serif;
+}
+.tela{
+    background-color: whitesmoke;
+    padding: 2rem 2rem 2rem 2rem;
+}
+.botaodiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.botao{
+    border-radius: 2rem;
+}
+.comnt{
+    text-align: center;
+}
+@media(max-width: 500px){
+    .tela{
+        padding: 0rem 0rem 0rem 0rem;
+        background-color: white;
+    }
+}

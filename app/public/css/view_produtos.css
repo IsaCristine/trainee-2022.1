@@ -42,6 +42,11 @@
     margin-top: 20px;
     object-fit: fill;
 }
+.cardrodape{
+    background-color: #FFFFFF;
+    border-top: 0pt;
+    margin-top: -1rem;
+}
 
 /************ FONTES e BOTOES: ************/ 
 
@@ -70,6 +75,7 @@ p{
 }
 .txtbotao{
     font-size: 14px;
+
     
 }
 
@@ -96,6 +102,10 @@ p{
         margin-left: 3rem;
     
     }
+    .pteste{
+        margin-bottom: 4rem;
+    }
+
 }
 
 @media (max-width: 1000px){
@@ -116,6 +126,10 @@ p{
     }
     .titulo{
         font-size: 2rem;
+    }
+    .cardproduto{
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
     
 }

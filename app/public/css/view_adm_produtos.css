@@ -9,6 +9,7 @@ body{
 
 .barra-pesquisa{
     margin-top: 2rem;
+    display: inline-block;
 }
 
 .caixa{

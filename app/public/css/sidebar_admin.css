@@ -1,3 +1,9 @@
+.bg-sidebar{
+    background-color: #001862;
+}
+.text-color{
+    color: #BD8E01;
+}
 /*************SIDEBAR HEADER*************/
 
 .close-button:hover{
@@ -18,7 +24,7 @@
 }
 
 .link:hover{
-    background-color: #0d6efd;
+    background-color: #9D0101;
 }
 
 .disable-link{
@@ -74,3 +80,8 @@
     height:100%;
 }
 
+@media(max-width:300px){
+    .area-img{
+        width:100%;
+    }
+}

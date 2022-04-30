@@ -2,7 +2,7 @@
     border: 1px solid red;
 }
 
-/******************TITLE AND SEARCH BAR******************/
+/*******************TITLE AND SEARCH BAR*******************/
 .title {
     margin-top: 5vh;
     margin-bottom: 50px;
@@ -36,7 +36,7 @@
     }
 }
 
-/******************TABLE******************/
+/********************TABLE********************/
 .table-buttons {
     display: flex;
     flex-wrap: nowrap;

@@ -15,3 +15,7 @@ body{
 .caixa{
     margin-top:2rem ;
 }
+
+.botao-adicionar{
+display: block;
+}

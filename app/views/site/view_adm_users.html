@@ -26,15 +26,13 @@
 <body>
 
     <div class="container">
-        <div class="table-responsive">
 
-        </div>
-        <div class="title display-3">Usuários</div>
+        <div class="title display-3" style="font-weight: 400;">Usuários</div>
 
         <div class="row row-cols-1 row-cols-sm-2 justify-content-around mb-4">
 
-            <div class="col">
-                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#NewUserModal"
+            <div class="col-3">
+                <button type="button" class="btn btn-secondary add" data-bs-toggle="modal" data-bs-target="#NewUserModal"
                     data-bs-whatever="@mdo">
 
                     <i class="bi bi-plus"></i>
@@ -42,13 +40,13 @@
                 </button>
             </div>
 
-            <div class="col">
+            <div class="col-9">
                 <div class="search-area">
 
                     <form method="GET" action="" class="search-form">
 
                         <input type="text" class="form-control input-search" name="search"
-                            placeholder="Pesquisar usuário...">
+                            placeholder="Pesquisar usuário">
                         <button type="submit" class="btn btn-primary ms-3">
                             <i class="bi bi-search"></i>
                         </button>
@@ -103,38 +101,39 @@
 
 
         <div class="table-responsive">
-            
 
             <table class="table table-striped table-bordered table-hover">
 
                 <thead>
                     <tr>
 
-                        <th style="width: 40%" scope="col">Nome</th>
-                        <th style="width: 40%" scope="col">E-mail</th>
-                        <th style="width: 20%" scope="col">Ações</th>
+                        <th style="width: 40%" scope="col" class="col-name">Nome</th>
+                        <th style="width: 40%" scope="col" class="col-email">E-mail</th>
+                        <th style="width: 20%" scope="col" class="col-actions">Ações</th>
 
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr>
-                        <td>Jacob Thornton</td>
-                        <td>jthornton31@contact.com</td>
+                        <td class="name">Jacob Thornton</td>
+                        <td class="email">jthornton31@contact.com</td>
                         <td style="text-align: center">
 
-                            <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#FirstViewModal">
-                                <i class="bi bi-eye"></i>
-                            </button>
+                            <div class="table-buttons">
+                                <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#FirstViewModal">
+                                    <i class="bi bi-eye"></i>
+                                </button>
 
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#FirstEditModal">
-                                <i class="bi bi-pencil"></i>
-                            </button>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#FirstEditModal">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
 
-                            <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#FirstDeleteModal">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                            
+                                <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#FirstDeleteModal">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </div>
+
                             <!-- MODAL VIEW -->
                             <div class="modal fade" id="FirstViewModal" tabindex="-1"
                                 aria-labelledby="FirstViewModalLabel" aria-hidden="true">
@@ -276,11 +275,11 @@
                     </tr>
 
                     <tr>
-                        <td>Jacob Thornton</td>
-                        <td>jthornton31@contact.com</td>
+                        <td class="name">Jacob Thornton</td>
+                        <td class="email">jthornton31@contact.com</td>
                         <td style="text-align: center">
 
-    
+                            <div class="table-buttons">
                                 <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#FirstViewModal">
                                     <i class="bi bi-eye"></i>
                                 </button>
@@ -292,18 +291,18 @@
                                 <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#FirstDeleteModal">
                                     <i class="bi bi-trash"></i>
                                 </button>
-                            
+                            </div>
 
                         </td>
 
                     </tr>
 
                     <tr>
-                        <td>Jacob Thornton</td>
-                        <td>jthornton31@contact.com</td>
+                        <td class="name">Jacob Thornton</td>
+                        <td class="email">jthornton31@contact.com</td>
                         <td style="text-align: center">
 
-                            
+                            <div class="table-buttons">
                                 <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#FirstViewModal">
                                     <i class="bi bi-eye"></i>
                                 </button>
@@ -315,18 +314,18 @@
                                 <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#FirstDeleteModal">
                                     <i class="bi bi-trash"></i>
                                 </button>
-                            
+                            </div>
 
                         </td>
 
                     </tr>
 
                     <tr>
-                        <td>Jacob Thornton</td>
-                        <td>jthornton31@contact.com</td>
+                        <td class="name">Jacob Thornton</td>
+                        <td class="email">jthornton31@contact.com</td>
                         <td style="text-align: center">
 
-                            
+                            <div class="table-buttons">
                                 <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#FirstViewModal">
                                     <i class="bi bi-eye"></i>
                                 </button>
@@ -338,7 +337,7 @@
                                 <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#FirstDeleteModal">
                                     <i class="bi bi-trash"></i>
                                 </button>
-                            
+                            </div>
 
                         </td>
 
@@ -347,7 +346,7 @@
                 </tbody>
 
             </table>
-        
+
         </div>
 
     </div>

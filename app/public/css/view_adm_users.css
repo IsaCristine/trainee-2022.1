@@ -57,6 +57,10 @@
 
 @media(max-width:461px) {
 
+    .title.display-3{
+        text-align: center;
+    }
+
     .table-responsive{
         font-size: 13px;
     }

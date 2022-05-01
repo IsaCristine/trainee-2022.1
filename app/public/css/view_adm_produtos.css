@@ -1,0 +1,25 @@
+body{
+    background-color:#DFDDDD;
+}
+
+.titulo-h2 h2{
+    color:#BD8E01;
+    margin-top: 2rem;
+}
+
+.barra-pesquisa{
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+.caixa{
+    margin-top:2rem ;
+}
+
+.botao-adicionar{
+display: block;
+}
+
+.bnt-ajuste{
+    margin-bottom: 0.5rem;
+}

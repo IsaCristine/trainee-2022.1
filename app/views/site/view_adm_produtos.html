@@ -18,7 +18,7 @@
     
     <div class="container-xl">
 
-        <div class="table-responsive">
+        <div class="table">
 
             <div class="table-wrapper">
 
@@ -26,27 +26,32 @@
 
                     <div class="row">
 
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 titulo-h2">
                             <h2>Produtos</h2>
                         </div>
 
-                        <div class="col-sm-4">
-                            <div class="search-box">
+                        <div class="col-sm-12">
+                            <div class="search-box barra-pesquisa">
                                 <input type="text" class="form-control" placeholder="Pesquisar...">
                             </div>
+                            
                         </div>
 
                     </div>
 
                 </div>
 
-                    <table class="table table-striped table-bordered">
+                    <div class="d-md-flex justify-content-md-end">
+                        <button type="button" class="btn btn-success botao-adicionar" data-bs-toggle="modal" data-bs-target="#adicioar-produto">Adiconar</button>
+                    </div>
+                
+                    <table class="table table-striped table-bordered caixa">
 
                         <thead>
                             <tr>
                 
-                                <th style="width: 40%" scope="col">Nome</th>
-                                <th style="width: 45%" scope="col">E-mail</th>
+                                <th style="width: 40%" scope="col">Produto</th>
+                                <th style="width: 45%" scope="col">Descrição</th>
                                 <th style="width: 15%" scope="col">Ações</th>
                 
                             </tr>
@@ -54,64 +59,64 @@
                 
                         <tbody>
                             <tr>
-                                <td>Jacob Thornton</td>
-                                <td>jthornton31@contact.com</td>
+                                <td>Gibi Superman</td>
+                                <td>Descrição do produto</td>
                                 <td style="text-align: center">
-                                    <button class="btn btn-outline-dark">
+                                    <button class="btn btn-primary bnt-ajuste" data-bs-toggle="modal" data-bs-target="#visualizar">
                                         <i class="fa fa-eye"></i>
                                     </button>
-                                    <button class="btn btn-outline-dark">
+                                    <button class="btn btn-warning bnt-ajuste" data-bs-toggle="modal" data-bs-target="#modal-editar">
                                         <i class="fa fa-pencil"></i>
                                     </button>
-                                    <button class="btn btn-outline-dark">
+                                    <button class="btn btn-danger bnt-ajuste" data-bs-toggle="modal" data-bs-target="#deletar-produto">
                                         <i class="fa fa-trash"></i>
                                     </button>
                                 </td>
                             </tr>
                 
                             <tr>
-                                <td>Jacob Thornton</td>
-                                <td>jthornton31@contact.com</td>
+                                <td>Action Figure</td>
+                                <td>Descrição do produto</td>
                                 <td style="text-align: center">
-                                    <button class="btn btn-outline-dark">
+                                    <button class="btn btn-primary bnt-ajuste" data-bs-toggle="modal" data-bs-target="#visualizar">
                                         <i class="fa fa-eye"></i>
                                     </button>
-                                    <button class="btn btn-outline-dark">
+                                    <button class="btn btn-warning bnt-ajuste" data-bs-toggle="modal" data-bs-target="#modal-editar">
                                         <i class="fa fa-pencil"></i>
                                     </button>
-                                    <button class="btn btn-outline-dark">
+                                    <button class="btn btn-danger bnt-ajuste" data-bs-toggle="modal data-bs-target="#deletar-produto">
                                         <i class="fa fa-trash"></i>
                                     </button>
                                 </td>
                             </tr>
                 
                             <tr>
-                                <td>Jacob Thornton</td>
-                                <td>jthornton31@contact.com</td>
+                                <td>Gibi homem aranha</td>
+                                <td>Descrição do produto</td>
                                 <td style="text-align: center">
-                                    <button class="btn btn-outline-dark">
+                                    <button class="btn btn-primary bnt-ajuste" data-bs-toggle="modal" data-bs-target="#visualizar">
                                         <i class="fa fa-eye"></i>
                                     </button>
-                                    <button class="btn btn-outline-dark">
+                                    <button class="btn btn-warning bnt-ajuste" data-bs-toggle="modal" data-bs-target="#modal-editar">
                                         <i class="fa fa-pencil"></i>
                                     </button>
-                                    <button class="btn btn-outline-dark">
+                                    <button class="btn btn-danger bnt-ajuste" data-bs-toggle="modal" data-bs-target="#deletar-produto">
                                         <i class="fa fa-trash"></i>
                                     </button>
                                 </td>
                             </tr>
                 
                             <tr>
-                                <td>Jacob Thornton</td>
-                                <td>jthornton31@contact.com</td>
+                                <td>Homem de ferro</td>
+                                <td>Descrição do produto</td>
                                 <td style="text-align: center">
-                                    <button class="btn btn-outline-dark">
-                                        <i class="fa fa-eye"></i>
+                                    <button class="btn btn-primary bnt-ajuste" data-bs-toggle="modal" data-bs-target="#visualizar">
+                                  <i class="fa fa-eye"></i>
                                     </button>
-                                    <button class="btn btn-outline-dark">
+                                    <button class="btn btn-warning bnt-ajuste" data-bs-toggle="modal" data-bs-target="#modal-editar">
                                         <i class="fa fa-pencil"></i>
                                     </button>
-                                    <button class="btn btn-outline-dark">
+                                    <button class="btn btn-danger bnt-ajuste" data-bs-toggle="modal" data-bs-target="#deletar-produto">
                                         <i class="fa fa-trash"></i>
                                     </button>
                                 </td>
@@ -126,8 +131,114 @@
         </div>
 
     </div>
+ 
+    <!-- Modal -->
+    <div class="modal fade" id="adicioar-produto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Adicioar produtos</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Nome produtos</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Descrição produto</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal-editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Editar produto</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Nome produto</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Descrição produto</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger">Editar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="modal fade" id="deletar-produto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Tem certeza que deseja Deletar?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer text-center">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-danger">Deletar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="visualizar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Tem certeza que deseja Visualizar?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer text-center">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary">ver</button>
+            </div>
+        </div>
+        </div>
+    </div>
 
 
+
+    <script>
+        var exampleModal = document.getElementById('exampleModal')
+        exampleModal.addEventListener('show.bs.modal', function (event) {
+        // Button that triggered the modal
+        var button = event.relatedTarget
+        // Extract info from data-bs-* attributes
+        var recipient = button.getAttribute('data-bs-whatever')
+        // If necessary, you could initiate an AJAX request here
+        // and then do the updating in a callback.
+        //
+        // Update the modal's content.
+        var modalTitle = exampleModal.querySelector('.modal-title')
+        var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+        modalTitle.textContent = 'New message to ' + recipient
+        modalBodyInput.value = recipient
+        })
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 

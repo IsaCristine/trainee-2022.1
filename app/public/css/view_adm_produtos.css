@@ -19,3 +19,7 @@ body{
 .botao-adicionar{
 display: block;
 }
+
+.btn-ajuste{
+    margin-bottom:0.5rem;
+}

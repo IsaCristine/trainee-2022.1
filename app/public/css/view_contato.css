@@ -1,4 +1,5 @@
-html, body{
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -6,38 +7,46 @@ html, body{
 
 }
 
-p{
+.linhas hr {
+    color: #9D0101;
+    height: 0.3rem;
+    opacity: 1;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+p {
     text-align: center;
     color: white;
 }
 
-h1{
-    color: white;
+h1 {
+    color: #BD8E01;
+    font-weight: 400;
+}
+
+h2 {
+    color: #323132;
     font-weight: 300;
 }
 
-h2{
-    color: white;
-    font-weight: 300;
-}
-
-label{
-    color: white;
+label {
+    color: #323132;
 }
 
 
-section{
+section {
     vertical-align: top;
     text-align: center;
 }
 
-#top-content{
-    background-color: #323132;
+#top-content {
+    background-color: #DFDDDD;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
 }
 
-#bottom-content{
+#bottom-content {
     background-color: #001862;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
@@ -45,21 +54,21 @@ section{
 
 
 
-.top-content p{
+.top-content p {
     font-size: 1rem;
 }
 
-.texto-contate p{
+.texto-contate p {
     margin-block-start: 0;
     margin-block-end: 0;
 }
 
-.texto-contate{
+.texto-contate {
     margin-bottom: 10px;
 }
 
 
-.bottom-content{
+.bottom-content {
     margin-top: 1.5rem;
     margin-left: 2rem;
     text-align: center;
@@ -67,13 +76,13 @@ section{
 
 
 
-.container-fluid{
+.container-fluid {
     width: 100vw;
     height: 100vh;
     background-color: lightgray;
 }
 
-.row{
+.row {
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
@@ -83,7 +92,7 @@ section{
     padding-right: 4rem;
 }
 
-form{
+form {
     display: inline-block;
     width: 38rem;
     margin: auto;
@@ -91,19 +100,19 @@ form{
 }
 
 
-.form-group label{
+.form-group label {
     display: inline-block;
 }
 
-.form-row{
+.form-row {
     display: flex;
 }
 
-.form-group{
+.form-group {
     padding-bottom: 10px;
 }
 
-.bottom-text{
+.bottom-text {
     padding-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -127,34 +136,34 @@ form{
     height: 100%;
 }
 
-.our-info{
+.our-info {
     font-size: 1rem;
-    color: darkgray;
+    color: #323132;
 }
 
-.our-info span{
+.our-info span {
     padding-top: 0.5rem;
 }
 
 @media only screen and (max-width: 768px) {
 
-    .top-content h1{
+    .top-content h1 {
         font-size: 2rem;
     }
-    
+
     .top-content {
         margin-left: 1rem;
     }
 
-    .bottom-content{
+    .bottom-content {
         margin-left: 1rem;
     }
 
-    .container-fluid{
+    .container-fluid {
         background-color: lightblue;
     }
 
-    form{
+    form {
         width: 90%;
     }
 }

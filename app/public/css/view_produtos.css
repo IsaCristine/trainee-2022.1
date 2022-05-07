@@ -1,6 +1,6 @@
 
 .container{
-    background-color: whitesmoke;
+    border: solid #DFDDDD 0.08rem;
     margin-top: 5%;
     margin-bottom: 5%;
     width: 80%;
@@ -15,7 +15,16 @@
 
 .campotxt{
     margin-left: 6rem;
+    
+}
 
+/*Meu height nao funciona, nao sei porque*/
+.linhas{
+    color: #9D0101;
+    opacity: 1;
+    height: 5rem;
+    margin-top: 0rem;
+    padding-left: 0rem;
 }
 
 /************ CARDS: ************/ 
@@ -56,9 +65,11 @@
     padding-left: 5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    color: #BD8E01;
+
 }
 .categoria{
-    background-color: #A2AD91;
+    background-color: #DFDDDD;
     border-radius: 12%;
     width: 60%;
     text-align: center;
@@ -148,6 +159,7 @@ p{
     .titulo{
         text-align: center;
         padding-left: 0rem;
+        margin-bottom: -0.8rem;
     }
     .barra{
         display: flex;
@@ -155,6 +167,10 @@ p{
     }
     .campotxt{
         min-width: 70%;
+    }
+
+    .linhas{
+        margin-top: 1.6rem;
     }
  
     
@@ -211,8 +227,8 @@ p{
         margin-left: 1rem;
     }
     .cardproduto{
-        margin-left: 2.5rem;
-        margin-right: 2.5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
     
     .cardestilo{
@@ -230,8 +246,8 @@ p{
         margin-left: 0rem;
     }
     .cardproduto{
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
+        margin-left: 0.6rem;
+        margin-right: 0.6rem;
     }
     .pag{
         font-size: 80%;

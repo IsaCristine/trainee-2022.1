@@ -144,6 +144,12 @@ p{
     }
     
 }
+@media(max-width: 880px){
+    .cardproduto{
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+}
 
 @media (max-width: 767px){
     .imgcard{
@@ -151,10 +157,11 @@ p{
     }
     .cardproduto{
         margin-top: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     .categoria{
         width: 62%;
-        
     }
     .titulo{
         text-align: center;
@@ -199,6 +206,11 @@ p{
         margin-left: auto; margin-right: auto; margin-bottom: auto;
         object-fit: fill;
     }
+    .cardproduto{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    
 
 }
 @media (max-width: 415px){
@@ -213,6 +225,10 @@ p{
     .categoria{
         width: 65%;  
     }
+    .cardproduto{
+        margin-left: 0.8rem;
+        margin-right: 0.8rem;
+    }
     
 }
 
@@ -225,10 +241,6 @@ p{
     .campotxt{
         min-width: 0%;
         margin-left: 1rem;
-    }
-    .cardproduto{
-        margin-left: 2rem;
-        margin-right: 2rem;
     }
     
     .cardestilo{
@@ -246,11 +258,11 @@ p{
         margin-left: 0rem;
     }
     .cardproduto{
-        margin-left: 0.6rem;
-        margin-right: 0.6rem;
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
     }
     .pag{
-        font-size: 80%;
+        font-size: 70%;
     }
 
 }

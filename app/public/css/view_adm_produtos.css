@@ -21,5 +21,6 @@ display: block;
 }
 
 .btn-ajuste{
-    margin-bottom:0.5rem;
+    margin:auto;
+    padding: auto;
 }

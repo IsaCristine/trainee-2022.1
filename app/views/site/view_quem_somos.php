@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></link>
-	<link rel="stylesheet" type="text/css" href="../../public/css/view_quem_somos.css">
+	<link rel="stylesheet" type="text/css" href="../../../public/css/view_quem_somos.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
 	
 	<div class= "quem_somos">
 		<h1>Quem Somos?</h1>
-		<img src="../../public/assets/drdroom.gif" class="img-fluid"></img>
+		<img src="../../../public/img/drdroom.gif" class="img-fluid"></img>
 		<p>As histórias em quadrinhos nacionais, passados mais de cem anos desde os
 		primeiros trabalhos publicados, já têm muita coisa a dizer para a História. Por isso, o
 		objetivo deste artigo é estabelecer um quadro preliminar com alguns momentos relevantes
@@ -30,7 +30,7 @@
 	<div class="foto_exemplo">
 		<hr>
 		<div class="text-center ">
-		  <img src="../../public/assets/imagem_exemplo.jpg" class="rounded img-fluid" alt="Foto Super Man voando com fundo amarelo">
+		  <img src="../../../public/img/imagem_exemplo.jpg" class="rounded img-fluid" alt="Foto Super Man voando com fundo amarelo">
 		</div>
 		<hr>
 	</div>

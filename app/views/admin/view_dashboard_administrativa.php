@@ -25,7 +25,7 @@
     <div class="row g-3 text-center">
       <div class="col-12 col-lg-4">
         <div class="card card_ajuste border border-primary border-3">
-          <img src="../../public/img/caminhao.gif" class="card-img-top p-2" alt="...">
+          <img src="../../../public/img/caminhao.gif" class="card-img-top p-2" alt="...">
           <div class="card-body">
             <h5 class="card-title">Produtos</h5>
             <p class="card-text"></p>
@@ -35,7 +35,7 @@
       </div>
       <div class="col-12 col-lg-4">
         <div class="card card_ajuste border border-primary border-3">
-          <img src="../../public/img/lista-de-controle.gif" class="card-img-top p-2" alt="...">
+          <img src="../../../public/img/lista-de-controle.gif" class="card-img-top p-2" alt="...">
           <div class="card-body">
             <h5 class="card-title">Categorias</h5>
             <p class="card-text"></p>
@@ -45,7 +45,7 @@
       </div>
       <div class="col-12 col-lg-4">
         <div class="card card_ajuste border border-primary border-3">
-          <img src="../../public/img/midia-social.gif" class="card-img-top p-2" alt="...">
+          <img src="../../../public/img/midia-social.gif" class="card-img-top p-2" alt="...">
           <div class="card-body">
             <h5 class="card-title">Usuários</h5>
             <p class="card-text"></p>

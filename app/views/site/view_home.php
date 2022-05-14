@@ -7,7 +7,7 @@
     <title>Home</title>
 
     <!--CSS-->
-    <link rel="stylesheet" href="../../public/css/view_home.css">
+    <link rel="stylesheet" href="../../../public/css/view_home.css">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -37,15 +37,15 @@
                 <div class="carousel-inner">
 
                   <div class="carousel-item active">
-                    <img src="../../public/img/carrossel-teste1.jpg" class="d-block w-100 carousel-img" alt="...">
+                    <img src="../../../public/img/carrossel-teste1.jpg" class="d-block w-100 carousel-img" alt="...">
                   </div>
                   
                   <div class="carousel-item">
-                    <img src="../../public/img/Macacode-modificado.jpg" class="d-block w-100 carousel-img" alt="...">
+                    <img src="../../../public/img/Macacode-modificado.jpg" class="d-block w-100 carousel-img" alt="...">
                   </div>
 
                   <div class="carousel-item">
-                    <img src="../../public/img/series-marvel-disney.png" class="d-block w-100 carousel-img" alt="...">
+                    <img src="../../../public/img/series-marvel-disney.png" class="d-block w-100 carousel-img" alt="...">
                   </div>
 
                 </div>
@@ -79,7 +79,7 @@
                         <div class="card card-border">
 
                             <label> 
-                                <img src="../../public/img/Macacode.jpg" alt="..." class="product-image">
+                                <img src="../../../public/img/Macacode.jpg" alt="..." class="product-image">
                             
 
                                 <div class="card-body">
@@ -101,7 +101,7 @@
                         <div class="card">
 
                             <label>
-                                <img src="../../public/img/carrossel-teste1.jpg" alt="..." class="product-image">
+                                <img src="../../../public/img/carrossel-teste1.jpg" alt="..." class="product-image">
                             
 
                                 <div class="card-body">
@@ -123,7 +123,7 @@
                         <div class="card">
 
                             <label>
-                                <img src="../../public/assets/Logo iluminada.png" alt="..." class="product-image">
+                                <img src="../../../public/assets/Logo iluminada.png" alt="..." class="product-image">
                             
 
                                 <div class="card-body">
@@ -146,7 +146,7 @@
                         <div class="card">
 
                             <label>
-                                <img src="../../public/assets/Logo escrita com flecha e retângulo.png" alt="..." class="product-image">
+                                <img src="../../../public/assets/Logo escrita com flecha e retângulo.png" alt="..." class="product-image">
                             
 
                                 <div class="card-body">
@@ -168,7 +168,7 @@
                         <div class="card">
 
                             <label>
-                                <img src="../../public/img/batman-img-teste.png" alt="..." class="product-image">
+                                <img src="../../../public/img/batman-img-teste.png" alt="..." class="product-image">
                             
 
                                 <div class="card-body">
@@ -189,7 +189,7 @@
                         <div class="card">
 
                             <label>
-                                <img src="../../public/img/quadro-batman-teste.png" alt="..." class="product-image">
+                                <img src="../../../public/img/quadro-batman-teste.png" alt="..." class="product-image">
                             
 
                                 <div class="card-body">
@@ -210,7 +210,7 @@
                         <div class="card">
 
                             <label>
-                                <img src="../../public/img/quadro-spider-teste.png" alt="..." class="product-image">
+                                <img src="../../../public/img/quadro-spider-teste.png" alt="..." class="product-image">
                             
 
                                 <div class="card-body">
@@ -231,7 +231,7 @@
                         <div class="card">
 
                             <label>
-                                <img src="../../public/img/png-transparent-superhero-action-toy-figures-others-superhero-fictional-character-tablet.png" alt="..." class="product-image">
+                                <img src="../../../public/img/png-transparent-superhero-action-toy-figures-others-superhero-fictional-character-tablet.png" alt="..." class="product-image">
                             
 
                                 <div class="card-body">

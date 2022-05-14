@@ -1,6 +1,6 @@
 /**********CARROSSEL**********/
 #area-carousel{   
-    background-color: #8d8e01;
+    background:url(../img/HQ.jpeg)#9D0101;
 }
 
 #carousel{
@@ -15,18 +15,20 @@
 /**********ULTIMOS PRODUTOS**********/
 #area-products{
     text-align:center;
-    background-color: #323132;
-    color:#DFDDDD;
+    background-color: #DFDDDD;
+    color:#BD8E01;
     padding-bottom:40px;
 }
 
 .products-title{
-    border-bottom:2px solid #DFDDDD;
+    border-bottom:2px solid #9D0101;
 }
 
 .products-title h2{
     display: inline-block;
     margin-top: 2vh;
+    font-size: 38px;
+    font-family: 'Bangers', cursive;
 }
 
 .products{
@@ -39,6 +41,8 @@
 
 .products .card{
     color: #323132;
+    border:2px solid #001862;
+    Border-radius: 1rem;
 }
 
 .product-image{

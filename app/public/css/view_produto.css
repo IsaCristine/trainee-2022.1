@@ -82,3 +82,8 @@ html, body{
     margin-right: 0.19rem;
 }
 
+#chart:hover{
+    cursor: default;
+    opacity: 100%;
+}
+

@@ -18,6 +18,10 @@ html, body{
     padding: 1rem 0;
 }
 
+.product-size button{
+    margin-bottom: 0.25rem;
+}
+
 .product-info-price span{
     font-size: 1.5rem;
     font-weight: 400;
@@ -86,4 +90,3 @@ html, body{
     cursor: default;
     opacity: 100%;
 }
-

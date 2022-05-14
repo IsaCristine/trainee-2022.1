@@ -7,43 +7,43 @@ use Exception;
 
 class ExampleController
 {
-    //Listar todos os registros:
+    //Renderiza a página para listar todos os registros:
     public function index()
     {
         
     }
 
-    //Exibição um registro:
+    //Renderiza a página para exibir um registro:
     public function show()
     {
 
     }
 
-    //Criação de um registro:
+    //Renderiza a página para criar de um registro:
     public function create()
     {
  
     }
 
-    //Armazenar um registro:
+    //Renderiza a página para armazenar um registro:
     public function store()
     {
 
     }
 
-    //Editar um registro:
+    //Renderiza a página para editar um registro:
     public function edit()
     {
   
     }
 
-    //Atualizar um registro:
+    //Renderiza a página para atualizar um registro:
     public function update()
     {
         
     }
 
-    //Deletar um registro:
+    //Renderiza a página para deletar um registro:
     public function delete()
     {
  

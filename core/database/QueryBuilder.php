@@ -4,7 +4,6 @@ namespace App\Core\Database;
 
 use Exception;
 use PDO;
-use PHPMailer\PHPMailer\PHPMailer;
 
 class QueryBuilder
 {

@@ -16,16 +16,19 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table)
+    public function selectAll()
     {
-        $query = "select * from {$table}";
-        try {
-            $stmt = $this->pdo->prepare($query);
-            $stmt->execute();
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
-        } catch (Exception $error) {
-            die($error->getMessage());
-        }
+        /*Exemplo de código para selecionar todos os 
+          "elementos" de uma tabela:*/
+        
+        // $query = "select * from {$table}";
+        // try {
+        //     $stmt = $this->pdo->prepare($query);
+        //     $stmt->execute();
+        //     return $stmt->fetchAll(PDO::FETCH_CLASS);
+        // } catch (Exception $error) {
+        //     die($error->getMessage());
+        // }
     }
 
     public function select()

@@ -54,10 +54,4 @@ FIM DO EXEMPLO -----------------------------------------------------------------
 
 //Fim Login
 
-
-
-//Rotas Dashboard
-
-//Fim Dashboard
-
 ?>

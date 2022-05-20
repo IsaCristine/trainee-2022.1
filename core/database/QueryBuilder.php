@@ -33,7 +33,16 @@ class QueryBuilder
     //QUERY DE CATEGORIAS
     public function selectCategorias()
     {
-        
+        try{
+            $query = $this->pdo->prepare("SELECT * FROM categorias");
+            $query->execute();
+            $categorias = $query->fetchAll(PDO::FETCH_ASSOC);
+            
+            return $categorias;
+        }
+        catch(Exception $e){
+            die($e->getMessage());
+        }
     }
 
     public function insertCategoria(string $name)

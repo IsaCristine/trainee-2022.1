@@ -21,7 +21,7 @@ FIM DO EXEMPLO -----------------------------------------------------------------
 
 
 //Rotas Categorias
-$router->get('Admin-Categorias', 'CategoriasController@getPage');
+$router->get('Admin-Categorias', 'CategoriasController@showCategorias');
 $router->post('salvarCategoria', 'CategoriasController@createCategoria');
 $router->post('editarCategoria', 'CategoriasController@editCategoria');
 $router->post('excluirCategoria', 'CategoriasController@deleteCategoria');

@@ -8,10 +8,11 @@ use Exception;
 
 class CategoriasController
 {
-    //Renderiza a página para listar todos os registros:
-    public function getPage()
+
+    public function showCategorias()
     {
-        require __DIR__ . '/../views/admin/view_admin_categoria.view.php';
+        $categorias = App::get("database")->selectCategorias();
+        include __DIR__ . '/../views/admin/view_admin_categoria.view.php';
     }
 
     public function createCategoria()
@@ -29,7 +30,7 @@ class CategoriasController
 
         $id = $_POST['id'];
 
-        $create = App::get("database")->editCategoria($id, $categoryName);
+        $edit = App::get("database")->editCategoria($id, $categoryName);
 
         header("location:Admin-Categorias");
     }
@@ -39,7 +40,7 @@ class CategoriasController
 
         $id = $_POST['id'];
 
-        $create = App::get("database")->deleteCategoria($id);
+        $delete = App::get("database")->deleteCategoria($id);
 
         header("location:Admin-Categorias");
     }

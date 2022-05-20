@@ -89,15 +89,12 @@
         </div>
 
 
-
-
-
-
         <div class="table-responsive">
 
             <div class="table-wrapper">
 
                 <table class="table table-striped table-bordered table-hover">
+
 
                     <thead>
                         <tr>
@@ -110,31 +107,36 @@
 
                     <tbody>
 
+                        <?php
+                        foreach ($categorias as $categoria){
+                        ?>
+
                         <tr>
-                            <td>Brinquedo</td>
+
+                            <td><?= $categoria['Nome'] ?></td>
 
                             <td style="text-align: center">
 
                                 <div class="table-buttons">
                                     <button class="btn btn-secondary view" data-bs-toggle="modal"
-                                        data-bs-target="#BrinquedoViewModal">
+                                        data-bs-target="#<?= $categoria["Nome"] ?>ViewModal">
                                         <i class="bi bi-eye"></i>
                                     </button>
 
                                     <button class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#BrinquedoEditModal">
+                                        data-bs-target="#<?= $categoria["Nome"] ?>EditModal">
                                         <i class="bi bi-pencil"></i>
                                     </button>
 
                                     <button class="btn btn-danger delete" data-bs-toggle="modal"
-                                        data-bs-target="#BrinquedoDeleteModal">
+                                        data-bs-target="#<?= $categoria["Nome"] ?>DeleteModal">
                                         <i class="bi bi-trash"></i>
                                     </button>
                                 </div>
 
                                 <!-- MODAL VIEW -->
-                                <div class="modal fade" id="BrinquedoViewModal" tabindex="-1"
-                                    aria-labelledby="BrinquedoViewModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="<?= $categoria["Nome"] ?>ViewModal" tabindex="-1"
+                                    aria-labelledby="<?= $categoria["Nome"] ?>ViewModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -153,7 +155,7 @@
                                                         <label for="category-name"
                                                             class="col-form-label d-flex justify-content-start">Nome:</label>
                                                         <input type="text" class="form-control" id="category-name"
-                                                            value="brinquedo" readonly>
+                                                            value="<?= $categoria['Nome'] ?>" readonly>
 
                                                     </div>
 
@@ -171,8 +173,8 @@
 
                                 <!--MODAL EDIT -->
 
-                                <div class="modal fade" id="BrinquedoEditModal" tabindex="-1"
-                                    aria-labelledby="BrinquedoEditModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="<?= $categoria["Nome"] ?>EditModal" tabindex="-1"
+                                    aria-labelledby="<?= $categoria["Nome"] ?>EditModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -190,9 +192,9 @@
                                                     <div class="mb-3">
                                                         <label for="category-name"
                                                             class="col-form-label d-flex justify-content-start">Nome:</label>
-                                                        <input type="hidden" name="id" value="1">
+                                                        <input type="hidden" name="id" value="<?= $categoria['id'] ?>">
                                                         <input type="text" class="form-control" id="category-name"
-                                                            name="category-name" value="Roupas">
+                                                            name="category-name" value="<?= $categoria['Nome'] ?>">
                                                     </div>
 
 
@@ -212,8 +214,8 @@
 
                                 <!--MODAL DELETE-->
 
-                                <div class="modal fade" id="BrinquedoDeleteModal" tabindex="-1"
-                                    aria-labelledby="BrinquedoDeleteModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="<?= $categoria["Nome"] ?>DeleteModal" tabindex="-1"
+                                    aria-labelledby="<?= $categoria["Nome"] ?>DeleteModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
 
@@ -229,9 +231,10 @@
 
                                                     <div class="mb-3 mt-3">
                                                         <p class="justify-content-start">Tem certeza que deseja excluir
-                                                            a categoria <span class="category-name">roupas</span> ?
+                                                            a categoria <span
+                                                                class="category-name"><?= $categoria['Nome'] ?></span> ?
                                                         </p>
-                                                        <input type="hidden" name="id" value="1">
+                                                        <input type="hidden" name="id" value="<?= $categoria['id'] ?>">
                                                     </div>
 
                                                 </div>
@@ -253,11 +256,21 @@
 
                         </tr>
 
-                        <!-- Option 1: Bootstrap Bundle with Popper -->
-                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-                            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-                            crossorigin="anonymous">
-                        </script>
+                        <?php } ?>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

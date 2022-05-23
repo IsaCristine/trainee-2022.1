@@ -9,13 +9,13 @@ FIM DO EXEMPLO -----------------------------------------------------------------
 
 
 //Rotas Usuários
-
+    $router->get('usuariosAdm', 'UsuariosController@show');
 //Fim Usuários
 
 
 
 //Rotas Produtos
-
+   
 //Fim Produtos
 
 

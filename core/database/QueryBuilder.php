@@ -30,6 +30,60 @@ class QueryBuilder
         //     }
         // }
 
+        //QUERY DE USUARIOS
+    public function selectUsuarios()
+    {
+        try{
+            $query = $this->pdo->prepare("SELECT * FROM usuarios");
+            $query->execute();
+            $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
+
+            return $usuarios;
+        }
+        catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
+    public function insertUsuarios(string $name)
+    {
+
+        try {
+            $query = $this->pdo->prepare("INSERT INTO usuarios (Nome) VALUE (?)");
+            $query->bindValue(1, $name);
+            $query->execute();
+        }
+        catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function editUsuario(string $id, string $name)
+    {
+        try {
+            $query = $this->pdo->prepare("UPDATE usuarios SET Nome = ? WHERE id=?");
+            $query->bindValue(1, $name);
+            $query->bindValue(2, $id);
+            $query->execute();
+        }
+        catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function deleteUsuarios(string $id)
+    {
+        try {
+            $query = $this->pdo->prepare("DELETE FROM usuarios WHERE id = ?");
+            $query->bindValue(1, $id);
+            $query->execute();
+        }
+        catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    //FIM DO QUERY DE USUARIOS
+
     public function selectAll()
     {
         
@@ -58,5 +112,5 @@ class QueryBuilder
     public function read()
     {
       
-    }
+    } 
 }

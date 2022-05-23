@@ -116,28 +116,31 @@
                 </thead>
 
                 <tbody>
+                    
+                    <?php foreach($usuarios as $usuario): ?>
+
                     <tr>
-                        <td class="name">Jacob Thornton</td>
-                        <td class="email">jthornton31@contact.com</td>
+                        <td class="name"><?= $usuario['nome'] ?></td>
+                        <td class="email"><?= $usuario['email'] ?></td>
                         <td style="text-align: center">
 
                             <div class="table-buttons">
-                                <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#FirstViewModal">
+                                <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#<?= $usuario['nome'] ?>ViewModal">
                                     <i class="bi bi-eye"></i>
                                 </button>
 
-                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#FirstEditModal">
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?= $usuario['nome'] ?>EditModal">
                                     <i class="bi bi-pencil"></i>
                                 </button>
 
-                                <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#FirstDeleteModal">
+                                <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#<?= $usuario['nome'] ?>DeleteModal">
                                     <i class="bi bi-trash"></i>
                                 </button>
                             </div>
 
                             <!-- MODAL VIEW -->
-                            <div class="modal fade" id="FirstViewModal" tabindex="-1"
-                                aria-labelledby="FirstViewModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="<?= $usuario['nome'] ?>ViewModal" tabindex="-1"
+                                aria-labelledby="<?= $usuario['nome'] ?>ViewModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -154,15 +157,15 @@
 
                                                     <label for="user-name"
                                                         class="col-form-label d-flex justify-content-start">Nome:</label>
-                                                    <input type="text" class="form-control" id="user-name" value="Jacob Thornton"
+                                                    <input type="text" class="form-control" id="user-name" value="<?= $usuario['nome'] ?>"
                                                         readonly>
                                                     <label for="user-mail"
                                                         class="col-form-label d-flex justify-content-start">E-mail:</label>
-                                                    <input type="text" class="form-control" id="user-mail" value="jthornton31@contact.com"
+                                                    <input type="text" class="form-control" id="user-mail" value="<?= $usuario['email'] ?>"
                                                         readonly>
                                                     <label for="user-password"
                                                         class="col-form-label d-flex justify-content-start">Senha:</label>
-                                                    <input type="text" class="form-control" id="user-password" value="123456"
+                                                    <input type="text" class="form-control" id="user-password" value="<?= $usuario['senha'] ?>"
                                                         readonly>
 
                                                 </div>
@@ -181,8 +184,8 @@
 
                             <!--MODAL EDIT -->
 
-                            <div class="modal fade" id="FirstEditModal" tabindex="-1"
-                                aria-labelledby="FirstEditModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="<?= $usuario['nome'] ?>EditModal" tabindex="-1"
+                                aria-labelledby="<?= $usuario['nome'] ?>EditModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -233,8 +236,8 @@
 
                             <!--MODAL DELETE-->
 
-                            <div class="modal fade" id="FirstDeleteModal" tabindex="-1"
-                                aria-labelledby="FirstDeleteModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="<?= $usuario['nome'] ?>DeleteModal" tabindex="-1"
+                                aria-labelledby="<?= $usuario['nome'] ?>DeleteModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
 
@@ -275,74 +278,7 @@
 
                     </tr>
 
-                    <tr>
-                        <td class="name">Jacob Thornton</td>
-                        <td class="email">jthornton31@contact.com</td>
-                        <td style="text-align: center">
-
-                            <div class="table-buttons">
-                                <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#FirstViewModal">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-
-                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#FirstEditModal">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-
-                                <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#FirstDeleteModal">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-                        <td class="name">Jacob Thornton</td>
-                        <td class="email">jthornton31@contact.com</td>
-                        <td style="text-align: center">
-
-                            <div class="table-buttons">
-                                <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#FirstViewModal">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-
-                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#FirstEditModal">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-
-                                <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#FirstDeleteModal">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-                        <td class="name">Jacob Thornton</td>
-                        <td class="email">jthornton31@contact.com</td>
-                        <td style="text-align: center">
-
-                            <div class="table-buttons">
-                                <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#FirstViewModal">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-
-                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#FirstEditModal">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-
-                                <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#FirstDeleteModal">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-
-                        </td>
-
-                    </tr>
+                    <?php endforeach; ?>
 
                 </tbody>
 

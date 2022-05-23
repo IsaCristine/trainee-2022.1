@@ -10,6 +10,9 @@ FIM DO EXEMPLO -----------------------------------------------------------------
 
 //Rotas Usuários
     $router->get('usuariosAdm', 'UsuariosController@show');
+    $router->post('adicionarUsuario', 'UsuariosController@create');
+    $router->post('editarUsuario', 'UsuariosController@edit');
+    $router->post('excluirUsuario', 'UsuariosController@delete');
 //Fim Usuários
 
 

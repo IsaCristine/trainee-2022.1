@@ -45,12 +45,14 @@ class QueryBuilder
         }
     }
 
-    public function insertUsuarios(string $name)
+    public function insertUsuarios(array $dados)
     {
 
         try {
-            $query = $this->pdo->prepare("INSERT INTO usuarios (Nome) VALUE (?)");
-            $query->bindValue(1, $name);
+            $query = $this->pdo->prepare("INSERT INTO usuarios (nome, email, senha) VALUE (:nome, :email, :senha)");
+            $query->bindValue(':nome', $dados['nome']);
+            $query->bindValue(':email', $dados['email']);
+            $query->bindValue(':senha', $dados['senha']);
             $query->execute();
         }
         catch(Exception $e) {
@@ -58,12 +60,14 @@ class QueryBuilder
         }
     }
 
-    public function editUsuario(string $id, string $name)
+    public function editUsuario(array $dados)
     {
         try {
-            $query = $this->pdo->prepare("UPDATE usuarios SET Nome = ? WHERE id=?");
-            $query->bindValue(1, $name);
-            $query->bindValue(2, $id);
+            $query = $this->pdo->prepare("UPDATE usuarios SET nome = :nome, email = :email, senha = :senha WHERE id = :id");
+            $query->bindValue(':nome', $dados['nome']);
+            $query->bindValue(':email', $dados['email']);
+            $query->bindValue(':senha', $dados['senha']);
+            $query->bindValue(':id', $dados['id']);
             $query->execute();
         }
         catch(Exception $e) {
@@ -71,11 +75,11 @@ class QueryBuilder
         }
     }
 
-    public function deleteUsuarios(string $id)
+    public function deleteUsuario(string $id)
     {
         try {
-            $query = $this->pdo->prepare("DELETE FROM usuarios WHERE id = ?");
-            $query->bindValue(1, $id);
+            $query = $this->pdo->prepare("DELETE FROM usuarios WHERE id = :id");
+            $query->bindValue(':id', $id);
             $query->execute();
         }
         catch(Exception $e) {

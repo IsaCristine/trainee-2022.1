@@ -3,16 +3,49 @@
 namespace App\Controllers;
 
 use App\Core\App;
+use App\Core\Database\QueryBuilder;
 use Exception;
 
-class ExampleController
+class ProdutosController
 {
-    //Renderiza a página para listar todos os registros:
-    public function index()
+
+    public function showProdutos()
     {
-        
+        $produtos = App::get("database")->selectProdutos();
+        include __DIR__ . '/../views/admin/view_admin_produto.view.php';
     }
 
+    public function createProduto()
+    {
+        $productName = filter_input(INPUT_POST, "product_name", FILTER_SANITIZE_STRING);
+        
+        $create = App::get("database")->insertProduto($productName);
+
+        header("location:Admin-Produtos");
+    }
+
+    public function editProduto()
+    {
+        $productName = filter_input(INPUT_POST, "product-name", FILTER_SANITIZE_STRING);
+
+        $id = $_POST['id'];
+
+        $edit = App::get("database")->editProduto($id, $productName);
+
+        header("location:Admin-Produtos");
+    }
+
+    public function deleteProduto()
+    {
+
+        $id = $_POST['id'];
+
+        $delete = App::get("database")->deleteProduto($id);
+
+        header("location:Admin-Produtos");
+    }
+
+    
     //Renderiza a página para exibir um registro:
     public function show()
     {

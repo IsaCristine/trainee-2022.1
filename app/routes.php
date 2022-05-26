@@ -15,12 +15,16 @@ FIM DO EXEMPLO -----------------------------------------------------------------
 
 
 //Rotas Produtos
-
+$router->get('Admin-Produtos', 'ProdutosController@showProdutos');
+$router->post('salvarProduto', 'ProdutosController@createProduto');
+$router->post('editarProduto', 'ProdutosController@editProduto');
+$router->post('excluirProduto', 'ProdutosController@deleteProduto');
 //Fim Produtos
 
 
 
 //Rotas Categorias
+
 
 //Fim Categorias
 

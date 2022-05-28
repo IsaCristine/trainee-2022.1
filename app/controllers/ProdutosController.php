@@ -42,7 +42,7 @@ class ProdutosController
         ];
 
         
-        $create = App::get("database")->editProduto($product);
+        $edit = App::get("database")->editProduto($product);
         header("location:Admin-Produtos");
         
     }

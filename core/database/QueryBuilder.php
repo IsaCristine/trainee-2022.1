@@ -30,6 +30,60 @@ class QueryBuilder
         //     }
         // }
 
+    //QUERY DE PRODUTOS
+    public function selectProdutos()
+    {
+        try{
+            $query = $this->pdo->prepare("SELECT * FROM produto");
+            $query->execute();
+            $produtos = $query->fetchAll(PDO::FETCH_ASSOC);
+            
+            return $produtos;
+        }
+        catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
+    public function insertProduto(string $name)
+    {
+        
+        try {
+            $query = $this->pdo->prepare("INSERT INTO categorias (Nome) VALUE (?)");
+            $query->bindValue(1, $name);
+            $query->execute();
+        }
+        catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function editProduto(string $id, string $name)
+    {
+        try {
+            $query = $this->pdo->prepare("UPDATE categorias SET Nome = ? WHERE id=?");
+            $query->bindValue(1, $name);
+            $query->bindValue(2, $id);
+            $query->execute();
+        }
+        catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function deleteProduo(string $id)
+    {
+        try {
+            $query = $this->pdo->prepare("DELETE FROM categorias WHERE id = ?");
+            $query->bindValue(1, $id);
+            $query->execute();
+        }
+        catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    //FIM DO QUERY DE PRODUTOS
+
     public function selectAll()
     {
         

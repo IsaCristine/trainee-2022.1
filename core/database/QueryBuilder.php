@@ -30,14 +30,14 @@ class QueryBuilder
         //     }
         // }
 
-    //QUERY DE PRODUTOS
+        //QUERY DE PRODUTOS
     public function selectProdutos()
     {
         try{
             $query = $this->pdo->prepare("SELECT * FROM produto");
             $query->execute();
             $produtos = $query->fetchAll(PDO::FETCH_ASSOC);
-            
+
             return $produtos;
         }
         catch(Exception $e){
@@ -45,12 +45,15 @@ class QueryBuilder
         }
     }
 
-    public function insertProduto(string $name)
+    public function insertprodutos(array $product)
     {
-        
+
         try {
-            $query = $this->pdo->prepare("INSERT INTO categorias (Nome) VALUE (?)");
-            $query->bindValue(1, $name);
+            $query = $this->pdo->prepare("INSERT INTO produtos (nome, valor, descricao, categorias_id) VALUE (:nome, :valor, :descricao, :categorias_id)");
+            $query->bindValue(':nome', $product['nome']);
+            $query->bindValue(':valor', $product['valor']);
+            $query->bindValue(':descricao', $product['descricao']);
+            $query->bindValue(':categorias_id', $product['categorias_id']);
             $query->execute();
         }
         catch(Exception $e) {
@@ -58,12 +61,15 @@ class QueryBuilder
         }
     }
 
-    public function editProduto(string $id, string $name)
+    public function editProduto(array $product)
     {
         try {
-            $query = $this->pdo->prepare("UPDATE categorias SET Nome = ? WHERE id=?");
-            $query->bindValue(1, $name);
-            $query->bindValue(2, $id);
+            $query = $this->pdo->prepare("UPDATE produto SET nome = :nome, valor = :valor, descricao = :descricao, categorias_id = :categorias_id  WHERE id = :id");
+            $query->bindValue(':nome', $product['nome']);
+            $query->bindValue(':valor', $product['valor']);
+            $query->bindValue(':descricao', $product['descricao']);
+            $query->bindValue(':categorias_id', $product['categorias_id']);
+            $query->bindValue(':id', $product['id']);
             $query->execute();
         }
         catch(Exception $e) {
@@ -71,11 +77,11 @@ class QueryBuilder
         }
     }
 
-    public function deleteProduo(string $id)
+    public function deleteProduto(string $id)
     {
         try {
-            $query = $this->pdo->prepare("DELETE FROM categorias WHERE id = ?");
-            $query->bindValue(1, $id);
+            $query = $this->pdo->prepare("DELETE FROM produto WHERE id = :id");
+            $query->bindValue(':id', $id);
             $query->execute();
         }
         catch(Exception $e) {
@@ -112,5 +118,5 @@ class QueryBuilder
     public function read()
     {
       
-    }
+    } 
 }

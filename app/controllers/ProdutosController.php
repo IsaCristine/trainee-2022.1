@@ -17,22 +17,34 @@ class ProdutosController
 
     public function createProduto()
     {
-        $productName = filter_input(INPUT_POST, "product_name", FILTER_SANITIZE_STRING);
         
-        $create = App::get("database")->insertProduto($productName);
+        $product = [
+            "nome" => filter_input(INPUT_POST, "product_name", FILTER_SANITIZE_STRING),
+            "descricao" => filter_input(INPUT_POST, "product_description", FILTER_SANITIZE_STRING),
+            "valor" => filter_input(INPUT_POST, "product_value", FILTER_SANITIZE_STRING),
+            "categoria" => filter_input(INPUT_POST, "product_categoriaID", FILTER_SANITIZE_STRING)
+
+        ];
+        $create = App::get("database")->insertProduto($product);
 
         header("location:Admin-Produtos");
     }
 
     public function editProduto()
     {
-        $productName = filter_input(INPUT_POST, "product-name", FILTER_SANITIZE_STRING);
 
-        $id = $_POST['id'];
+        $product = [
+            "nome" => filter_input(INPUT_POST, "product_name", FILTER_SANITIZE_STRING),
+            "descricao" => filter_input(INPUT_POST, "product_description", FILTER_SANITIZE_STRING),
+            "valor" => filter_input(INPUT_POST, "product_value", FILTER_SANITIZE_STRING),
+            "categoria" => filter_input(INPUT_POST, "product_categoriaID", FILTER_SANITIZE_STRING),
+            "id" => $_POST['id']
+        ];
 
-        $edit = App::get("database")->editProduto($id, $productName);
-
+        
+        $create = App::get("database")->editProduto($product);
         header("location:Admin-Produtos");
+        
     }
 
     public function deleteProduto()

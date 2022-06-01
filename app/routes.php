@@ -8,6 +8,7 @@ FIM DO EXEMPLO -----------------------------------------------------------------
 
 
 
+
 //Rotas Usuários
 
 //Fim Usuários
@@ -31,11 +32,15 @@ $router->post('excluirCategoria', 'CategoriasController@deleteCategoria');
 
 //Rotas Home
 
+$router->get('Home','HomeController@getPage');
+
 //Fim Home
 
 
 
 //Rotas Quem Somos
+
+$router->get('Quem-somos','QuemSomosController@getPage');
 
 //Fim Quem Somos
 
@@ -43,11 +48,15 @@ $router->post('excluirCategoria', 'CategoriasController@deleteCategoria');
 
 //Rotas Contato
 
+$router->get('Contato','ContatoController@getPage');
+
 //Fim Contato
 
 
 
 //Rotas Produto
+
+$router->get('Produto','ProdutoController@getPage');
 
 //Fim Produto
 
@@ -55,6 +64,20 @@ $router->post('excluirCategoria', 'CategoriasController@deleteCategoria');
 
 //Rotas Login
 
+$router->get('Login','LoginController@getPage');
+
 //Fim Login
+
+//Rotas Dashboard Adm
+
+$router->get('Admin','AdmDashboardController@getPage');
+
+//Fim Dashboard Adm
+
+//Rotas Produtos
+
+$router->get('Produtos','ProdutosController@getPage');
+
+//Fim Produtos
 
 ?>

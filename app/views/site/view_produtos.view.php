@@ -184,7 +184,7 @@
           <nav aria-label="..." class="pag">
             <ul class="pagination">
               <li class="page-item">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                <a class="page-link" href="Produtos" tabindex="-1" aria-disabled="true">Previous</a>
               </li>
 
               <li class="page-item active"><a class="page-link" href="#">1</a></li>

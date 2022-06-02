@@ -53,3 +53,11 @@
 .category-name{
     color:#0d6efd;
 }
+
+/******************PAGINAÇÃO******************/
+.pag{
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+
+}

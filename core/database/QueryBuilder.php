@@ -61,9 +61,9 @@ class QueryBuilder
     }
 
     //**********QUERIES DE PAGINACAO**********//
-    public function list_page_products($first_item, $quantity){
+    public function list_page_products($table_name, $first_item, $quantity){
         try{
-            $query = $this->pdo->prepare("SELECT * FROM produto ORDER BY id DESC 
+            $query = $this->pdo->prepare("SELECT * FROM $table_name ORDER BY id DESC 
                                             LIMIT $first_item, $quantity");
             $query->execute();
 
@@ -77,9 +77,9 @@ class QueryBuilder
     }
 
     //pega a quantidade de paginas que vai ter
-    public function quantity_pages($results_per_page){
+    public function quantity_pages($results_per_page, $table_name){
         try{
-            $query = $this->pdo->prepare("SELECT COUNT(id) AS product_quantity FROM produto");
+            $query = $this->pdo->prepare("SELECT COUNT(id) AS product_quantity FROM $table_name");
             $query->execute();
 
             $products_quantity = $query->fetch(PDO::FETCH_ASSOC);

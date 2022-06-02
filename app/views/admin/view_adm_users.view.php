@@ -106,45 +106,51 @@
             <table class="table table-striped table-bordered table-hover">
 
                 <thead>
-                    <tr>
+                <tr>
 
-                        <th style="width: 40%" scope="col" class="col-name">Nome</th>
-                        <th style="width: 40%" scope="col" class="col-email">E-mail</th>
-                        <th style="width: 20%" scope="col" class="col-actions">Ações</th>
+                    <th style="width: 40%" scope="col" class="col-name">Nome</th>
+                    <th style="width: 40%" scope="col" class="col-email">E-mail</th>
+                    <th style="width: 20%" scope="col" class="col-actions">Ações</th>
 
-                    </tr>
+                </tr>
                 </thead>
 
                 <tbody>
+
+                <?php foreach($list_users as $user): ?>
+
                     <tr>
-                        <td class="name">Jacob Thornton</td>
-                        <td class="email">jthornton31@contact.com</td>
+                        <td class="name"><?= $user['nome'] ?></td>
+                        <td class="email"><?= $user['email'] ?></td>
                         <td style="text-align: center">
 
                             <div class="table-buttons">
-                                <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#FirstViewModal">
+                                <button class="btn btn-secondary view" data-bs-toggle="modal"
+                                        data-bs-target="#<?= $user['nome'] ?>ViewModal">
                                     <i class="bi bi-eye"></i>
                                 </button>
 
-                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#FirstEditModal">
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#<?= $user['nome'] ?>EditModal">
                                     <i class="bi bi-pencil"></i>
                                 </button>
 
-                                <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#FirstDeleteModal">
+                                <button class="btn btn-danger delete" data-bs-toggle="modal"
+                                        data-bs-target="#<?= $user['nome'] ?>DeleteModal">
                                     <i class="bi bi-trash"></i>
                                 </button>
                             </div>
 
                             <!-- MODAL VIEW -->
-                            <div class="modal fade" id="FirstViewModal" tabindex="-1"
-                                aria-labelledby="FirstViewModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="<?= $user['nome'] ?>ViewModal" tabindex="-1"
+                                 aria-labelledby="<?= $user['nome'] ?>ViewModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
 
                                             <h5 class="modal-title" id="exampleModalLabel">Informações do Usuário</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
+                                                    aria-label="Close"></button>
 
                                         </div>
 
@@ -152,18 +158,18 @@
                                             <form>
                                                 <div class="mb-3">
 
-                                                    <label for="user-name"
-                                                        class="col-form-label d-flex justify-content-start">Nome:</label>
-                                                    <input type="text" class="form-control" id="user-name" value="Jacob Thornton"
-                                                        readonly>
-                                                    <label for="user-mail"
-                                                        class="col-form-label d-flex justify-content-start">E-mail:</label>
-                                                    <input type="text" class="form-control" id="user-mail" value="jthornton31@contact.com"
-                                                        readonly>
-                                                    <label for="user-password"
-                                                        class="col-form-label d-flex justify-content-start">Senha:</label>
-                                                    <input type="text" class="form-control" id="user-password" value="123456"
-                                                        readonly>
+                                                    <label for="user_name"
+                                                           class="col-form-label d-flex justify-content-start">Nome:</label>
+                                                    <input type="text" class="form-control" id="user_name"
+                                                           value="<?= $user['nome'] ?>" readonly>
+                                                    <label for="user_email"
+                                                           class="col-form-label d-flex justify-content-start">E-mail:</label>
+                                                    <input type="text" class="form-control" id="user_mail"
+                                                           value="<?= $user['email'] ?>" readonly>
+                                                    <label for="user_password"
+                                                           class="col-form-label d-flex justify-content-start">Senha:</label>
+                                                    <input type="text" class="form-control" id="user_password"
+                                                           value="<?= $user['senha'] ?>" readonly>
 
                                                 </div>
 
@@ -172,7 +178,7 @@
 
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">Fechar</button>
+                                                    data-bs-dismiss="modal">Fechar</button>
                                         </div>
 
                                     </div>
@@ -181,84 +187,85 @@
 
                             <!--MODAL EDIT -->
 
-                            <div class="modal fade" id="FirstEditModal" tabindex="-1"
-                                aria-labelledby="FirstEditModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="<?= $user['nome'] ?>EditModal" tabindex="-1"
+                                 aria-labelledby="<?= $user['nome'] ?>EditModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
 
                                             <h5 class="modal-title" id="exampleModalLabel">Editar Usuário</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
+                                                    aria-label="Close"></button>
 
                                         </div>
 
                                         <div class="modal-body">
 
-                                            <form method="POST" action="">
+                                            <form method="POST" action="editarUsuario">
 
                                                 <div class="mb-3">
-                                                    <label for="user-name"
-                                                        class="col-form-label d-flex justify-content-start">Nome:</label>
-                                                    <input type="hidden" name="id" value="">
-                                                    <input type="text" class="form-control" id="user-name"
-                                                        name="user-name" value="Jacob Thornton">
+                                                    <label for="user_name"
+                                                           class="col-form-label d-flex justify-content-start">Nome:</label>
+                                                    <input type="hidden" name="id" value="<?= $user['id'] ?>">
+                                                    <input type="text" class="form-control" id="user_name"
+                                                           name="user_name" value="<?= $user['nome'] ?>">
 
-                                                    <label for="user-mail"
-                                                        class="col-form-label d-flex justify-content-start">E-mail:</label>
-                                                    <input type="hidden" name="id" value="">
-                                                    <input type="text" class="form-control" id="user-mail"
-                                                        name="user-mail" value="jthornton31@contact.com">
+                                                    <label for="user_email"
+                                                           class="col-form-label d-flex justify-content-start">E-mail:</label>
+                                                    <input type="hidden" name="id" value="<?= $user['id'] ?>">
+                                                    <input type="text" class="form-control" id="user_email"
+                                                           name="user_email" value="<?= $user['email'] ?>">
 
-                                                    <label for="user-password"
-                                                        class="col-form-label d-flex justify-content-start">Senha:</label>
-                                                    <input type="hidden" name="id" value="">
-                                                    <input type="text" class="form-control" id="user-password"
-                                                        name="user-password" value="123456">
+                                                    <label for="user_password"
+                                                           class="col-form-label d-flex justify-content-start">Senha:</label>
+                                                    <input type="hidden" name="id" value="<?= $user['id'] ?>">
+                                                    <input type="text" class="form-control" id="user_password"
+                                                           name="user_password" value="<?= $user['senha'] ?>">
                                                 </div>
 
-                                            </form>
+
 
                                         </div>
 
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-danger"
-                                                data-bs-dismiss="modal">Cancelar</button>
-                                            <button type="button" class="btn btn-primary">Editar</button>
+                                                    data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="submit" class="btn btn-primary">Editar</button>
                                         </div>
 
                                     </div>
                                 </div>
                             </div>
-
+                            </form>
                             <!--MODAL DELETE-->
 
-                            <div class="modal fade" id="FirstDeleteModal" tabindex="-1"
-                                aria-labelledby="FirstDeleteModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="<?= $user['nome'] ?>DeleteModal" tabindex="-1"
+                                 aria-labelledby="<?= $user['nome'] ?>DeleteModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
 
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="exampleModalLabel">Excluir Usuário</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close">
-                                                </button>
+                                            </button>
                                         </div>
 
                                         <div class="modal-body">
-                                            <form>
+                                            <form method="POST" action="excluirUsuario">
 
                                                 <div class="mb-3 mt-3">
                                                     <p class="justify-content-start">Tem certeza que deseja excluir o
-                                                        usuário <span class="user-name">Jacob</span> ?</p>
-                                                    <input type="hidden" name="id" value="">
+                                                        usuário <span class="user_name"><?= $user['nome'] ?></span> ?
+                                                    </p>
+                                                    <input type="hidden" name="id" value="<?= $user['id'] ?>">
                                                 </div>
 
                                         </div>
 
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">Cancelar</button>
+                                                    data-bs-dismiss="modal">Cancelar</button>
                                             <button type="submit" class="btn btn-danger" name="delete">Excluir</button>
                                         </div>
 
@@ -275,80 +282,56 @@
 
                     </tr>
 
-                    <tr>
-                        <td class="name">Jacob Thornton</td>
-                        <td class="email">jthornton31@contact.com</td>
-                        <td style="text-align: center">
-
-                            <div class="table-buttons">
-                                <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#FirstViewModal">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-
-                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#FirstEditModal">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-
-                                <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#FirstDeleteModal">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-                        <td class="name">Jacob Thornton</td>
-                        <td class="email">jthornton31@contact.com</td>
-                        <td style="text-align: center">
-
-                            <div class="table-buttons">
-                                <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#FirstViewModal">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-
-                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#FirstEditModal">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-
-                                <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#FirstDeleteModal">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-                        <td class="name">Jacob Thornton</td>
-                        <td class="email">jthornton31@contact.com</td>
-                        <td style="text-align: center">
-
-                            <div class="table-buttons">
-                                <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#FirstViewModal">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-
-                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#FirstEditModal">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-
-                                <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#FirstDeleteModal">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-
-                        </td>
-
-                    </tr>
+                <?php endforeach; ?>
 
                 </tbody>
 
             </table>
 
         </div>
+
+        <!-- PAGINACAO: -->
+        <nav aria-label="..." class="pag">
+            <ul class="pagination">
+
+                <?php if($current_page > 1){ ?>
+                    <li class="page-item">
+                        <a class="page-link" href="usuariosAdm?page=<?= $current_page - 1 ?>" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                <?php } ?>
+
+                <?php for($previous_page = $current_page - $quantity_links; $previous_page < $current_page; $previous_page++){
+                    if($previous_page > 0) {
+                        ?>
+                        <li class="page-item " aria-current="page">
+                            <a class="page-link" href="usuariosAdm?page=<?=$previous_page?>"><?=$previous_page?></a>
+                        </li>
+
+                    <?php       }
+                }
+                ?>
+
+                <li class="page-item active"><a class="page-link"><?=$current_page?></a></li>
+
+                <?php for($next_page = $current_page + 1; $next_page <= $current_page + $quantity_links; $next_page++){
+                    if($next_page <= $page_quantity){
+                        ?>
+                        <li class="page-item " aria-current="page">
+                            <a class="page-link" href="usuariosAdm?page=<?=$next_page?>"><?=$next_page?></a>
+                        </li>
+
+                    <?php        }
+                }
+                ?>
+
+                <?php if($current_page < $page_quantity){ ?>
+                    <li class="page-item">
+                        <a class="page-link" href="usuariosAdm?page=<?= $current_page + 1?>">Next</a>
+                    </li>
+                <?php } ?>
+
+            </ul>
+        </nav>
 
     </div>
 

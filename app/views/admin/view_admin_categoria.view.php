@@ -82,520 +82,222 @@
             </div>
         </div>
 
-        
-
-
-
-
         <div class="table-responsive">
 
             <div class="table-wrapper">
 
-                    <table class="table table-striped table-bordered table-hover">
+                <table class="table table-striped table-bordered table-hover">
 
-                        <thead>
-                            <tr>
-                
-                                <th style="width: 40%" scope="col">Nome</th>
-                                <th style="width: 15%" scope="col">Ações</th>
-                
-                            </tr>
-                        </thead>
-                
-                        <tbody>
 
-                            <tr>
-                                <td>Brinquedo</td>
+                    <thead>
+                    <tr>
 
-                                <td style="text-align: center">
-                                    
-                                    <div class="table-buttons">
-                                        <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#BrinquedoViewModal">
-                                            <i class="bi bi-eye"></i>
-                                        </button>
+                        <th style="width: 40%" scope="col">Nome</th>
+                        <th style="width: 15%" scope="col">Ações</th>
 
-                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BrinquedoEditModal">
-                                            <i class="bi bi-pencil"></i>
-                                        </button>
+                    </tr>
+                    </thead>
 
-                                        <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#BrinquedoDeleteModal">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
-                                    </div>
+                    <tbody>
 
-                                    <!-- MODAL VIEW -->
-                                    <div class="modal fade" id="BrinquedoViewModal" tabindex="-1" aria-labelledby="BrinquedoViewModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                          <div class="modal-content">
+                    <?php
+                    foreach ($list_categories as $category){
+                        ?>
+
+                        <tr>
+
+                            <td><?= $category['nome'] ?></td>
+
+                            <td style="text-align: center">
+
+                                <div class="table-buttons">
+                                    <button class="btn btn-secondary view" data-bs-toggle="modal"
+                                            data-bs-target="#<?= $category['nome'] ?>ViewModal">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+
+                                    <button class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#<?= $category['nome'] ?>EditModal">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+
+                                    <button class="btn btn-danger delete" data-bs-toggle="modal"
+                                            data-bs-target="#<?= $category['nome'] ?>DeleteModal">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </div>
+
+                                <!-- MODAL VIEW -->
+                                <div class="modal fade" id="<?= $category['nome'] ?>ViewModal" tabindex="-1"
+                                     aria-labelledby="<?= $category['nome'] ?>ViewModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
                                             <div class="modal-header">
 
-                                              <h5 class="modal-title" id="exampleModalLabel">Informações da Categoria</h5>
-                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                <h5 class="modal-title" id="exampleModalLabel">Informações da Categoria
+                                                </h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
 
                                             </div>
 
                                             <div class="modal-body">
-                                              <form>
-                                                <div class="mb-3">
+                                                <form>
+                                                    <div class="mb-3">
 
-                                                  <label for="category-name" class="col-form-label d-flex justify-content-start">Nome:</label>
-                                                  <input type="text" class="form-control" id="category-name" value="brinquedo" readonly>
+                                                        <label for="category-name"
+                                                               class="col-form-label d-flex justify-content-start">Nome:</label>
+                                                        <input type="text" class="form-control" id="category-name"
+                                                               value="<?= $category['nome'] ?>" readonly>
 
-                                                </div>
+                                                    </div>
 
-                                              </form>
+                                                </form>
                                             </div>
 
                                             <div class="modal-footer">
-                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                                <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Fechar</button>
                                             </div>
 
-                                          </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <!--MODAL EDIT -->
+                                <!--MODAL EDIT -->
 
-                                    <div class="modal fade" id="BrinquedoEditModal" tabindex="-1" aria-labelledby="BrinquedoEditModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                          <div class="modal-content">
+                                <div class="modal fade" id="<?= $category['nome'] ?>EditModal" tabindex="-1"
+                                     aria-labelledby="<?= $category['nome'] ?>EditModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
                                             <div class="modal-header">
 
-                                              <h5 class="modal-title" id="exampleModalLabel">Editar Categoria</h5>
-                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                <h5 class="modal-title" id="exampleModalLabel">Editar Categoria</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
 
                                             </div>
 
-                                            <div class="modal-body">
+                                            <form method="POST" action="editarCategoria">
 
-                                              <form method="POST" action="">
+                                                <div class="modal-body">
 
-                                                <div class="mb-3">
-                                                  <label for="category-name" class="col-form-label d-flex justify-content-start">Nome:</label>
-                                                  <input type="hidden" name="id" value="">
-                                                  <input type="text" class="form-control" id="category-name" name="category-name" value="Brinquedo">
+                                                    <div class="mb-3">
+                                                        <label for="category-name"
+                                                               class="col-form-label d-flex justify-content-start">Nome:</label>
+                                                        <input type="hidden" name="id" value="<?= $category['nome'] ?>">
+                                                        <input type="text" class="form-control" id="category-name"
+                                                               name="category-name" value="<?= $category['nome'] ?>">
+                                                    </div>
+
+
+
                                                 </div>
 
-                                              </form>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger"
+                                                            data-bs-dismiss="modal">Cancelar</button>
+                                                    <button type="submit" class="btn btn-primary">Editar</button>
+                                                </div>
 
-                                            </div>
-
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                                              <button type="button" class="btn btn-primary">Editar</button>
-                                            </div>
-
-                                          </div>
+                                            </form>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <!--MODAL DELETE-->
+                                <!--MODAL DELETE-->
 
-                                    <div class="modal fade" id="BrinquedoDeleteModal" tabindex="-1" aria-labelledby="BrinquedoDeleteModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                          <div class="modal-content">
+                                <div class="modal fade" id="<?= $category['nome'] ?>DeleteModal" tabindex="-1"
+                                     aria-labelledby="<?= $category['nome'] ?>DeleteModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
 
                                             <div class="modal-header">
-                                              <h5 class="modal-title" id="exampleModalLabel">Excluir Categoria</h5>
-                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                <h5 class="modal-title" id="exampleModalLabel">Excluir Categoria</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
                                             </div>
 
-                                            <div class="modal-body">
-                                              <form>
+                                            <form method="POST" action="excluirCategoria">
+                                                <div class="modal-body">
 
-                                                <div class="mb-3 mt-3">
-                                                  <p class="justify-content-start">Tem certeza que deseja excluir a categoria <span class="category-name">brinquedo</span> ?</p>
-                                                  <input type="hidden" name="id" value="">
-                                                </div>
 
-                                            </div>
-
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                              <button type="submit" class="btn btn-danger" name="delete">Excluir</button>
-                                            </div>
-
-                                               </form>
-
-                                          </div>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                
-                            <tr>
-                                <td>Roupas</td>
-
-                                <td style="text-align: center">
-
-                                    <div class="table-buttons">
-                                        <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#RoupasViewModal">
-                                            <i class="bi bi-eye"></i>
-                                        </button>
-
-                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#RoupasEditModal">
-                                            <i class="bi bi-pencil"></i>
-                                        </button>
-
-                                        <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#RoupasDeleteModal">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
-                                    </div>
-
-                                    <!-- MODAL VIEW -->
-                                    <div class="modal fade" id="RoupasViewModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                          <div class="modal-content">
-                                            <div class="modal-header">
-
-                                              <h5 class="modal-title" id="exampleModalLabel">Informações da Categoria</h5>
-                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-                                            </div>
-
-                                            <div class="modal-body">
-                                              <form>
-                                                <div class="mb-3">
-
-                                                  <label for="category-name" class="col-form-label d-flex justify-content-start">Nome:</label>
-                                                  <input type="text" class="form-control" id="category-name" value="Roupas" readonly>
+                                                    <div class="mb-3 mt-3">
+                                                        <p class="justify-content-start">Tem certeza que deseja excluir
+                                                            a categoria <span
+                                                                    class="category-name"><?= $category['nome']?></span> ?
+                                                        </p>
+                                                        <input type="hidden" name="id" value="<?= $category['nome'] ?>">
+                                                    </div>
 
                                                 </div>
 
-                                              </form>
-                                            </div>
-
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                            </div>
-
-                                          </div>
-                                        </div>
-                                    </div>
-
-                                    <!--MODAL EDIT -->
-
-                                    <div class="modal fade" id="RoupasEditModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                          <div class="modal-content">
-                                            <div class="modal-header">
-
-                                              <h5 class="modal-title" id="exampleModalLabel">Editar Categoria</h5>
-                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-                                            </div>
-
-                                            <div class="modal-body">
-
-                                              <form method="POST" action="">
-
-                                                <div class="mb-3">
-                                                  <label for="category-name" class="col-form-label d-flex justify-content-start">Nome:</label>
-                                                  <input type="hidden" name="id" value="">
-                                                  <input type="text" class="form-control" id="category-name" name="category-name" value="Roupas">
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Cancelar</button>
+                                                    <button type="submit" class="btn btn-danger"
+                                                            name="delete">Excluir</button>
                                                 </div>
 
-                                              </form>
+                                            </form>
 
-                                            </div>
-
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                                              <button type="button" class="btn btn-primary">Editar</button>
-                                            </div>
-
-                                          </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <!--MODAL DELETE-->
+                            </td>
 
-                                    <div class="modal fade" id="RoupasDeleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                          <div class="modal-content">
+                        </tr>
 
-                                            <div class="modal-header">
-                                              <h5 class="modal-title" id="exampleModalLabel">Excluir Categoria</h5>
-                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
+                    <?php } ?>
 
-                                            <div class="modal-body">
-                                              <form>
-
-                                                <div class="mb-3 mt-3">
-                                                  <p class="justify-content-start">Tem certeza que deseja excluir a categoria <span class="category-name">Roupas</span> ?</p>
-                                                  <input type="hidden" name="id" value="">
-                                                </div>
-
-                                            </div>
-
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                              <button type="submit" class="btn btn-danger" name="delete">Excluir</button>
-                                            </div>
-
-                                               </form>
-
-                                          </div>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                
-                            <tr>
-                                
-                                <td>Decoração</td>
-
-                                <td style="text-align: center">
-
-                                    <div class="table-buttons">
-                                        <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#DecoracaoViewModal">
-                                            <i class="bi bi-eye"></i>
-                                        </button>
-
-                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DecoracaoEditModal">
-                                            <i class="bi bi-pencil"></i>
-                                        </button>
-
-                                        <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#DecoracaoDeleteModal">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
-                                    </div>
-
-                                    <!-- MODAL VIEW -->
-                                    <div class="modal fade" id="DecoracaoViewModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                          <div class="modal-content">
-                                            <div class="modal-header">
-
-                                              <h5 class="modal-title" id="exampleModalLabel">Informações da Categoria</h5>
-                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-                                            </div>
-
-                                            <div class="modal-body">
-                                              <form>
-                                                <div class="mb-3">
-
-                                                  <label for="category-name" class="col-form-label d-flex justify-content-start">Nome:</label>
-                                                  <input type="text" class="form-control" id="category-name" value="Decoração" readonly>
-
-                                                </div>
-
-                                              </form>
-                                            </div>
-
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                            </div>
-
-                                          </div>
-                                        </div>
-                                    </div>
-
-                                    <!--MODAL EDIT -->
-
-                                    <div class="modal fade" id="DecoracaoEditModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                          <div class="modal-content">
-                                            <div class="modal-header">
-
-                                              <h5 class="modal-title" id="exampleModalLabel">Editar Categoria</h5>
-                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-                                            </div>
-
-                                            <div class="modal-body">
-
-                                              <form method="POST" action="">
-
-                                                <div class="mb-3">
-                                                  <label for="category-name" class="col-form-label d-flex justify-content-start">Nome:</label>
-                                                  <input type="hidden" name="id" value="">
-                                                  <input type="text" class="form-control" id="category-name" name="category-name" value="Decoração">
-                                                </div>
-
-                                              </form>
-
-                                            </div>
-
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                                              <button type="button" class="btn btn-primary">Editar</button>
-                                            </div>
-
-                                          </div>
-                                        </div>
-                                    </div>
-
-                                    <!--MODAL DELETE-->
-
-                                    <div class="modal fade" id="DecoracaoDeleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                          <div class="modal-content">
-
-                                            <div class="modal-header">
-                                              <h5 class="modal-title" id="exampleModalLabel">Excluir Categoria</h5>
-                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-
-                                            <div class="modal-body">
-                                              <form>
-
-                                                <div class="mb-3 mt-3">
-                                                  <p class="justify-content-start">Tem certeza que deseja excluir a categoria <span class="category-name">Decoração</span> ?</p>
-                                                  <input type="hidden" name="id" value="">
-                                                </div>
-
-                                            </div>
-
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                              <button type="submit" class="btn btn-danger" name="delete">Excluir</button>
-                                            </div>
-
-                                               </form>
-
-                                          </div>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                
-                            <tr>
-                                <td>Caneca</td>
-
-                                <td style="text-align: center">
-                                    
-                                    <div class="table-buttons">
-                                        <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#CanecaViewModal">
-                                            <i class="bi bi-eye"></i>
-                                        </button>
-
-                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CanecaEditModal">
-                                            <i class="bi bi-pencil"></i>
-                                        </button>
-
-                                        <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#CanecaDeleteModal">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
-                                    </div>
-
-                                    <!-- MODAL VIEW -->
-                                    <div class="modal fade" id="CanecaViewModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                          <div class="modal-content">
-                                            <div class="modal-header">
-
-                                              <h5 class="modal-title" id="exampleModalLabel">Informações da Categoria</h5>
-                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-                                            </div>
-
-                                            <div class="modal-body">
-                                              <form>
-                                                <div class="mb-3">
-
-                                                  <label for="category-name" class="col-form-label d-flex justify-content-start">Nome:</label>
-                                                  <input type="text" class="form-control" id="category-name" value="Caneca" readonly>
-
-                                                </div>
-
-                                              </form>
-                                            </div>
-
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                            </div>
-
-                                          </div>
-                                        </div>
-                                    </div>
-
-                                    <!--MODAL EDIT -->
-
-                                    <div class="modal fade" id="CanecaEditModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                          <div class="modal-content">
-                                            <div class="modal-header">
-
-                                              <h5 class="modal-title" id="exampleModalLabel">Editar Categoria</h5>
-                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-                                            </div>
-
-                                            <div class="modal-body">
-
-                                              <form method="POST" action="">
-
-                                                <div class="mb-3">
-                                                  <label for="category-name" class="col-form-label d-flex justify-content-start">Nome:</label>
-                                                  <input type="hidden" name="id" value="">
-                                                  <input type="text" class="form-control" id="category-name" name="category-name" value="Caneca">
-                                                </div>
-
-                                              </form>
-
-                                            </div>
-
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                                              <button type="button" class="btn btn-primary">Editar</button>
-                                            </div>
-
-                                          </div>
-                                        </div>
-                                    </div>
-
-                                    <!--MODAL DELETE-->
-
-                                    <div class="modal fade" id="CanecaDeleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                          <div class="modal-content">
-
-                                            <div class="modal-header">
-                                              <h5 class="modal-title" id="exampleModalLabel">Excluir Categoria</h5>
-                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-
-                                            <div class="modal-body">
-                                              <form>
-
-                                                <div class="mb-3 mt-3">
-                                                  <p class="justify-content-start">Tem certeza que deseja excluir a categoria <span class="category-name">Caneca</span> ?</p>
-                                                  <input type="hidden" name="id" value="">
-                                                </div>
-
-                                            </div>
-
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                              <button type="submit" class="btn btn-danger" name="delete">Excluir</button>
-                                            </div>
-
-                                               </form>
-
-                                          </div>
-                                        </div>
-                                    </div>
-
-                                </td>
-                            </tr>
-                
-                        </tbody>
-                
-                    </table>
+                    </tbody>
+                </table>
 
             </div>
-
         </div>
+            <!-- PAGINACAO: -->
+            <nav aria-label="..." class="pag">
+                <ul class="pagination">
 
+                    <?php if($current_page > 1){ ?>
+                        <li class="page-item">
+                            <a class="page-link" href="Admin-Categorias?page=<?= $current_page - 1 ?>" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                    <?php } ?>
+
+                    <?php for($previous_page = $current_page - $quantity_links; $previous_page < $current_page; $previous_page++){
+                        if($previous_page > 0) {
+                            ?>
+                            <li class="page-item " aria-current="page">
+                                <a class="page-link" href="Admin-Categorias?page=<?=$previous_page?>"><?=$previous_page?></a>
+                            </li>
+
+                        <?php       }
+                    }
+                    ?>
+
+                    <li class="page-item active"><a class="page-link"><?=$current_page?></a></li>
+
+                    <?php for($next_page = $current_page + 1; $next_page <= $current_page + $quantity_links; $next_page++){
+                        if($next_page <= $page_quantity){
+                            ?>
+                            <li class="page-item " aria-current="page">
+                                <a class="page-link" href="Admin-Categorias?page=<?=$next_page?>"><?=$next_page?></a>
+                            </li>
+
+                        <?php        }
+                    }
+                    ?>
+
+                    <?php if($current_page < $page_quantity){ ?>
+                        <li class="page-item">
+                            <a class="page-link" href="Admin-Categorias?page=<?= $current_page + 1?>">Next</a>
+                        </li>
+                    <?php } ?>
+
+                </ul>
+            </nav>
     </div>
 
 

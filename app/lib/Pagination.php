@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Libs;
 
 use App\Core\App;
 

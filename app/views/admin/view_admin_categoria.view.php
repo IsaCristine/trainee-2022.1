@@ -102,7 +102,7 @@
 
                     <?php
                     foreach ($list_categories as $category){
-                        ?>
+                    ?>
 
                         <tr>
 

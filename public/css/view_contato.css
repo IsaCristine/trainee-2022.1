@@ -4,7 +4,6 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
-
 }
 
 .linhas hr {
@@ -74,9 +73,12 @@ section {
     text-align: center;
 }
 
+.pagina-contato {
+    padding-top: 75px;
+    background-color: #DFDDDD;
+}
 
-
-.container-fluid {
+.pagina-contato container-fluid {
     width: 100vw;
     height: 100vh;
     background-color: lightgray;

@@ -29,11 +29,11 @@
                 <div class="navbar-collapse collapse justify-content-end" id="navbarToggleExternalContent">
 
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a href="#" class="nav-item nav-link">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-item nav-link">Produtos</a></li>
-                        <li class="nav-item"><a href="#" class="nav-item nav-link">Quem somos</a></li>
-                        <li class="nav-item"><a href="#" class="nav-item nav-link">Contato</a></li>
-                        <li class="nav-item"><a href="#" class="nav-item nav-link">Login</a></li>
+                        <li class="nav-item"><a href="Home" class="nav-item nav-link">Home</a></li>
+                        <li class="nav-item"><a href="Produtos" class="nav-item nav-link">Produtos</a></li>
+                        <li class="nav-item"><a href="Quem-somos" class="nav-item nav-link">Quem somos</a></li>
+                        <li class="nav-item"><a href="Contato" class="nav-item nav-link">Contato</a></li>
+                        <li class="nav-item"><a href="Login" class="nav-item nav-link">Login</a></li>
                     </ul>
 
                 </div>

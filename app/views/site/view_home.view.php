@@ -287,8 +287,8 @@
                 </div>
 
                 <div class="col-lg-3 col-sm-7 d-flex flex-column justify-content-center">
-                    <a href="" class="btn btn-warning mb-3 contact-button">Entre em contato</a>
-                    <a href="" class="btn btn-light">Quem somos</a>
+                    <a href="Contato" class="btn btn-warning mb-3 contact-button">Entre em contato</a>
+                    <a href="Quem-somos" class="btn btn-light">Quem somos</a>
                 </div>
 
             </div>

@@ -71,7 +71,7 @@
                         <form method="POST" action="/salvarCategoria">
 
                             <div class="mb-3">
-                                <label for="category-name" class="col-form-label">Nome:</label>
+                                <label for="category-name" class="col-form-label">nome:</label>
                                 <input type="text" class="form-control" id="category-name" name="category_name">
                             </div>
 
@@ -99,7 +99,7 @@
                     <thead>
                         <tr>
 
-                            <th style="width: 40%" scope="col">Nome</th>
+                            <th style="width: 40%" scope="col">nome</th>
                             <th style="width: 15%" scope="col">Ações</th>
 
                         </tr>
@@ -113,30 +113,30 @@
 
                         <tr>
 
-                            <td><?= $categoria['Nome'] ?></td>
+                            <td><?= $categoria['nome'] ?></td>
 
                             <td style="text-align: center">
 
                                 <div class="table-buttons">
                                     <button class="btn btn-secondary view" data-bs-toggle="modal"
-                                        data-bs-target="#<?= $categoria["Nome"] ?>ViewModal">
+                                        data-bs-target="#<?= $categoria["nome"] ?>ViewModal">
                                         <i class="bi bi-eye"></i>
                                     </button>
 
                                     <button class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#<?= $categoria["Nome"] ?>EditModal">
+                                        data-bs-target="#<?= $categoria["nome"] ?>EditModal">
                                         <i class="bi bi-pencil"></i>
                                     </button>
 
                                     <button class="btn btn-danger delete" data-bs-toggle="modal"
-                                        data-bs-target="#<?= $categoria["Nome"] ?>DeleteModal">
+                                        data-bs-target="#<?= $categoria["nome"] ?>DeleteModal">
                                         <i class="bi bi-trash"></i>
                                     </button>
                                 </div>
 
                                 <!-- MODAL VIEW -->
-                                <div class="modal fade" id="<?= $categoria["Nome"] ?>ViewModal" tabindex="-1"
-                                    aria-labelledby="<?= $categoria["Nome"] ?>ViewModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="<?= $categoria["nome"] ?>ViewModal" tabindex="-1"
+                                    aria-labelledby="<?= $categoria["nome"] ?>ViewModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -153,9 +153,9 @@
                                                     <div class="mb-3">
 
                                                         <label for="category-name"
-                                                            class="col-form-label d-flex justify-content-start">Nome:</label>
+                                                            class="col-form-label d-flex justify-content-start">nome:</label>
                                                         <input type="text" class="form-control" id="category-name"
-                                                            value="<?= $categoria['Nome'] ?>" readonly>
+                                                            value="<?= $categoria['nome'] ?>" readonly>
 
                                                     </div>
 
@@ -173,8 +173,8 @@
 
                                 <!--MODAL EDIT -->
 
-                                <div class="modal fade" id="<?= $categoria["Nome"] ?>EditModal" tabindex="-1"
-                                    aria-labelledby="<?= $categoria["Nome"] ?>EditModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="<?= $categoria["nome"] ?>EditModal" tabindex="-1"
+                                    aria-labelledby="<?= $categoria["nome"] ?>EditModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -191,10 +191,10 @@
 
                                                     <div class="mb-3">
                                                         <label for="category-name"
-                                                            class="col-form-label d-flex justify-content-start">Nome:</label>
+                                                            class="col-form-label d-flex justify-content-start">nome:</label>
                                                         <input type="hidden" name="id" value="<?= $categoria['id'] ?>">
                                                         <input type="text" class="form-control" id="category-name"
-                                                            name="category-name" value="<?= $categoria['Nome'] ?>">
+                                                            name="category-name" value="<?= $categoria['nome'] ?>">
                                                     </div>
 
 
@@ -214,8 +214,8 @@
 
                                 <!--MODAL DELETE-->
 
-                                <div class="modal fade" id="<?= $categoria["Nome"] ?>DeleteModal" tabindex="-1"
-                                    aria-labelledby="<?= $categoria["Nome"] ?>DeleteModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="<?= $categoria["nome"] ?>DeleteModal" tabindex="-1"
+                                    aria-labelledby="<?= $categoria["nome"] ?>DeleteModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
 
@@ -232,7 +232,7 @@
                                                     <div class="mb-3 mt-3">
                                                         <p class="justify-content-start">Tem certeza que deseja excluir
                                                             a categoria <span
-                                                                class="category-name"><?= $categoria['Nome'] ?></span> ?
+                                                                class="category-name"><?= $categoria['nome'] ?></span> ?
                                                         </p>
                                                         <input type="hidden" name="id" value="<?= $categoria['id'] ?>">
                                                     </div>

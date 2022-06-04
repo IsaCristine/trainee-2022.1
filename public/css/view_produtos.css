@@ -9,10 +9,10 @@ body {
     height: 100%;
 }
 
-.container {
+.page-content {
     border: solid #DFDDDD 0.08rem;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     width: 80%;
 
 
@@ -30,7 +30,7 @@ body {
 }
 
 /*Meu height nao funciona, nao sei porque*/
-.linhas {
+.page-content linhas {
     color: #9D0101;
     opacity: 1;
     height: 5rem;
@@ -92,16 +92,16 @@ body {
     text-align: center;
 }
 
-h5 {
+.page-content h5 {
     font-size: 16px;
     color: white;
 }
 
-H6 {
+.page-content H6 {
     font-size: 12px;
 }
 
-p {
+.page-content p {
     font-size: 14px;
 }
 
@@ -128,7 +128,7 @@ p {
         height: 7rem;
     }
 
-    h5 {
+    .page-content h5 {
         font-size: 14px;
     }
 

@@ -17,6 +17,7 @@
     <title>Bell Comics</title>
 
 </head>
+
 <div class="navbar-content">
     <?php include($_SERVER["DOCUMENT_ROOT"] . "/app/views/includes" . "/navbar.php"); ?>
 </div>

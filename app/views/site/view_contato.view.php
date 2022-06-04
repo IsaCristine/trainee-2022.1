@@ -17,7 +17,7 @@
 
 <body>
 
-    <div class="navbar">
+    <div class="navbar-content">
         <?php include($_SERVER["DOCUMENT_ROOT"] . "/app/views/includes" . "/navbar.php"); ?>
     </div>
 
@@ -93,7 +93,7 @@
     </div>
     </div>
 
-    <div class="footer">
+    <div class="footer-content">
         <?php include($_SERVER["DOCUMENT_ROOT"] . "/app/views/includes" . "/footer.php"); ?>
     </div>
 

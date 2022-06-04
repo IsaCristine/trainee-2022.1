@@ -1,25 +1,35 @@
+html {
+    overflow: hidden;
+    height: 100%;
+}
 
-.container{
+body {
+    overflow: auto;
+    height: 100%;
+}
+
+.container {
     border: solid #DFDDDD 0.08rem;
     margin-top: 5%;
     margin-bottom: 5%;
     width: 80%;
-    
-    
-}
-/************ CABECALHO: ************/ 
 
-.cabecalho{
+
+}
+
+/************ CABECALHO: ************/
+
+.cabecalho {
     padding-top: 2rem;
 }
 
-.campotxt{
+.campotxt {
     margin-left: 6rem;
-    
+
 }
 
 /*Meu height nao funciona, nao sei porque*/
-.linhas{
+.linhas {
     color: #9D0101;
     opacity: 1;
     height: 5rem;
@@ -27,40 +37,45 @@
     padding-left: 0rem;
 }
 
-/************ CARDS: ************/ 
+/************ CARDS: ************/
 
 
-.cardproduto{
+.cardproduto {
     margin-left: 3rem;
     margin-right: 3rem;
-    
+
 }
 
 
-.cardestilo{
+.cardestilo {
     height: 95%;
     margin-top: 1rem;
     width: 95%;
-    
+
 }
-.imgcard{
-    width: 10rem; height: 10rem;
+
+.imgcard {
+    width: 10rem;
+    height: 10rem;
     justify-content: center;
     align-items: center;
-    margin-left: auto; margin-right: auto; margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
     margin-top: 20px;
     object-fit: fill;
 }
-.cardrodape{
+
+.cardrodape {
     background-color: #FFFFFF;
     border-top: 0pt;
     margin-top: -1rem;
 }
 
-/************ FONTES e BOTOES: ************/ 
+/************ FONTES e BOTOES: ************/
 
-.titulo{
-    font-size:2.2rem;
+.titulo {
+    font-size: 2.2rem;
     padding-bottom: 2rem;
     padding-left: 5rem;
     font-family: 'Roboto', sans-serif;
@@ -68,200 +83,238 @@
     color: #BD8E01;
 
 }
-.categoria{
+
+.categoria {
     background-color: #DFDDDD;
     border-radius: 12%;
     width: 60%;
     text-align: center;
 }
-h5{
+
+h5 {
     font-size: 16px;
-    color:  white;
+    color: white;
 }
-H6{
+
+H6 {
     font-size: 12px;
 }
-p{
+
+p {
     font-size: 14px;
 }
-.txtbotao{
+
+.txtbotao {
     font-size: 14px;
 
-    
+
 }
 
 
-/* PAG: */ 
-.pag{
+/* PAG: */
+.pag {
     margin-top: 2.5rem;
     display: flex;
     justify-content: center;
-       
+
 }
 
-/************ TRATAMENTO DA IMG: ************/ 
+/************ TRATAMENTO DA IMG: ************/
 
-@media (max-width: 1280px){
-    .imgcard{
-        width: 7rem; height: 7rem;
+@media (max-width: 1280px) {
+    .imgcard {
+        width: 7rem;
+        height: 7rem;
     }
 
-    h5{
+    h5 {
         font-size: 14px;
     }
-    .campotxt{
+
+    .campotxt {
         margin-left: 3rem;
-    
+
     }
-    .pteste{
+
+    .pteste {
         margin-bottom: 4rem;
     }
 
 }
 
-@media (max-width: 1000px){
-    .imgcard{
-        width: 5rem; height: 5rem;
+@media (max-width: 1000px) {
+    .imgcard {
+        width: 5rem;
+        height: 5rem;
     }
-    .categoria{
+
+    .categoria {
         width: 100%;
-        
+
     }
-    .txtbotao{
+
+    .txtbotao {
         font-size: 12px;
-        
+
     }
-    .campotxt{
+
+    .campotxt {
         margin-left: 0rem;
-    
+
     }
-    .titulo{
+
+    .titulo {
         font-size: 2rem;
     }
-    .cardproduto{
+
+    .cardproduto {
         margin-left: 2rem;
         margin-right: 2rem;
     }
-    
+
 }
-@media(max-width: 880px){
-    .cardproduto{
+
+@media(max-width: 880px) {
+    .cardproduto {
         margin-left: 0rem;
         margin-right: 0rem;
     }
 }
 
-@media (max-width: 767px){
-    .imgcard{
-        width: 8rem; height: 8rem;
+@media (max-width: 767px) {
+    .imgcard {
+        width: 8rem;
+        height: 8rem;
     }
-    .cardproduto{
+
+    .cardproduto {
         margin-top: 2rem;
         margin-left: 1rem;
         margin-right: 1rem;
     }
-    .categoria{
+
+    .categoria {
         width: 62%;
     }
-    .titulo{
+
+    .titulo {
         text-align: center;
         padding-left: 0rem;
         margin-bottom: -0.8rem;
     }
-    .barra{
+
+    .barra {
         display: flex;
         justify-content: center;
     }
-    .campotxt{
+
+    .campotxt {
         min-width: 70%;
     }
 
-    .linhas{
+    .linhas {
         margin-top: 1.6rem;
     }
- 
-    
+
+
 }
 
-@media (max-width: 600px){
-    .imgcard{
-        width: 7rem; height: 7rem;
+@media (max-width: 600px) {
+    .imgcard {
+        width: 7rem;
+        height: 7rem;
     }
 }
 
-@media (max-width: 575px){
-    .imgcard{
-        width: 8rem; height: 8rem;
+@media (max-width: 575px) {
+    .imgcard {
+        width: 8rem;
+        height: 8rem;
     }
-    .categoria{
+
+    .categoria {
         width: 50%;
-        
+
     }
-    .cardestilo{
+
+    .cardestilo {
         text-align: center;
     }
-    .categoria{
+
+    .categoria {
         justify-content: center;
         align-items: center;
-        margin-left: auto; margin-right: auto; margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
         object-fit: fill;
     }
-    .cardproduto{
+
+    .cardproduto {
         margin-left: 3rem;
         margin-right: 3rem;
     }
-    
+
 
 }
-@media (max-width: 415px){
-    .campotxt{
+
+@media (max-width: 415px) {
+    .campotxt {
         min-width: 60%;
         margin-left: 0.6rem;
     }
-    .imgcard{
-        width: 7rem; height: 7rem;
+
+    .imgcard {
+        width: 7rem;
+        height: 7rem;
     }
 
-    .categoria{
-        width: 65%;  
+    .categoria {
+        width: 65%;
     }
-    .cardproduto{
+
+    .cardproduto {
         margin-left: 0.8rem;
         margin-right: 0.8rem;
     }
-    
+
 }
 
-@media(max-width: 380px){
-    
-    .categoria{
+@media(max-width: 380px) {
+
+    .categoria {
         width: 75%;
         ;
     }
-    .campotxt{
+
+    .campotxt {
         min-width: 0%;
         margin-left: 1rem;
     }
-    
-    .cardestilo{
+
+    .cardestilo {
         width: 100%;
-        
+
     }
-    .imgcard{
-        width: 6rem; height: 6rem;
+
+    .imgcard {
+        width: 6rem;
+        height: 6rem;
     }
 }
 
-@media(max-width: 310px){
-    .campotxt{
+@media(max-width: 310px) {
+    .campotxt {
         min-width: 0%;
         margin-left: 0rem;
     }
-    .cardproduto{
+
+    .cardproduto {
         margin-left: 0.2rem;
         margin-right: 0.2rem;
     }
-    .pag{
+
+    .pag {
         font-size: 70%;
     }
 

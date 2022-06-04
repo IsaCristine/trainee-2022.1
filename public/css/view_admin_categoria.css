@@ -1,55 +1,67 @@
-.debug{
-    border:1px solid red;
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    overflow: auto;
+    height: 100%;
+}
+
+.debug {
+    border: 1px solid red;
 }
 
 /******************TITLE AND SEARCH BAR******************/
-.title{
-    margin-top:5vh;
-    margin-bottom:50px;
+.title {
+    margin-top: 5vh;
+    margin-bottom: 50px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size:58px;
-    color:#BD8E01;
-    
-}
-.search-area{
-    display:flex;
-}
-.search-form{
-    display:flex;
-    flex-flow:row;
+    font-size: 58px;
+    color: #BD8E01;
+
 }
 
-@media(min-width:576px){
-    .search-area{
+.search-area {
+    display: flex;
+}
+
+.search-form {
+    display: flex;
+    flex-flow: row;
+}
+
+@media(min-width:576px) {
+    .search-area {
         justify-content: end;
     }
 }
 
-@media(max-width:575px){
-    .search-area{
+@media(max-width:575px) {
+    .search-area {
         justify-content: center;
         width: 100%;
-        margin-top:2vh;
+        margin-top: 2vh;
     }
 }
 
 /******************TABLE******************/
-.table-buttons{
-    display:flex;
+.table-buttons {
+    display: flex;
     flex-wrap: nowrap;
     justify-content: center;
 }
 
-.view{
-    margin-right:4px;
-    
+.view {
+    margin-right: 4px;
+
 }
 
-.delete{
-    margin-left:4px;
+.delete {
+    margin-left: 4px;
 }
 
 /******************MODAIS******************/
-.category-name{
-    color:#0d6efd;
+.category-name {
+    color: #0d6efd;
 }

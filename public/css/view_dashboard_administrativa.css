@@ -1,51 +1,60 @@
-body{
+html {
+	overflow: hidden;
+	height: 100%;
+}
+
+body {
+	overflow: auto;
+	height: 100%;
+}
+
+body {
 	margin-right: 2rem;
 	margin-left: 2rem;
 	margin-top: 2rem;
 	background-color: #DFDDDD;
-	display: block;	
+	display: block;
 }
 
-.card_ajuste{
-  width: 15rem;
-  margin: 2rem;
-  margin-left: 2rem;
-  text-align: center;
-  justify-content: center;
-  justify-items: center;
+.card_ajuste {
+	width: 15rem;
+	margin: 2rem;
+	margin-left: 2rem;
+	text-align: center;
+	justify-content: center;
+	justify-items: center;
 }
 
-.conteiner-ajuste{
+.conteiner-ajuste {
 	display: flex;
 	justify-content: center;
 	margin-top: 3rem;
 }
 
-.conteiner-ajuste h5{
+.conteiner-ajuste h5 {
 	color: #323132;
 }
 
-.border{
+.border {
 	border-radius: 1rem;
 	border-color: #BD8E01;
 }
 
-.text-h1 h1{
+.text-h1 h1 {
 	color: #BD8E01;
 	font-family: Arial;
 	font-weight: bold;
 }
 
-.linhas hr{
+.linhas hr {
 	color: #9D0101;
 	height: 0.3rem;
 	opacity: 1;
 }
 
-@media ( max-width: 1000px) and (min-width: 100px){
-	.card_ajuste{
+@media (max-width: 1000px) and (min-width: 100px) {
+	.card_ajuste {
 		display: inline-block;
 		width: 12rem;
 	}
 }
-

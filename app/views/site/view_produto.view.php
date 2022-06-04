@@ -31,9 +31,9 @@
             <div class="col-lg-6 col-md-6 col-sm-12">
 
                 <ul class="caminho">
-                    <li><a href="">Home</a></li>
+                    <li><a href="Home">Home</a></li>
                     <li>></li>
-                    <li><a href="">Produtos</a></li>
+                    <li><a href="Produtos">Produtos</a></li>
                     <li>></li>
                     <li><a href="">Camisetas</a></li>
                     <li>></li>

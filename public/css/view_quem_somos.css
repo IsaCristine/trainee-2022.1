@@ -1,6 +1,7 @@
 html {
 	overflow: hidden;
 	height: 100%;
+	padding-top: 86px;
 }
 
 body {
@@ -15,7 +16,6 @@ body {
 }
 
 .page-content {
-	padding-top: 75px;
 	margin-left: 2rem;
 	margin-right: 2rem;
 	margin-top: 2rem;

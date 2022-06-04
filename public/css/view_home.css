@@ -1,6 +1,7 @@
 html {
     overflow: hidden;
     height: 100%;
+    padding-top: 86px;
 }
 
 body {
@@ -103,7 +104,6 @@ body {
 }
 
 .content {
-    padding-top: 2rem;
     padding-bottom: 0;
     text-align: center;
 }

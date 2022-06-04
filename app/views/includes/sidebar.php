@@ -1,14 +1,35 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../public/css/sidebar_admin.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
+        integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
+
+</head>
+
 <header>
     <nav class="navbar navbar-light bg-light shadow">
         <div class="container-fluid">
 
             <div class="border-button">
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasNavbar">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon menu-button"></span>
                 </button>
             </div>
 
-            <div class="offcanvas offcanvas-start bg-sidebar" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas offcanvas-start bg-sidebar" data-bs-scroll="true" data-bs-backdrop="true"
+                tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
 
                 <div class="d-flex flex-column p-3 text-white sidebar-area bg-sidebar">
 
@@ -70,7 +91,8 @@
 
                         <div class="btn-group dropup bg-sidebar">
 
-                            <button type="button" class="btn dropdown-toggle text-white" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button type="button" class="btn dropdown-toggle text-white" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
                                 <img class="admin-sidebar-logo" src="../../../public/img/Macacode.jpg">
                                 <strong class="admin-username text-white">USERNAME</strong>
                             </button>
@@ -79,17 +101,19 @@
 
                                 <li>
 
-                                        <span data-bs-dismiss="offcanvas" aria-label="Close">
-                                            <button class="dropdown-item text-white logout-link" data-bs-toggle="modal" data-bs-target="#editModal">
-                                                Editar
-                                            </button>
-                                        </span>
+                                    <span data-bs-dismiss="offcanvas" aria-label="Close">
+                                        <button class="dropdown-item text-white logout-link" data-bs-toggle="modal"
+                                            data-bs-target="#editModal">
+                                            Editar
+                                        </button>
+                                    </span>
 
                                 </li>
 
                                 <li>
 
-                                    <a class="dropdown-item text-white logout-link" href=""> <span class=" me-auto"> Logout </span><i class="bi bi-box-arrow-right logout-icon"></i></a>
+                                    <a class="dropdown-item text-white logout-link" href=""> <span class=" me-auto">
+                                            Logout </span><i class="bi bi-box-arrow-right logout-icon"></i></a>
 
                                 </li>
 
@@ -118,12 +142,14 @@
 
                                 <div class="mb-3">
                                     <label for="username" class="col-form-label">Username:</label>
-                                    <input type="text" class="form-control" id="username" name="username" value="Username">
+                                    <input type="text" class="form-control" id="username" name="username"
+                                        value="Username">
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="email" class="col-form-label">Email:</label>
-                                    <input type="email" class="form-control" id="email" name="email" value="usermail@email.com"></input>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        value="usermail@email.com"></input>
                                 </div>
 
                                 <div class="mb-3">
@@ -141,7 +167,8 @@
                                     </label>
 
                                     <div class="card-body">
-                                        <input type="file" name="image" accept="image/*" class="form-control" id="image">
+                                        <input type="file" name="image" accept="image/*" class="form-control"
+                                            id="image">
                                     </div>
 
                                 </div>

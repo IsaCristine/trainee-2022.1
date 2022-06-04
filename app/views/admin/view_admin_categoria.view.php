@@ -21,6 +21,10 @@
 
 <body>
 
+    <div class="sidebar-content">
+        <?php include($_SERVER["DOCUMENT_ROOT"] . "/app/views/includes" . "/sidebar.php"); ?>
+    </div>
+
     <div class="container">
 
         <div class="title display-3">Categorias</div>

@@ -73,6 +73,11 @@
 
               <img src="../../public/img/Logo escrita amarela com flecha.png" alt="Logo Bell Comics" id="logo" class="imagem-modal">
 
+              <div class="input-group mb-3">
+                <input type="file" class="form-control" id="inputGroupFile02">
+                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+              </div>
+
               <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">Nome:</label>
                 <input type="text" class="form-control" id="recipient-name">
@@ -87,6 +92,10 @@
                 <label for="recipient-name" class="col-form-label">Descrição:</label>
                 <input type="text" class="form-control" id="recipient-name">
               </div>
+
+              <label for="user-name" class="col-form-label d-flex justify-content-start">Informações:</label>
+              <input type="hidden" name="id" value="">
+              <input type="text" class="form-control" id="recipient-name" value="Produto novo">
 
               <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">Preço:</label>
@@ -204,8 +213,14 @@
                       <form method="POST" action="">
 
                         <div class="mb-3">
-
+                          
                           <img src="../../public/img/Logo escrita amarela com flecha.png" alt="Logo Bell Comics" id="logo" class="imagem-modal">
+                          
+                          <div class="input-group mb-3">
+                            <input type="file" class="form-control" id="inputGroupFile02">
+                            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                          </div>
+
                           <label for="user-name" class="col-form-label d-flex justify-content-start">Nome:</label>
                           <input type="hidden" name="id" value="">
                           <input type="text" class="form-control" id="recipient-name" value="Gibi Superman">
@@ -218,6 +233,11 @@
                             class="col-form-label d-flex justify-content-start">Descrição:</label>
                           <input type="hidden" name="id" value="">
                           <input type="text" class="form-control" id="recipient-name" value="Edição #001 da revista">
+
+                          <label for="user-name" class="col-form-label d-flex justify-content-start">Informações:</label>
+                          <input type="hidden" name="id" value="">
+                          <input type="text" class="form-control" id="recipient-name" value="Produto novo">
+
 
                           <label for="user-password" class="col-form-label d-flex justify-content-start">Preço:</label>
                           <input type="hidden" name="id" value="">
@@ -258,19 +278,17 @@
                           <p class="justify-content-start">Tem certeza que deseja excluir o
                             produto?</p>
                           <input type="hidden" name="id" value="">
+                            
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                              <button type="submit" class="btn btn-danger" name="delete">Excluir</button> 
+                            </div>
+                          
                         </div>
-
-    
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                          <button type="submit" class="btn btn-danger" name="delete">Excluir</button> 
-
 
                     </div>
 
                 </div>
-
-                    <div class="d-md-flex justify-content-md-end ajuste-btn">
-
 
                     </form>
 

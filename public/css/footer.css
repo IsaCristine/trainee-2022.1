@@ -1,0 +1,44 @@
+.row {
+    margin: 0;
+}
+
+.container {
+    padding: 1rem 0;
+}
+
+.nav-link {
+    text-align: right;
+}
+
+footer {
+    background-color: #001862;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer p {
+    color: #DFDDDD;
+}
+
+.redes-sociais {
+    padding-right: 0;
+}
+
+.redes-sociais li {
+    margin: 0 10px;
+}
+
+.redes-sociais a {
+    text-decoration: none;
+}
+
+.redes-sociais a i {
+    color: #BD8E01;
+    font-size: 1.1rem;
+}
+
+.redes-sociais a:hover i {
+    color: #DFDDDD;
+}

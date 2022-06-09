@@ -1,0 +1,131 @@
+<!-- MODAL VIEW -->
+                            <div class="modal fade" id="FirstViewModal" tabindex="-1"
+                                aria-labelledby="FirstViewModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+
+                                            <h5 class="modal-title" id="exampleModalLabel">Informações do Usuário</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="mb-3">
+
+                                                    <label for="user-name"
+                                                        class="col-form-label d-flex justify-content-start">Nome:</label>
+                                                    <input type="text" class="form-control" id="user-name" value="first"
+                                                        readonly>
+                                                    <label for="user-mail"
+                                                        class="col-form-label d-flex justify-content-start">E-mail:</label>
+                                                    <input type="text" class="form-control" id="user-mail" value="first"
+                                                        readonly>
+                                                    <label for="user-password"
+                                                        class="col-form-label d-flex justify-content-start">Senha:</label>
+                                                    <input type="text" class="form-control" id="user-password" value="first"
+                                                        readonly>
+
+                                                </div>
+
+                                            </form>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Fechar</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--MODAL EDIT -->
+
+                            <div class="modal fade" id="FirstEditModal" tabindex="-1"
+                                aria-labelledby="FirstEditModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+
+                                            <h5 class="modal-title" id="exampleModalLabel">Editar Usuário</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+
+                                        </div>
+
+                                        <div class="modal-body">
+
+                                            <form method="POST" action="">
+
+                                                <div class="mb-3">
+                                                    <label for="user-name"
+                                                        class="col-form-label d-flex justify-content-start">Nome:</label>
+                                                    <input type="hidden" name="id" value="">
+                                                    <input type="text" class="form-control" id="user-name"
+                                                        name="user-name" value="first">
+
+                                                    <label for="user-mail"
+                                                        class="col-form-label d-flex justify-content-start">E-mail:</label>
+                                                    <input type="hidden" name="id" value="">
+                                                    <input type="text" class="form-control" id="user-mail"
+                                                        name="user-mail" value="first">
+
+                                                    <label for="user-password"
+                                                        class="col-form-label d-flex justify-content-start">Senha:</label>
+                                                    <input type="hidden" name="id" value="">
+                                                    <input type="text" class="form-control" id="user-password"
+                                                        name="user-password" value="first">
+                                                </div>
+
+                                            </form>
+
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="button" class="btn btn-primary">Editar</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--MODAL DELETE-->
+
+                            <div class="modal fade" id="FirstDeleteModal" tabindex="-1"
+                                aria-labelledby="FirstDeleteModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Excluir Usuário
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <form>
+
+                                                <div class="mb-3 mt-3">
+                                                    <p class="justify-content-start">Tem certeza que deseja excluir o
+                                                        usuário <span class="user-name">Jacob</span> ?</p>
+                                                    <input type="hidden" name="id" value="">
+                                                </div>
+
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="submit" class="btn btn-danger" name="delete">Excluir</button>
+                                        </div>
+
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>

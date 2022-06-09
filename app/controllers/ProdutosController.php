@@ -12,7 +12,7 @@ class ProdutosController
     public function showProdutos()
     {
         $produtos = App::get("database")->selectProdutos();
-        include __DIR__ . '/../views/admin/view_admin_produto.view.php';
+        include __DIR__ . '/../views/admin/view_adm_produtos.view.php';
     }
 
     public function createProduto()

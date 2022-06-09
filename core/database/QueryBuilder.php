@@ -45,11 +45,11 @@ class QueryBuilder
         }
     }
 
-    public function insertprodutos(array $product)
+    public function insertProduto(array $product)
     {
 
         try {
-            $query = $this->pdo->prepare("INSERT INTO produtos (nome, valor, descricao, categorias_id) VALUE (:nome, :valor, :descricao, :categorias_id)");
+            $query = $this->pdo->prepare("INSERT INTO produto (nome, valor, descricao, categorias_id) VALUE (:nome, :valor, :descricao, :categorias_id)");
             $query->bindValue(':nome', $product['nome']);
             $query->bindValue(':valor', $product['valor']);
             $query->bindValue(':descricao', $product['descricao']);

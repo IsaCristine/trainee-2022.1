@@ -31,10 +31,11 @@ class QueryBuilder
         // }
 
         //QUERY DE PRODUTOS
+
     public function selectProdutos()
     {
         try{
-            $query = $this->pdo->prepare("SELECT * FROM produto");
+            $query = $this->pdo->prepare("SELECT P.id, P.nome, P.valor, P.descricao, P.imagem, C.nome AS categoria FROM produto P INNER JOIN categorias C ON P.categorias_id=C.id");
             $query->execute();
             $produtos = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -90,9 +91,18 @@ class QueryBuilder
     }
     //FIM DO QUERY DE PRODUTOS
 
-    public function selectAll()
+    public function selectCategorias()
     {
-        
+        try{
+            $query = $this->pdo->prepare("SELECT * FROM categorias");
+            $query->execute();
+            $produtos = $query->fetchAll(PDO::FETCH_ASSOC);
+
+            return $produtos;
+        }
+        catch(Exception $e){
+            die($e->getMessage());
+        }
     }
 
     public function select()

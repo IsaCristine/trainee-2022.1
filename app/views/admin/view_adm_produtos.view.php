@@ -74,10 +74,16 @@
                                 <input type="text" class="form-control" id="product_name" name="product_name">
                             </div>
 
-                            <div class="mb-3">
-                                <label for="product_category" class="col-form-label">Categoria:</label>
-                                <input type="text" class="form-control" id="product_category" name="product_category">
+                            <?php foreach ($categorias as $cat) { ?>
+                            <div class="mb-3 form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="categoria"
+                                    id="cat-<?= $cat['nome'] ?>" value="<?= $cat['nome'] ?>">
+                                <input name="categorias_id" type="hidden" value="<?=$cat['id']?>">
+                                <label class="form-check-label" for="cat-<?= $cat['nome'] ?>">
+                                    <?= $cat['nome'] ?>
+                                </label>
                             </div>
+                            <?php } ?>
 
                             <div class="mb-3">
                                 <label for="product_description" class="col-form-label">Descrição:</label>
@@ -124,7 +130,7 @@
 
                     <tr>
                         <td><?= $produto['nome'] ?></td>
-                        <td>Revista em Quadrinhos</td>
+                        <td><?= $produto['categoria'] ?></td>
                         <td style="text-align: center">
 
                             <div class="table-buttons">
@@ -169,7 +175,7 @@
                                                     <label for="product_category"
                                                         class="col-form-label d-flex justify-content-start">Categoria:</label>
                                                     <input type="text" class="form-control" id="product_category"
-                                                        value="Revista em quadrinhos" readonly>
+                                                        value="<?= $produto['categoria'] ?>" readonly>
                                                     <label for="product_description"
                                                         class="col-form-label d-flex justify-content-start">Descrição:</label>
                                                     <input type="text" class="form-control" id="product_description"
@@ -213,29 +219,43 @@
                                             <form method="POST" action="editarProduto">
 
                                                 <div class="mb-3">
-                                                    <label for="user-name"
-                                                        class="col-form-label d-flex justify-content-start">Nome:</label>
-                                                    <input type="hidden" name="id" value="">
-                                                    <input type="text" class="form-control" id="product_name"
-                                                        value="<?= $produto['nome'] ?>">
 
-                                                    <label for="user-mail"
-                                                        class="col-form-label d-flex justify-content-start">Categoria:</label>
-                                                    <input type="hidden" name="id" value="">
-                                                    <input type="text" class="form-control" id="product_name"
-                                                        value="Revista em quadrinhos">
+                                                    <div class="mb-3">
+                                                        <label for="product_name"
+                                                            class="col-form-label d-flex justify-content-start">Nome:</label>
+                                                        <input type="hidden" name="id" value="">
+                                                        <input type="text" class="form-control" id="product_name"
+                                                            value="<?= $produto['nome'] ?>">
+                                                    </div>
 
-                                                    <label for="user-password"
-                                                        class="col-form-label d-flex justify-content-start">Descrição:</label>
-                                                    <input type="hidden" name="id" value="">
-                                                    <input type="text" class="form-control" id="product_name"
-                                                        value="<?= $produto['descricao'] ?>">
 
-                                                    <label for="user-password"
-                                                        class="col-form-label d-flex justify-content-start">Preço:</label>
-                                                    <input type="hidden" name="id" value="">
-                                                    <input type="text" class="form-control" id="product_name"
-                                                        value="<?= $produto['valor'] ?>">
+                                                    <?php foreach ($categorias as $cat) { ?>
+                                                    <div class="mb-3 form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="categoria"
+                                                            id="cat-<?= $cat['nome'] ?>" value="<?= $cat['nome'] ?>">
+                                                        <input name="categorias_id" type="hidden"
+                                                            value="<?=$cat['id']?>">
+                                                        <label class="form-check-label" for="cat-<?= $cat['nome'] ?>">
+                                                            <?= $cat['nome'] ?>
+                                                        </label>
+                                                    </div>
+                                                    <?php } ?>
+
+                                                    <div class="mb-3">
+                                                        <label for="product_description"
+                                                            class="col-form-label d-flex justify-content-start">Descrição:</label>
+                                                        <input type="hidden" name="id" value="">
+                                                        <input type="text" class="form-control" id="product_description"
+                                                            value="<?= $produto['descricao'] ?>">
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label for="product_value"
+                                                            class="col-form-label d-flex justify-content-start">Preço:</label>
+                                                        <input type="hidden" name="id" value="">
+                                                        <input type="text" class="form-control" id="product_value"
+                                                            value="<?= $produto['valor'] ?>">
+                                                    </div>
 
                                                 </div>
 
@@ -246,7 +266,7 @@
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-danger"
                                                 data-bs-dismiss="modal">Cancelar</button>
-                                            <button type="button" class="btn btn-primary">Editar</button>
+                                            <button type="submit" class="btn btn-primary">Editar</button>
                                         </div>
 
                                     </div>
@@ -308,84 +328,9 @@
                     </tr>
 
                     <tr>
-                        <td>Gibi Superman</td>
-                        <td>Revista em quadrinhos</td>
-                        <td style="text-align: center">
 
-                            <div class="table-buttons">
-                                <button class="btn btn-secondary view" data-bs-toggle="modal"
-                                    data-bs-target="#<?= $produto['nome'] ?>ViewModal">
-                                    <i class="bi bi-eye"></i>
-                                </button>
 
-                                <button class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#<?= $produto['nome'] ?>EditModal">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-
-                                <button class="btn btn-danger delete" data-bs-toggle="modal"
-                                    data-bs-target="#<?= $produto['nome'] ?>DeleteModal">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-                        <td>Gibi Spiderman</td>
-                        <td>Revista em quadrinhos</td>
-                        <td style="text-align: center">
-
-                            <div class="table-buttons">
-                                <button class="btn btn-secondary view" data-bs-toggle="modal"
-                                    data-bs-target="#<?= $produto['nome'] ?>ViewModal">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-
-                                <button class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#<?= $produto['nome'] ?>EditModal">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-
-                                <button class="btn btn-danger delete" data-bs-toggle="modal"
-                                    data-bs-target="#<?= $produto['nome'] ?>DeleteModal">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-                        <td>Gibi Superman</td>
-                        <td>Revista em quadrinhos</td>
-                        <td style="text-align: center">
-
-                            <div class="table-buttons">
-                                <button class="btn btn-secondary view" data-bs-toggle="modal"
-                                    data-bs-target="#<?= $produto['nome'] ?>ViewModal">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-
-                                <button class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#<?= $produto['nome'] ?>EditModal">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-
-                                <button class="btn btn-danger delete" data-bs-toggle="modal"
-                                    data-bs-target="#<?= $produto['nome'] ?>DeleteModal">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-
-                        </td>
-
-                    </tr>
-
-                    <?php } ?>
+                        <?php } ?>
 
                 </tbody>
 

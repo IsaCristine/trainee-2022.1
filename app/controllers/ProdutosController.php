@@ -12,17 +12,19 @@ class ProdutosController
     public function showProdutos()
     {
         $produtos = App::get("database")->selectProdutos();
+        $categorias = App::get('database')->selectCategorias();
         include __DIR__ . '/../views/admin/view_adm_produtos.view.php';
     }
 
     public function createProduto()
     {
-        
+
+
         $product = [
             "nome" => filter_input(INPUT_POST, "product_name", FILTER_SANITIZE_STRING),
             "valor" => filter_input(INPUT_POST, "product_value", FILTER_SANITIZE_STRING),
             "descricao" => filter_input(INPUT_POST, "product_description", FILTER_SANITIZE_STRING),
-            "categoria_id" => filter_input(INPUT_POST, "product_categoria_id", FILTER_SANITIZE_STRING)
+            "categorias_id" => filter_input(INPUT_POST, "categorias_id", FILTER_SANITIZE_NUMBER_INT)
 
         ];
         $create = App::get("database")->insertProduto($product);

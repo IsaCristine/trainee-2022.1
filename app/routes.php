@@ -49,6 +49,7 @@ $router->get('Quem-somos','QuemSomosController@getPage');
 //Rotas Contato
 
 $router->get('Contato','ContatoController@getPage');
+$router->post('Contato','ContatoController@sendEmail');
 
 //Fim Contato
 

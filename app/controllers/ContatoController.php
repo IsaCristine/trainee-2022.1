@@ -31,6 +31,31 @@ class ContatoController
         $mensagem = $_POST['mensagem'];
 
         $mail = new PHPMailer();
+
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->SMTPSecure = 'tls';
+        $mail->Username = 'testetraineephp@gmail.com';
+        $mail->Password = 'Bcomics123';
+        $mail->Port = 587;
         
+        $mail->setFrom('testetraineephp@gmail.com', 'Destinatario');
+        $mail->addAddress('testetraineephp@gmail.com', 'Remetente');
+
+        $mail->isHTML(true);
+        $mail->Subject = $assunto;
+        $mail->Body    = $mensagem;
+
+        if(!$mail->send()) {
+            echo "<script>alert('Mensagem não enviada');</script>";
+            echo '<script>alert(Erro inesperado);</script>';
+            header('Location: /contato');;
+        } 
+        
+        else {
+            echo "<script>alert('Mensagem enviada');</script>";
+            return view('site/contato');
+        }
     }
 }

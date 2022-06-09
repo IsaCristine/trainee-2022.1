@@ -286,39 +286,31 @@
                                                 aria-label="Close">
                                             </button>
                                         </div>
-                                        <form method="POST" action="excluirProduto">
-                                            <div class="modal-body">
-                                                <form>
 
-                                                    <div class="mb-3 mt-3">
-                                                        <p class="justify-content-start">Tem certeza que deseja excluir
-                                                            o
-                                                            produto?</p>
-                                                        <input type="hidden" name="id" value="">
-                                                    </div>
+                                        <div class="modal-body">
+                                            <form method="POST" action="excluirProduto">
 
-                                            </div>
-
-                                    </div>
-
-                                    <div class="d-md-flex justify-content-md-end ajuste-btn">
-
-                                        <div class="d-md-flex justify-content-md-end">
-                                            <button type="button" class="btn btn-success add botao-adicionar"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#adicionar-produto">Adicionar</button>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-bs-dismiss="modal">Cancelar</button>
-                                                <button type="submit" class="btn btn-danger"
-                                                    name="delete">Excluir</button>
-                                            </div>
-
-                                            </form>
+                                                <div class="mb-3 mt-3">
+                                                    <p class="justify-content-start">Tem certeza que deseja excluir o
+                                                        produto <span
+                                                            class="product_name"><?= $produto['nome'] ?></span> ?
+                                                    </p>
+                                                    <input type="hidden" name="id" value="<?= $produto['id'] ?>">
+                                                </div>
 
                                         </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="submit" class="btn btn-danger" name="delete">Excluir</button>
+                                        </div>
+
+                                        </form>
+
                                     </div>
                                 </div>
+                            </div>
 
                         </td>
 

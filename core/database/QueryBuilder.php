@@ -71,6 +71,7 @@ class QueryBuilder
             $query->bindValue(':descricao', $product['descricao']);
             $query->bindValue(':categorias_id', $product['categorias_id']);
             $query->bindValue(':id', $product['id']);
+            /* die(var_dump($product)); */
             $query->execute();
         }
         catch(Exception $e) {

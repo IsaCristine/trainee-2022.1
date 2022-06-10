@@ -39,11 +39,12 @@ class ProdutosController
             "nome" => filter_input(INPUT_POST, "product_name", FILTER_SANITIZE_STRING),
             "valor" => filter_input(INPUT_POST, "product_value", FILTER_SANITIZE_STRING),
             "descricao" => filter_input(INPUT_POST, "product_description", FILTER_SANITIZE_STRING),
-            "categoria_id" => filter_input(INPUT_POST, "categorias_id", FILTER_SANITIZE_STRING),
+            "categorias_id" => filter_input(INPUT_POST, "categorias_id", FILTER_SANITIZE_STRING),
             "id" => $_POST['id']
+            
         ];
 
-        
+        /* die(var_dump($product['categorias_id'])); */
         $edit = App::get("database")->editProduto($product);
         header("location:Admin-Produtos");
         

@@ -230,12 +230,12 @@
 
 
                                                     <?php foreach ($categorias as $cat) { ?>
+                                                    <?= $cat['id']; ?>
                                                     <div class="mb-3 form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio"
-                                                            name="categorias_id" id="cat-<?= $cat['nome'] ?>"
-                                                            value="<?= $cat['nome'] ?>">
+                                                        <input class="form-check-input" type="radio" name="categoria"
+                                                            id="cat-<?= $cat['nome'] ?>" value="<?= $cat['nome']  ?>">
                                                         <input name="categorias_id" type="hidden"
-                                                            value="<?= $cat['nome'] ?>">
+                                                            value="<?= $cat['id'] ?>">
                                                         <label class="form-check-label" for="cat-<?= $cat['nome'] ?>">
                                                             <?= $cat['nome'] ?>
                                                         </label>

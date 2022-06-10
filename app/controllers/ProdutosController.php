@@ -27,7 +27,6 @@ class ProdutosController
             "categorias_id" => filter_input(INPUT_POST, "categorias_id", FILTER_SANITIZE_NUMBER_INT)
 
         ];
-        die(var_dump($product));
         $create = App::get("database")->insertProduto($product);
 
         header("location:Admin-Produtos");

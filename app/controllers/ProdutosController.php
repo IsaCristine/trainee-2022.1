@@ -39,7 +39,7 @@ class ProdutosController
             "nome" => filter_input(INPUT_POST, "product_name", FILTER_SANITIZE_STRING),
             "valor" => filter_input(INPUT_POST, "product_value", FILTER_SANITIZE_STRING),
             "descricao" => filter_input(INPUT_POST, "product_description", FILTER_SANITIZE_STRING),
-            "categoria_id" => filter_input(INPUT_POST, "product_categoria_id", FILTER_SANITIZE_STRING),
+            "categoria_id" => filter_input(INPUT_POST, "categorias_id", FILTER_SANITIZE_STRING),
             "id" => $_POST['id']
         ];
 

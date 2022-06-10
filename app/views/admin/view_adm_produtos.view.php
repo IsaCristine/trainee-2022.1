@@ -223,19 +223,19 @@
                                                     <div class="mb-3">
                                                         <label for="product_name"
                                                             class="col-form-label d-flex justify-content-start">Nome:</label>
-                                                        <input type="hidden" name="id" value="">
+                                                        <input type="hidden" name="id" value="<?= $produto['id'] ?>">
                                                         <input type="text" class="form-control" id="product_name"
-                                                            value="<?= $produto['nome'] ?>">
+                                                            name="product_name" value="<?= $produto['nome'] ?>">
                                                     </div>
 
 
                                                     <?php foreach ($categorias as $cat) { ?>
                                                     <div class="mb-3 form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="categoria"
-                                                            id="cat-<?= $cat['nome'] ?>" value="<?= $cat['nome'] ?>"
-                                                            checked>
+                                                        <input class="form-check-input" type="radio"
+                                                            name="categorias_id" id="cat-<?= $cat['nome'] ?>"
+                                                            value="<?= $cat['nome'] ?>">
                                                         <input name="categorias_id" type="hidden"
-                                                            value="<?=$cat['id']?>">
+                                                            value="<?= $cat['nome'] ?>">
                                                         <label class="form-check-label" for="cat-<?= $cat['nome'] ?>">
                                                             <?= $cat['nome'] ?>
                                                         </label>
@@ -245,22 +245,21 @@
                                                     <div class="mb-3">
                                                         <label for="product_description"
                                                             class="col-form-label d-flex justify-content-start">Descrição:</label>
-                                                        <input type="hidden" name="id" value="">
+                                                        <input type="hidden" name="id" value="<?= $produto['id'] ?>">
                                                         <input type="text" class="form-control" id="product_description"
+                                                            name="product_description"
                                                             value="<?= $produto['descricao'] ?>">
                                                     </div>
 
                                                     <div class="mb-3">
                                                         <label for="product_value"
                                                             class="col-form-label d-flex justify-content-start">Preço:</label>
-                                                        <input type="hidden" name="id" value="">
+                                                        <input type="hidden" name="id" value="<?= $produto['id'] ?>">
                                                         <input type="text" class="form-control" id="product_value"
-                                                            value="<?= $produto['valor'] ?>">
+                                                            name="product_value" value="<?= $produto['valor'] ?>">
                                                     </div>
 
                                                 </div>
-
-                                            </form>
 
                                         </div>
 
@@ -274,6 +273,7 @@
                                 </div>
                             </div>
 
+                            </form>
                             <!--MODAL DELETE-->
 
                             <div class="modal fade" id="<?= $produto['nome'] ?>DeleteModal" tabindex="-1"

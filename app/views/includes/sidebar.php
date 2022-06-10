@@ -46,7 +46,7 @@
                         <ul class="nav flex-column mb-auto">
 
                             <li class="nav-item link mb-4">
-                                <a href="" class="disable-link ms-3">
+                                <a href="Admin" class="disable-link ms-3">
 
                                     <i class="bi bi-clipboard-data icon"></i>
 
@@ -64,7 +64,7 @@
                             </li>
 
                             <li class="nav-item link mb-4">
-                                <a href="" class="disable-link ms-3">
+                                <a href="Admin-Categorias" class="disable-link ms-3">
 
                                     <i class="bi bi-collection icon"></i>
 

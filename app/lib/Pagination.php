@@ -29,4 +29,11 @@ class Pagination
         $quantity_pages = App::get("database")->quantity_pages($results_per_page, $table_name);
         return $quantity_pages;
     }
+
+    //método exclusivo da página Admin Produtos
+    public function list_products($item_number,$results_per_pages)
+    {
+        $list_products = App::get("database")->list_products($item_number,$results_per_pages);
+        return $list_products;
+    }
 }

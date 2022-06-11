@@ -40,6 +40,13 @@
     margin-left: 4px;
 }
 
+/******************PAGINATION******************/
+.pag{
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
 @media(min-width:576px) {
     .search-area {
         justify-content: end;

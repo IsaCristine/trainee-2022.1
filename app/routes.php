@@ -16,7 +16,7 @@ $router->get('usuariosAdm', 'UsuariosController@show');
 
 
 //Rotas Produtos
-
+$router->get('Admin-Produtos', 'AdmProdutosController@showProdutos');
 //Fim Produtos
 
 

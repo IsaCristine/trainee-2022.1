@@ -6,7 +6,7 @@ use App\Core\App;
 use App\Core\Database\QueryBuilder;
 use Exception;
 
-class ProdutosController
+class AdmProdutosController
 {
 
     public function showProdutos()

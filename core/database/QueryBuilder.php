@@ -50,11 +50,12 @@ class QueryBuilder
     {
 
         try {
-            $query = $this->pdo->prepare("INSERT INTO produto (nome, valor, descricao, categorias_id) VALUE (:nome, :valor, :descricao, :categorias_id)");
+            $query = $this->pdo->prepare("INSERT INTO produto (nome, valor, descricao, categorias_id, imagem) VALUE (:nome, :valor, :descricao, :categorias_id, :imagem)");
             $query->bindValue(':nome', $product['nome']);
             $query->bindValue(':valor', $product['valor']);
             $query->bindValue(':descricao', $product['descricao']);
             $query->bindValue(':categorias_id', $product['categorias_id']);
+            $query->bindValue(':imagem', $product['imagem']);
             $query->execute();
         }
         catch(Exception $e) {
@@ -65,13 +66,13 @@ class QueryBuilder
     public function editProduto(array $product)
     {
         try {
-            $query = $this->pdo->prepare("UPDATE produto SET nome = :nome, valor = :valor, descricao = :descricao, categorias_id = :categorias_id  WHERE id = :id");
+            $query = $this->pdo->prepare("UPDATE produto SET nome = :nome, valor = :valor, descricao = :descricao, categorias_id = :categorias_id, imagem = :imagem  WHERE id = :id");
             $query->bindValue(':nome', $product['nome']);
             $query->bindValue(':valor', $product['valor']);
             $query->bindValue(':descricao', $product['descricao']);
             $query->bindValue(':categorias_id', $product['categorias_id']);
             $query->bindValue(':id', $product['id']);
-            /* die(var_dump($product)); */
+            $query->bindValue(':imagem', $product['imagem']);
             $query->execute();
         }
         catch(Exception $e) {

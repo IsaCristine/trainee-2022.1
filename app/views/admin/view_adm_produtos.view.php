@@ -67,7 +67,7 @@
                     </div>
                     <div class="modal-body">
 
-                        <form method="POST" action="salvarProduto">
+                        <form method="POST" action="salvarProduto" enctype="multipart/form-data">
 
                             <div class="mb-3">
                                 <label for="product_name" class="col-form-label">Nome:</label>
@@ -102,6 +102,11 @@
                             <div class="mb-3">
                                 <label for="product_value" class="col-form-label">Preço:</label>
                                 <input type="text" class="form-control" id="product_value" name="product_value">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="image" class="col-form-label">Imagem: </label>
+                                <input type="file" id="image" name="image" accept="image/*" class="form-control">
                             </div>
 
                     </div>
@@ -189,10 +194,23 @@
                                                         class="col-form-label d-flex justify-content-start">Descrição:</label>
                                                     <input type="text" class="form-control" id="product_description"
                                                         value="<?= $produto['descricao'] ?>" readonly>
+
                                                     <label for="product_value"
                                                         class="col-form-label d-flex justify-content-start">Preço:</label>
                                                     <input type="text" class="form-control" id="product_value"
                                                         value="<?= $produto['valor'] ?>" readonly>
+
+                                                    <div class="mb-3 mt-3">
+                                                        <div class="card areaImagem">
+                                                            <div class="card-header">Imagem:</div>
+
+                                                            <div class="card-body">
+                                                                <img class="cardImagem"
+                                                                    src="<?= 'data:image/jpg;base64, ' .base64_encode($produto['imagem']) ?>">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
 
                                                 </div>
 
@@ -225,7 +243,7 @@
 
                                         <div class="modal-body">
 
-                                            <form method="POST" action="editarProduto">
+                                            <form method="POST" action="editarProduto" enctype="multipart/form-data">
 
                                                 <div class="mb-3">
                                                     <label for="product_name"
@@ -270,6 +288,23 @@
                                                     <input type="hidden" name="id" value="<?= $produto['id'] ?>">
                                                     <input type="text" class="form-control" id="product_value"
                                                         name="product_value" value="<?= $produto['valor'] ?>">
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <div class="card areaImagem">
+                                                        <div class="card-header">Imagem:</div>
+                                                        <label for="image" class="col-form-label">
+                                                            <img class="cardImagem"
+                                                                src="<?= 'data:image/jpg;base64, ' .base64_encode($produto['imagem']) ?>">
+                                                        </label>
+
+                                                        <div class="card-body">
+                                                            <input type="file" id="image" name="image" accept="image/*"
+                                                                class="form-control">
+                                                        </div>
+
+                                                    </div>
+
                                                 </div>
 
                                         </div>

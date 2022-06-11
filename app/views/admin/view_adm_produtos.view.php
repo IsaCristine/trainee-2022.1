@@ -23,7 +23,6 @@
 </head>
 
 <body>
-
   <div class="container">
 
     <div class="title display-3" style="font-weight: 400;">Produtos</div>
@@ -42,9 +41,9 @@
       <div class="col-9">
         <div class="search-area">
 
-          <form method="GET" action="" class="search-form">
+          <form method="POST" action="" class="search-form">
 
-            <input type="text" class="form-control input-search" name="search" placeholder="Pesquisar produto">
+            <input type="text" class="form-control input-search" name="Pesquisar" placeholder="Pesquisar produto">
             <button type="submit" class="btn btn-primary ms-3">
               <i class="bi bi-search"></i>
             </button>

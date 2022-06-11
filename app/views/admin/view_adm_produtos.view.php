@@ -74,15 +74,15 @@
                                 <input type="text" class="form-control" id="product_name" name="product_name">
                             </div>
 
-
                             <div class="btn-group dropup">
 
-                                <select class="btn dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                                <select name="categorias_id" class="btn dropdown-toggle" aria-haspopup="true"
+                                    aria-expanded="false">
                                     Categoria
 
                                     <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
                                         <?php foreach($categorias as $cat){ ?>
-                                        <option name="categorias_id" value="<?= $cat['id']; ?>"><?= $cat['nome']; ?>
+                                        <option value="<?= $cat['id']; ?>"><?= $cat['nome']; ?>
                                         </option>
                                         <?php } ?>
 
@@ -184,6 +184,7 @@
                                                         class="col-form-label d-flex justify-content-start">Categoria:</label>
                                                     <input type="text" class="form-control" id="product_category"
                                                         value="<?= $produto['categoria'] ?>" readonly>
+
                                                     <label for="product_description"
                                                         class="col-form-label d-flex justify-content-start">Descrição:</label>
                                                     <input type="text" class="form-control" id="product_description"
@@ -227,46 +228,48 @@
                                             <form method="POST" action="editarProduto">
 
                                                 <div class="mb-3">
-
-                                                    <div class="mb-3">
-                                                        <label for="product_name"
-                                                            class="col-form-label d-flex justify-content-start">Nome:</label>
-                                                        <input type="hidden" name="id" value="<?= $produto['id'] ?>">
-                                                        <input type="text" class="form-control" id="product_name"
-                                                            name="product_name" value="<?= $produto['nome'] ?>">
-                                                    </div>
+                                                    <label for="product_name"
+                                                        class="col-form-label d-flex justify-content-start">Nome:</label>
+                                                    <input type="hidden" name="id" value="<?= $produto['id'] ?>">
+                                                    <input type="text" class="form-control" id="product_name"
+                                                        name="product_name" value="<?= $produto['nome'] ?>">
+                                                </div>
 
 
-                                                    <?php foreach ($categorias as $cat) { ?>
-                                                    <?= $cat['id']; ?>
-                                                    <div class="mb-3 form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="categoria"
-                                                            id="cat-<?= $cat['nome'] ?>" value="<?= $cat['nome']  ?>">
-                                                        <input name="categorias_id" type="hidden"
-                                                            value="<?= $cat['id'] ?>">
-                                                        <label class="form-check-label" for="cat-<?= $cat['nome'] ?>">
-                                                            <?= $cat['nome'] ?>
-                                                        </label>
-                                                    </div>
-                                                    <?php } ?>
+                                                <div class="btn-group">
 
-                                                    <div class="mb-3">
-                                                        <label for="product_description"
-                                                            class="col-form-label d-flex justify-content-start">Descrição:</label>
-                                                        <input type="hidden" name="id" value="<?= $produto['id'] ?>">
-                                                        <input type="text" class="form-control" id="product_description"
-                                                            name="product_description"
-                                                            value="<?= $produto['descricao'] ?>">
-                                                    </div>
+                                                    <select name="categorias_id" class="btn dropdown-toggle"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        Categoria
 
-                                                    <div class="mb-3">
-                                                        <label for="product_value"
-                                                            class="col-form-label d-flex justify-content-start">Preço:</label>
-                                                        <input type="hidden" name="id" value="<?= $produto['id'] ?>">
-                                                        <input type="text" class="form-control" id="product_value"
-                                                            name="product_value" value="<?= $produto['valor'] ?>">
-                                                    </div>
+                                                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                                                            <?php foreach($categorias as $cat){ ?>
+                                                            <option value="<?= $cat['id']; ?>"
+                                                                <?php if($cat['nome'] === $produto['categoria']) echo "selected" ?>>
+                                                                <?= $cat['nome']; ?>
+                                                            </option>
+                                                            <?php } ?>
 
+                                                        </ul>
+
+                                                    </select>
+
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="product_description"
+                                                        class="col-form-label d-flex justify-content-start">Descrição:</label>
+                                                    <input type="hidden" name="id" value="<?= $produto['id'] ?>">
+                                                    <input type="text" class="form-control" id="product_description"
+                                                        name="product_description" value="<?= $produto['descricao'] ?>">
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="product_value"
+                                                        class="col-form-label d-flex justify-content-start">Preço:</label>
+                                                    <input type="hidden" name="id" value="<?= $produto['id'] ?>">
+                                                    <input type="text" class="form-control" id="product_value"
+                                                        name="product_value" value="<?= $produto['valor'] ?>">
                                                 </div>
 
                                         </div>

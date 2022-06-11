@@ -27,7 +27,7 @@ class ProdutosController
             "categorias_id" => $_POST["categorias_id"]
 
         ];
-        die(var_dump($product));
+        /* die(var_dump($product)); */
         $create = App::get("database")->insertProduto($product);
 
         header("location:Admin-Produtos");
@@ -44,8 +44,7 @@ class ProdutosController
             "id" => $_POST['id']
             
         ];
-
-        die(var_dump($product['categorias_id']));
+        
         $edit = App::get("database")->editProduto($product);
         header("location:Admin-Produtos");
         

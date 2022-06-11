@@ -74,16 +74,24 @@
                                 <input type="text" class="form-control" id="product_name" name="product_name">
                             </div>
 
-                            <?php foreach ($categorias as $cat) { ?>
-                            <div class="mb-3 form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="categoria"
-                                    id="cat-<?= $cat['nome'] ?>" value="<?= $cat['nome'] ?>">
-                                <input name="categorias_id" type="hidden" value="<?=$cat['id']?>">
-                                <label class="form-check-label" for="cat-<?= $cat['nome'] ?>">
-                                    <?= $cat['nome'] ?>
-                                </label>
+
+                            <div class="btn-group dropup">
+
+                                <select class="btn dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                                    Categoria
+
+                                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                                        <?php foreach($categorias as $cat){ ?>
+                                        <option name="categorias_id" value="<?= $cat['id']; ?>"><?= $cat['nome']; ?>
+                                        </option>
+                                        <?php } ?>
+
+                                    </ul>
+
+                                </select>
+
                             </div>
-                            <?php } ?>
+
 
                             <div class="mb-3">
                                 <label for="product_description" class="col-form-label">Descrição:</label>

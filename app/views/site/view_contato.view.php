@@ -77,7 +77,7 @@
 
             <div class="bottom-text">
                 <p>Rua Santos da Silva, 987</p>
-                <p>Juíz de Fora, MG, 12345-678</p>
+                <p>Juiz de Fora, MG, 12345-678</p>
             </div>
 
             <div class="mapa">

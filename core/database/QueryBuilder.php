@@ -30,6 +30,68 @@ class QueryBuilder
         //     }
         // }
 
+        //QUERY DE PRODUTOS
+        public function selectProdutos()
+        {
+            try{
+                $query = $this->pdo->prepare("SELECT P.id, P.nome, P.valor, P.descricao, P.imagem, C.nome AS categoria FROM produto P INNER JOIN categorias C ON P.categorias_id=C.id");
+                $query->execute();
+                $produtos = $query->fetchAll(PDO::FETCH_ASSOC);
+    
+                return $produtos;
+            }
+            catch(Exception $e){
+                die($e->getMessage());
+            }
+        }
+    
+        public function insertProduto(array $product)
+        {
+    
+            try {
+                $query = $this->pdo->prepare("INSERT INTO produto (nome, valor, descricao, categorias_id, imagem) VALUE (:nome, :valor, :descricao, :categorias_id, :imagem)");
+                $query->bindValue(':nome', $product['nome']);
+                $query->bindValue(':valor', $product['valor']);
+                $query->bindValue(':descricao', $product['descricao']);
+                $query->bindValue(':categorias_id', $product['categorias_id']);
+                $query->bindValue(':imagem', $product['imagem']);
+                $query->execute();
+            }
+            catch(Exception $e) {
+                die($e->getMessage());
+            }
+        }
+    
+        public function editProduto(array $product)
+        {
+            try {
+                $query = $this->pdo->prepare("UPDATE produto SET nome = :nome, valor = :valor, descricao = :descricao, categorias_id = :categorias_id, imagem = :imagem  WHERE id = :id");
+                $query->bindValue(':nome', $product['nome']);
+                $query->bindValue(':valor', $product['valor']);
+                $query->bindValue(':descricao', $product['descricao']);
+                $query->bindValue(':categorias_id', $product['categorias_id']);
+                $query->bindValue(':id', $product['id']);
+                $query->bindValue(':imagem', $product['imagem']);
+                $query->execute();
+            }
+            catch(Exception $e) {
+                die($e->getMessage());
+            }
+        }
+    
+        public function deleteProduto(string $id)
+        {
+            try {
+                $query = $this->pdo->prepare("DELETE FROM produto WHERE id = :id");
+                $query->bindValue(':id', $id);
+                $query->execute();
+            }
+            catch(Exception $e) {
+                die($e->getMessage());
+            }
+        }
+    //FIM DO QUERY DE PRODUTOS
+
     //QUERY DE CATEGORIAS
     public function selectCategorias()
     {

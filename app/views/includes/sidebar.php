@@ -55,7 +55,7 @@
                             </li>
 
                             <li class="nav-item link mb-4">
-                                <a href="" class="disable-link ms-3">
+                                <a href="Admin-Produtos" class="disable-link ms-3">
 
                                     <i class="bi bi-box-seam icon"></i>
 

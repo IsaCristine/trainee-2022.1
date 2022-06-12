@@ -73,7 +73,7 @@
                             </li>
 
                             <li class="nav-item link mb-4">
-                                <a href="" class="disable-link ms-3 mb-5">
+                                <a href="Admin-Usuarios" class="disable-link ms-3 mb-5">
 
                                     <i class="bi bi-people icon"></i>
 

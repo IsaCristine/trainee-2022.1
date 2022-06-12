@@ -20,7 +20,7 @@
 
     <?php include($_SERVER["DOCUMENT_ROOT"] . "/app/views/includes" . "/navbar.php"); ?>
 
-    <div class="container">
+    <div class="container login-content">
 
         <div class="row justify-content-center align-items-center y">
 

@@ -30,6 +30,14 @@ header,
     color: #FFF;
 }
 
+.navbar {
+    padding-right: 5px;
+}
+
+.navbar-nav {
+    background-color: #001862;
+}
+
 .nav-link {
     text-align: right;
 }

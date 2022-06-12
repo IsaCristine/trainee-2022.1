@@ -16,7 +16,7 @@
 
             <div class="container-fluid">
                 <!-- Logo -->
-                <a href="#" class="navbar-brand">
+                <a href="Home" class="navbar-brand">
                     <img src="../../public/img/Logo escrita amarela com flecha.png" alt="Logo Bell Comics" id="logo">
                 </a>
 

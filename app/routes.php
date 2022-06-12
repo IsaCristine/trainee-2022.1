@@ -18,12 +18,12 @@ $router->post('excluirUsuario', 'UsuariosController@delete');
 
 
 
-//Rotas Produtos
+//Rotas Admin Produtos
 $router->get('Admin-Produtos', 'AdmProdutosController@showProdutos');
 $router->post('salvarProduto', 'AdmProdutosController@createProduto');
 $router->post('editarProduto', 'AdmProdutosController@editProduto');
 $router->post('excluirProduto', 'AdmProdutosController@deleteProduto');
-//Fim Produtos
+//Fim Admin Produtos
 
 
 
@@ -65,8 +65,6 @@ $router->get('Contato','ContatoController@getPage');
 $router->get('Produto','ProdutoController@getPage');
 
 //Fim Produto
-
-
 
 //Rotas Login
 

@@ -112,7 +112,8 @@
 
                                 <li>
 
-                                    <a class="dropdown-item text-white logout-link" href=""> <span class=" me-auto">
+                                    <a class="dropdown-item text-white logout-link" href="Login"> <span
+                                            class=" me-auto">
                                             Logout </span><i class="bi bi-box-arrow-right logout-icon"></i></a>
 
                                 </li>

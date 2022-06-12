@@ -34,7 +34,7 @@ class UsuariosController
         ];
 
         $create = App::get("database")->insertUsuarios($dados);
-        header("location:usuariosAdm");
+        header("location:Admin-Usuarios");
     }
 
     //Renderiza a página para armazenar um registro:
@@ -54,7 +54,7 @@ class UsuariosController
         ];
 
         $create = App::get("database")->editUsuario($dados);
-        header("location:usuariosAdm");
+        header("location:Admin-Usuarios");
     }
 
     //Renderiza a página para atualizar um registro:
@@ -70,6 +70,6 @@ class UsuariosController
 
         $delete = App::get("database")->deleteUsuario($id);
 
-        header("location:usuariosAdm");
+        header("location:Admin-Usuarios");
     }
 }

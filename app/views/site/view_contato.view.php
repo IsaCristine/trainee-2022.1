@@ -35,7 +35,7 @@
                         <span>(32) 9876-5432</span>
                     </h5>
 
-                    <form action="" id="form">
+                    <form method="POST" action="envio" id="form">
 
                         <div class="form-group">
                             <label for="name">Nome</label>
@@ -58,7 +58,7 @@
                             <textarea rows="4" id="message" name="message" required class="form-control"></textarea>
                         </div>
 
-                        <button type="button" class="btn btn-light">Enviar</button>
+                        <button type="submit" class="btn btn-light">Enviar</button>
 
                     </form>
 

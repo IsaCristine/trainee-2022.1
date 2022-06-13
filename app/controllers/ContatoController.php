@@ -14,48 +14,47 @@ class ContatoController
         require __DIR__ . '/../views/site/view_contato.view.php';
     }
 
-    public function contato(){
-
-        return view('/site/contato');
-    }
 
     public function sendEmail()
     {
 
-        $nome = $_POST['nome'];
+        $nome = $_POST['name'];
 
         $email = $_POST['email'];
 
-        $assunto = $_POST['assunto'];
+        $assunto = $_POST['subject'];
 
-        $mensagem = $_POST['mensagem'];
+        $mensagem = $_POST['message'];
 
         $mail = new PHPMailer();
 
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPDebug=2;
+        $mail->mailer='smtp';
         $mail->SMTPAuth = true;
-        $mail->SMTPSecure = 'tls';
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 587;
+        $mail->isHTML(true);
         $mail->Username = 'testetraineephp@gmail.com';
         $mail->Password = 'Bcomics123';
-        $mail->Port = 587;
         
-        $mail->setFrom('testetraineephp@gmail.com', 'Destinatario');
-        $mail->addAddress('testetraineephp@gmail.com', 'Remetente');
-
-        $mail->isHTML(true);
+        $mail->setFrom($email, 'Destinatario');
         $mail->Subject = $assunto;
         $mail->Body    = $mensagem;
+        $mail->AddAddress('testetraineephp@gmail.com', 'Remetente');
+
 
         if(!$mail->send()) {
             echo "<script>alert('Mensagem não enviada');</script>";
             echo '<script>alert(Erro inesperado);</script>';
-            header('Location: /contato');;
+            echo $mail->ErrorInfo;
+            // header('Location:Contato'); 
         } 
         
         else {
             echo "<script>alert('Mensagem enviada');</script>";
-            return view('site/contato');
+            return view('site/Contato');
         }
     }
 }

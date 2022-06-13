@@ -46,13 +46,13 @@ class QueryBuilder
         }
     }
 
-    public function pesquisaProduto($nome){
+    public function pesquisaProdutos($nome){
         try{
-            $query = $this->pdo->prepare("SELECT * FROM produtos WHERE nome LIKE '%$nome%'");
+            $query = $this->pdo->prepare("SELECT * FROM produto WHERE nome LIKE '%$nome%'");
             $query->execute();
-            $categorias = $query->fetchAll(PDO::FETCH_ASSOC);
+            $produtos = $query->fetchAll(PDO::FETCH_ASSOC);
 
-            return $categorias;
+            return $produtos;
         }
         catch(Exception $e){
             die($e->getMessage());

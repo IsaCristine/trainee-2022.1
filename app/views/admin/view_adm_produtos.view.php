@@ -44,7 +44,7 @@
 
                     <form method="GET" action="" class="search-form">
 
-                        <input type="text" class="form-control input-search" name="search"
+                        <input type="text" class="form-control input-search" name="pesquisar"
                             placeholder="Pesquisar produto">
                         <button type="submit" class="btn btn-primary ms-3">
                             <i class="bi bi-search"></i>

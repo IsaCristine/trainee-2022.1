@@ -13,6 +13,13 @@ class AdmProdutosController
     {
         $produtos = App::get("database")->selectProdutos();
         $categorias = App::get('database')->selectCategorias();
+
+        $nome = filter_input(INPUT_GET,'pesquisar');
+        if($nome){
+            $produtos = App::get("database")->pesquisaProdutos($nome);
+        }else{
+            $produtos = App::get("database")->selectProdutos();
+        } 
         include __DIR__ . '/../views/admin/view_adm_produtos.view.php';
     }
 

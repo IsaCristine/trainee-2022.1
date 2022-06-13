@@ -58,9 +58,12 @@
 
   <section class="linhas"><hr></section>
 
+  <form method="POST" action="logout">
   <div class="text-center">
-    <button type="button" class="btn btn-danger text-center m-5">Sair</button>
+    <button name="logout" type="submit" class="btn btn-danger text-center m-5">Sair</button>
   </div>
+  </form>
+  
 
 </body>
 </html>

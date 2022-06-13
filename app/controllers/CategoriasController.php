@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-
+session_start();
 use App\Core\App;
 use App\Core\Database\QueryBuilder;
 use Exception;
@@ -11,8 +11,14 @@ class CategoriasController
 
     public function showCategorias()
     {
-        $categorias = App::get("database")->selectCategorias();
-        include __DIR__ . '/../views/admin/view_admin_categoria.view.php';
+        
+        if($_SESSION["userId"]){
+            $categorias = App::get("database")->selectCategorias();
+            include __DIR__ . '/../views/admin/view_admin_categoria.view.php';
+        }
+        else{
+            header("Location:Home");
+        }
     }
 
     public function createCategoria()

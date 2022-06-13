@@ -21,14 +21,14 @@
           <div class="row justify-content-center align-items-center vh-100 y">
             
             <div class="col-auto">
-              <form class="tela">
+              
                 <div>
                   <div class="row justify-content-end">
                     <div class="col-4 divFoto"> 
                       <img class= "img" src="../../../public/img/MacacodeIcon.png">
                     </div>
                     <div class="col-4 divIconeClose"> 
-                      <img class= "imgclose" src="../../../public/img/close.png">
+                      <a href="Home"><img class= "imgclose" src="../../../public/img/close.png"></a>
                     </div>
                   </div>   
                 </div>
@@ -36,23 +36,26 @@
                 <div>
                   <h1>Login</h1>
                 </div>
+
                 <div>
                   <hr class="linhas">
                 </div>
+                <form method="POST" action="logar">
+
                 
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label txt">E-mail</label>
-                  <input type="email" class="form-control txt" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text comnt txtdescricao">Não compartilhe email ou senha com outras pessoas</div>
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label txt">Senha</label>
-                  <input type="password" class="form-control txt" id="exampleInputPassword1">
-                </div>
-                <div class="botaodiv">
-                  <button type="submit" class="btn btn-primary w-100 botao txt">Entrar</button>
-                </div>
-                
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label txt">E-mail</label>
+                    <input type="email" name="email" class="form-control txt" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text comnt txtdescricao">Não compartilhe email ou senha com outras pessoas</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label txt">Senha</label>
+                    <input type="password" name="senha" class="form-control txt" id="exampleInputPassword1">
+                  </div>
+                  <div class="botaodiv">
+                    <button type="submit" class="btn btn-primary w-100 botao txt">Entrar</button>
+                  </div>
+                  
               </form>
             </div>
           </div>

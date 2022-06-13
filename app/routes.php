@@ -10,13 +10,13 @@ FIM DO EXEMPLO -----------------------------------------------------------------
 
 
 //Rotas Usuários
-
+$router->get('Admin-Usuarios', 'UsuariosController@show');
 //Fim Usuários
 
 
 
 //Rotas Produtos
-
+$router->get('Admin-Produtos', 'AdmProdutosController@showProdutos');
 //Fim Produtos
 
 
@@ -65,6 +65,8 @@ $router->get('Produto','ProdutoController@getPage');
 //Rotas Login
 
 $router->get('Login','LoginController@getPage');
+$router->post('logar','LoginController@verificaLogin');
+$router->post('logout','LoginController@logout');
 
 //Fim Login
 

@@ -32,8 +32,8 @@
         <div class="row row-cols-1 row-cols-sm-2 justify-content-around mb-4">
 
             <div class="col-3">
-                <button type="button" class="btn btn-secondary add" data-bs-toggle="modal" data-bs-target="#NewUserModal"
-                    data-bs-whatever="@mdo">
+                <button type="button" class="btn btn-secondary add" data-bs-toggle="modal"
+                    data-bs-target="#NewUserModal" data-bs-whatever="@mdo">
 
                     <i class="bi bi-plus"></i>
 
@@ -70,21 +70,21 @@
 
                     <div class="modal-body">
 
-                        <form method="POST" action="">
+                        <form method="POST" action="adicionarUsuario">
 
                             <div class="mb-3">
-                                <label for="user-name" class="col-form-label">Nome:</label>
-                                <input type="text" class="form-control" id="user-name" name="user_name">
+                                <label for="user_name" class="col-form-label">Nome:</label>
+                                <input type="text" class="form-control" id="user_name" name="user_name">
                             </div>
 
                             <div class="mb-3">
-                                <label for="user-email" class="col-form-label">E-mail:</label>
-                                <input type="text" class="form-control" id="user-email" name="user_email">
+                                <label for="user_email" class="col-form-label">E-mail:</label>
+                                <input type="text" class="form-control" id="user_email" name="user_email">
                             </div>
 
                             <div class="mb-3">
-                                <label for="user-password" class="col-form-label">Senha:</label>
-                                <input type="text" class="form-control" id="user-password" name="user_password">
+                                <label for="user_password" class="col-form-label">Senha:</label>
+                                <input type="text" class="form-control" id="user_password" name="user_password">
                             </div>
 
                     </div>
@@ -116,28 +116,34 @@
                 </thead>
 
                 <tbody>
+
+                    <?php foreach($usuarios as $usuario): ?>
+
                     <tr>
-                        <td class="name">Jacob Thornton</td>
-                        <td class="email">jthornton31@contact.com</td>
+                        <td class="name"><?= $usuario['nome'] ?></td>
+                        <td class="email"><?= $usuario['email'] ?></td>
                         <td style="text-align: center">
 
                             <div class="table-buttons">
-                                <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#FirstViewModal">
+                                <button class="btn btn-secondary view" data-bs-toggle="modal"
+                                    data-bs-target="#<?= $usuario['nome'] ?>ViewModal">
                                     <i class="bi bi-eye"></i>
                                 </button>
 
-                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#FirstEditModal">
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#<?= $usuario['nome'] ?>EditModal">
                                     <i class="bi bi-pencil"></i>
                                 </button>
 
-                                <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#FirstDeleteModal">
+                                <button class="btn btn-danger delete" data-bs-toggle="modal"
+                                    data-bs-target="#<?= $usuario['nome'] ?>DeleteModal">
                                     <i class="bi bi-trash"></i>
                                 </button>
                             </div>
 
                             <!-- MODAL VIEW -->
-                            <div class="modal fade" id="FirstViewModal" tabindex="-1"
-                                aria-labelledby="FirstViewModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="<?= $usuario['nome'] ?>ViewModal" tabindex="-1"
+                                aria-labelledby="<?= $usuario['nome'] ?>ViewModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -152,18 +158,18 @@
                                             <form>
                                                 <div class="mb-3">
 
-                                                    <label for="user-name"
+                                                    <label for="user_name"
                                                         class="col-form-label d-flex justify-content-start">Nome:</label>
-                                                    <input type="text" class="form-control" id="user-name" value="Jacob Thornton"
-                                                        readonly>
-                                                    <label for="user-mail"
+                                                    <input type="text" class="form-control" id="user_name"
+                                                        value="<?= $usuario['nome'] ?>" readonly>
+                                                    <label for="user_email"
                                                         class="col-form-label d-flex justify-content-start">E-mail:</label>
-                                                    <input type="text" class="form-control" id="user-mail" value="jthornton31@contact.com"
-                                                        readonly>
-                                                    <label for="user-password"
+                                                    <input type="text" class="form-control" id="user_mail"
+                                                        value="<?= $usuario['email'] ?>" readonly>
+                                                    <label for="user_password"
                                                         class="col-form-label d-flex justify-content-start">Senha:</label>
-                                                    <input type="text" class="form-control" id="user-password" value="123456"
-                                                        readonly>
+                                                    <input type="text" class="form-control" id="user_password"
+                                                        value="<?= $usuario['senha'] ?>" readonly>
 
                                                 </div>
 
@@ -181,8 +187,8 @@
 
                             <!--MODAL EDIT -->
 
-                            <div class="modal fade" id="FirstEditModal" tabindex="-1"
-                                aria-labelledby="FirstEditModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="<?= $usuario['nome'] ?>EditModal" tabindex="-1"
+                                aria-labelledby="<?= $usuario['nome'] ?>EditModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -195,63 +201,64 @@
 
                                         <div class="modal-body">
 
-                                            <form method="POST" action="">
+                                            <form method="POST" action="editarUsuario">
 
                                                 <div class="mb-3">
-                                                    <label for="user-name"
+                                                    <label for="user_name"
                                                         class="col-form-label d-flex justify-content-start">Nome:</label>
-                                                    <input type="hidden" name="id" value="">
-                                                    <input type="text" class="form-control" id="user-name"
-                                                        name="user-name" value="Jacob Thornton">
+                                                    <input type="hidden" name="id" value="<?= $usuario['id'] ?>">
+                                                    <input type="text" class="form-control" id="user_name"
+                                                        name="user_name" value="<?= $usuario['nome'] ?>">
 
-                                                    <label for="user-mail"
+                                                    <label for="user_email"
                                                         class="col-form-label d-flex justify-content-start">E-mail:</label>
-                                                    <input type="hidden" name="id" value="">
-                                                    <input type="text" class="form-control" id="user-mail"
-                                                        name="user-mail" value="jthornton31@contact.com">
+                                                    <input type="hidden" name="id" value="<?= $usuario['id'] ?>">
+                                                    <input type="text" class="form-control" id="user_email"
+                                                        name="user_email" value="<?= $usuario['email'] ?>">
 
-                                                    <label for="user-password"
+                                                    <label for="user_password"
                                                         class="col-form-label d-flex justify-content-start">Senha:</label>
-                                                    <input type="hidden" name="id" value="">
-                                                    <input type="text" class="form-control" id="user-password"
-                                                        name="user-password" value="123456">
+                                                    <input type="hidden" name="id" value="<?= $usuario['id'] ?>">
+                                                    <input type="text" class="form-control" id="user_password"
+                                                        name="user_password" value="<?= $usuario['senha'] ?>">
                                                 </div>
 
-                                            </form>
+
 
                                         </div>
 
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-danger"
                                                 data-bs-dismiss="modal">Cancelar</button>
-                                            <button type="button" class="btn btn-primary">Editar</button>
+                                            <button type="submit" class="btn btn-primary">Editar</button>
                                         </div>
 
                                     </div>
                                 </div>
                             </div>
-
+                            </form>
                             <!--MODAL DELETE-->
 
-                            <div class="modal fade" id="FirstDeleteModal" tabindex="-1"
-                                aria-labelledby="FirstDeleteModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="<?= $usuario['nome'] ?>DeleteModal" tabindex="-1"
+                                aria-labelledby="<?= $usuario['nome'] ?>DeleteModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
 
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="exampleModalLabel">Excluir Usuário</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close">
-                                                </button>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close">
+                                            </button>
                                         </div>
 
                                         <div class="modal-body">
-                                            <form>
+                                            <form method="POST" action="excluirUsuario">
 
                                                 <div class="mb-3 mt-3">
                                                     <p class="justify-content-start">Tem certeza que deseja excluir o
-                                                        usuário <span class="user-name">Jacob</span> ?</p>
-                                                    <input type="hidden" name="id" value="">
+                                                        usuário <span class="user_name"><?= $usuario['nome'] ?></span> ?
+                                                    </p>
+                                                    <input type="hidden" name="id" value="<?= $usuario['id'] ?>">
                                                 </div>
 
                                         </div>
@@ -275,74 +282,7 @@
 
                     </tr>
 
-                    <tr>
-                        <td class="name">Jacob Thornton</td>
-                        <td class="email">jthornton31@contact.com</td>
-                        <td style="text-align: center">
-
-                            <div class="table-buttons">
-                                <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#FirstViewModal">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-
-                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#FirstEditModal">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-
-                                <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#FirstDeleteModal">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-                        <td class="name">Jacob Thornton</td>
-                        <td class="email">jthornton31@contact.com</td>
-                        <td style="text-align: center">
-
-                            <div class="table-buttons">
-                                <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#FirstViewModal">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-
-                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#FirstEditModal">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-
-                                <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#FirstDeleteModal">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-                        <td class="name">Jacob Thornton</td>
-                        <td class="email">jthornton31@contact.com</td>
-                        <td style="text-align: center">
-
-                            <div class="table-buttons">
-                                <button class="btn btn-secondary view" data-bs-toggle="modal" data-bs-target="#FirstViewModal">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-
-                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#FirstEditModal">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-
-                                <button class="btn btn-danger delete" data-bs-toggle="modal" data-bs-target="#FirstDeleteModal">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-
-                        </td>
-
-                    </tr>
+                    <?php endforeach; ?>
 
                 </tbody>
 
@@ -355,8 +295,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 </body>
 
 

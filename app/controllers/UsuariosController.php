@@ -18,13 +18,16 @@ class UsuariosController
     {
 
         //  include __DIR__ . '/../views/admin/view_adm_users.view.php';
-        if($_SESSION["userId"]){
-            $usuarios = App::get("database")-> selectUsuarios(); 
-            return viewAdm('view_adm_users', compact('usuarios'));
+        if(isset($_SESSION["userId"])){
+                if($_SESSION["userId"]){
+                $usuarios = App::get("database")-> selectUsuarios(); 
+                return viewAdm('view_adm_users', compact('usuarios'));
+                die();
+            }
         }
-        else{
-            header("Location:Home");
-        }
+        
+        header("Location:Home");
+        
         
     }
 

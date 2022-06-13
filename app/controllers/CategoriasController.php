@@ -12,13 +12,15 @@ class CategoriasController
     public function showCategorias()
     {
         
-        if($_SESSION["userId"]){
-            $categorias = App::get("database")->selectCategorias();
-            include __DIR__ . '/../views/admin/view_admin_categoria.view.php';
+        if(isset($_SESSION["userId"])){
+            if($_SESSION["userId"]){
+                $categorias = App::get("database")->selectCategorias();
+                include __DIR__ . '/../views/admin/view_admin_categoria.view.php';
+                die();
+            }
         }
-        else{
-            header("Location:Home");
-        }
+        header("Location:Home");
+    
     }
 
     public function createCategoria()

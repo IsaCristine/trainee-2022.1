@@ -13,14 +13,17 @@ class AdmProdutosController
     public function showProdutos()
     {
         
-        if($_SESSION["userId"]){
-            $produtos = App::get("database")->selectProdutos();
-            $categorias = App::get('database')->selectCategorias();
-            include __DIR__ . '/../views/admin/view_adm_produtos.view.php';
+        if(isset($_SESSION["userId"])){
+            if($_SESSION["userId"]){
+                $produtos = App::get("database")->selectProdutos();
+                $categorias = App::get('database')->selectCategorias();
+                include __DIR__ . '/../views/admin/view_adm_produtos.view.php';
+                die();
+            }
         }
-        else{
-            header("Location:Home");
-        }
+        
+        header("Location:Home");
+        
     }
 
     public function createProduto()

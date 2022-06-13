@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 
 
 class ContatoController
@@ -17,6 +18,8 @@ class ContatoController
 
     public function sendEmail()
     {
+        //Load Composer's autoloader
+        require 'vendor/autoload.php';
 
         $nome = $_POST['name'];
 
@@ -27,23 +30,22 @@ class ContatoController
         $mensagem = $_POST['message'];
 
         $mail = new PHPMailer();
-
+        $mail->SMTPDebug = 2;
         $mail->isSMTP();
-        $mail->SMTPDebug=2;
-        $mail->mailer='smtp';
-        $mail->SMTPAuth = true;
         $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPSecure = 'ssl';
+        $mail->SMTPAuth = true;
+        $mail->SMTPSecure = 'tls';
+        $mail->Username = 'noreplybuyin@gmail.com';
+        $mail->Password = 'mzzxktdkvtzdlhka';
         $mail->Port = 587;
+
+        $mail->setFrom('noreplybuyin@gmail.com');
+        $mail->addAddress('noreplybuyin@gmail.com');
+        $mail->addReplyTo($email,$nome);
+
         $mail->isHTML(true);
-        $mail->Username = 'testetraineephp@gmail.com';
-        $mail->Password = 'Bcomics123';
-        
-        $mail->setFrom($email, 'Destinatario');
         $mail->Subject = $assunto;
         $mail->Body    = $mensagem;
-        $mail->AddAddress('testetraineephp@gmail.com', 'Remetente');
-
 
         if(!$mail->send()) {
             echo "<script>alert('Mensagem não enviada');</script>";
@@ -54,7 +56,7 @@ class ContatoController
         
         else {
             echo "<script>alert('Mensagem enviada');</script>";
-            return view('site/Contato');
+            header("Location:Contato");
         }
     }
 }

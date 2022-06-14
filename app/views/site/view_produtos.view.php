@@ -44,9 +44,12 @@
                       <p class="card-text"><?= $product["descricao"] ?></p>
                     </div>
 
+                  <form method="GET" action="Produto">
                     <div class="card-footer cardrodape">
-                      <a href="#" class="btn btn-primary txtbotao">Saiba Mais</a>
+                        <input type="hidden" name="id" value="<?= $product["id"]?>">
+                        <button type="submit" class="btn btn-primary txtbotao">Saiba Mais</button>
                     </div>
+                  </form>
 
                   </div>
                 </div>

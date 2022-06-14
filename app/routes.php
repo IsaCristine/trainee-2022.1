@@ -17,6 +17,9 @@ $router->get('usuariosAdm', 'UsuariosController@show');
 
 //Rotas Produtos
 $router->get('Admin-Produtos', 'AdmProdutosController@showProdutos');
+$router->post('salvarProduto', 'AdmProdutosController@createProduto');
+$router->post('editarProduto', 'AdmProdutosController@editProduto');
+$router->post('excluirProduto', 'AdmProdutosController@deleteProduto');
 //Fim Produtos
 
 

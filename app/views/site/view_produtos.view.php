@@ -35,7 +35,7 @@
             <?php foreach ($list_products as $product){ ?>
                 <div class="col">
                   <div class="card cardestilo">
-                    <img class="imgcard" src="https://quintacapa.com.br/wp-content/uploads/2021/11/Arcane-league-of-legends-destaque-quinta-capa.png" class="card-img-top" >
+                    <img class="imgcard" src="<?= 'data:image/jpg;base64, ' .base64_encode($product['imagem']) ?>" class="card-img-top" >
                     <div class="card-body">
                       <div class="categoria">
                         <h5 class="card-title"><?= $product["nome"] ?> </h5>

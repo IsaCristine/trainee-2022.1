@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
         integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
 
+    <script type="text/javascript" src="../../../public/js/filterInput.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
@@ -114,7 +116,8 @@
 
                             <div class="mb-3">
                                 <label for="product_value" class="col-form-label">Preço:</label>
-                                <input type="text" class="form-control" id="product_value" name="product_value">
+                                <input type="text" class="form-control" id="product_value" name="product_value"
+                                    onkeypress="filterInput(event)">
                             </div>
 
                             <div class="mb-3">
@@ -220,7 +223,7 @@
                                                     <label for="product_value"
                                                         class="col-form-label d-flex justify-content-start">Preço:</label>
                                                     <input type="text" class="form-control" id="product_value"
-                                                        value="<?= $produto['valor'] ?>" readonly>
+                                                        value="R$<?= $produto['valor'] ?>" readonly>
 
                                                     <div class="mb-3 mt-3">
                                                         <div class="card areaImagem">
@@ -280,7 +283,7 @@
 
                                                     <select name="categorias_id" class="btn dropdown-toggle"
                                                         aria-haspopup="true" aria-expanded="false">
-                                                        Categoria
+                                                        Categoria:
 
                                                         <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
                                                             <?php foreach($categorias as $cat){ ?>
@@ -320,7 +323,7 @@
                                                         class="col-form-label d-flex justify-content-start">Preço:</label>
                                                     <input type="hidden" name="id" value="<?= $produto['id'] ?>">
                                                     <input type="text" class="form-control" id="product_value"
-                                                        name="product_value" value="<?= $produto['valor'] ?>">
+                                                        name="product_value" value="R$<?= $produto['valor'] ?>">
                                                 </div>
 
                                                 <div class="mb-3">

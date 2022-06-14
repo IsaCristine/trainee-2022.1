@@ -89,27 +89,12 @@
 
                             <h3 class="box-title mt-4">Informações do produto</h3>
                             <ul class="list-unstyled">
-
+                                <?php foreach($arr as $info): ?>
                                 <li>
                                     <i class="fa fa-check text-success"></i>
-                                    Tecido 100% algodão
+                                    <?= $info ?>
                                 </li>
-
-                                <li>
-                                    <i class="fa fa-check text-success"></i>
-                                    Estampa levemente desbotada estilo Vintage
-                                </li>
-
-                                <li>
-                                    <i class="fa fa-check text-success"></i>
-                                    Costuras reforçadas no colarinho e ombros
-                                </li>
-
-                                <li>
-                                    <i class="fa fa-check text-success"></i>
-                                    Frete grátis para todo o Brasil
-                                </li>
-
+                                <?php endforeach ?>
                             </ul>
 
                             <h4 style="font-size: 1.25rem" class="mt-4">

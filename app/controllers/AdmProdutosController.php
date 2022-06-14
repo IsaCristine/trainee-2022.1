@@ -45,6 +45,7 @@ class AdmProdutosController extends Pagination
         $product = [
             "nome" => filter_input(INPUT_POST, "product_name", FILTER_SANITIZE_STRING),
             "valor" => filter_input(INPUT_POST, "product_value", FILTER_SANITIZE_STRING),
+            "info" => filter_input(INPUT_POST, "product_info", FILTER_SANITIZE_STRING),
             "descricao" => filter_input(INPUT_POST, "product_description", FILTER_SANITIZE_STRING),
             "categorias_id" => $_POST["categorias_id"],
             "imagem" => $image_content
@@ -70,6 +71,7 @@ class AdmProdutosController extends Pagination
         $product = [
             "nome" => filter_input(INPUT_POST, "product_name", FILTER_SANITIZE_STRING),
             "valor" => filter_input(INPUT_POST, "product_value", FILTER_SANITIZE_STRING),
+            "info" => filter_input(INPUT_POST, "product_info", FILTER_SANITIZE_STRING),
             "descricao" => filter_input(INPUT_POST, "product_description", FILTER_SANITIZE_STRING),
             "categorias_id" => filter_input(INPUT_POST, "categorias_id", FILTER_SANITIZE_STRING),
             "imagem" => $image_content,

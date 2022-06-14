@@ -13,6 +13,7 @@ class ProdutoController
 
         if(isset($id)){
             $produto = $this->getProduct($id);
+            $arr = explode("\n",$produto["info"]);
             if($produto) {
                 require __DIR__ . '/../views/site/view_produto.view.php';
                 die();

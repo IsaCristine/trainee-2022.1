@@ -64,9 +64,10 @@ class QueryBuilder
     {
 
         try {
-            $query = $this->pdo->prepare("INSERT INTO produto (nome, valor, descricao, categorias_id, imagem) VALUE (:nome, :valor, :descricao, :categorias_id, :imagem)");
+            $query = $this->pdo->prepare("INSERT INTO produto (nome, valor, info, descricao, categorias_id, imagem) VALUE (:nome, :valor, :descricao, :categorias_id, :imagem)");
             $query->bindValue(':nome', $product['nome']);
             $query->bindValue(':valor', $product['valor']);
+            $query->bindValue(':info', $product['info']);
             $query->bindValue(':descricao', $product['descricao']);
             $query->bindValue(':categorias_id', $product['categorias_id']);
             $query->bindValue(':imagem', $product['imagem']);
@@ -80,9 +81,10 @@ class QueryBuilder
     public function editProduto(array $product)
     {
         try {
-            $query = $this->pdo->prepare("UPDATE produto SET nome = :nome, valor = :valor, descricao = :descricao, categorias_id = :categorias_id, imagem = :imagem  WHERE id = :id");
+            $query = $this->pdo->prepare("UPDATE produto SET nome = :nome, valor = :valor, info = :info, descricao = :descricao, categorias_id = :categorias_id, imagem = :imagem  WHERE id = :id");
             $query->bindValue(':nome', $product['nome']);
             $query->bindValue(':valor', $product['valor']);
+            $query->bindValue(':info', $product['info']);
             $query->bindValue(':descricao', $product['descricao']);
             $query->bindValue(':categorias_id', $product['categorias_id']);
             $query->bindValue(':id', $product['id']);
@@ -114,7 +116,7 @@ class QueryBuilder
     public function list_products($first_item, $quantity)
     {
         try{
-            $query = $this->pdo->prepare("SELECT P.id, P.nome, P.valor, P.descricao, P.imagem,
+            $query = $this->pdo->prepare("SELECT P.id, P.nome, P.valor, P.descricao, P.info, P.imagem,
                                                 C.nome AS categoria FROM produto P INNER JOIN categorias C 
                                                     ON P.categorias_id=C.id ORDER BY P.id DESC LIMIT $first_item, $quantity");
 
@@ -181,7 +183,7 @@ class QueryBuilder
     public function selectProdutoPorId($id)
     {
         try{
-            $query = $this->pdo->prepare("SELECT P.nome, P.valor, P.descricao, P.imagem,
+            $query = $this->pdo->prepare("SELECT P.nome, P.valor, P.info, P.descricao, P.imagem,
                                                 C.nome AS categoria FROM produto P INNER JOIN categorias C 
                                                 ON P.categorias_id=C.id WHERE P.id = ?");
             $query->bindValue(1,$id);

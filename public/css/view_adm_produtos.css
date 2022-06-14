@@ -47,6 +47,21 @@
     justify-content: center;
 }
 
+textarea {
+    width: 100%;
+    height: 9.375rem;
+}
+
+
+.mb-3 textarea {
+    width: 12rem;
+    height: 8rem;
+}
+
+.info-area {
+    margin-left: 0.1rem;
+}
+
 @media(min-width:576px) {
     .search-area {
         justify-content: end;

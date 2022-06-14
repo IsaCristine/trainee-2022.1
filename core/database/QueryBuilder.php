@@ -48,7 +48,7 @@ class QueryBuilder
 
     public function pesquisaProdutos($nome){
         try{
-            $query = $this->pdo->prepare("SELECT * FROM produto WHERE nome LIKE '%$nome%'");
+            $query = $this->pdo->prepare("SELECT P.id, P.nome, P.valor, P.descricao, P.imagem, C.nome AS categoria FROM produto P INNER JOIN categorias C ON P.categorias_id=C.id WHERE P.nome LIKE '%$nome%'");
             $query->execute();
             $produtos = $query->fetchAll(PDO::FETCH_ASSOC);
 

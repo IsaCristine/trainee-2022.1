@@ -11,7 +11,6 @@ class AdmProdutosController
 
     public function showProdutos()
     {
-        $produtos = App::get("database")->selectProdutos();
         $categorias = App::get('database')->selectCategorias();
 
         $nome = filter_input(INPUT_GET,'pesquisar');

@@ -47,7 +47,7 @@
 
                         <input type="text" class="form-control input-search" name="search"
                             placeholder="Pesquisar categoria">
-                        <button type="submit" class="btn btn-primary ms-3">
+                        <button type="submit" class="btn btn-primary ms-3" value="enviar">
                             <i class="bi bi-search"></i>
                         </button>
 

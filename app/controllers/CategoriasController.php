@@ -11,7 +11,12 @@ class CategoriasController
 
     public function showCategorias()
     {
-        $categorias = App::get("database")->selectCategorias();
+        $nome = filter_input(INPUT_GET,'search');
+        if($nome){
+            $categorias = App::get("database")->searchCategoria($nome);
+        }else{
+            $categorias = App::get("database")->selectCategorias();
+        }
         include __DIR__ . '/../views/admin/view_admin_categoria.view.php';
     }
 

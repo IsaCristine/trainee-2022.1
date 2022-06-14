@@ -139,7 +139,7 @@
 
             <tbody>
 
-            <?php foreach ($produtos as $produto){ ?>
+            <?php foreach ($produtos as $produto){?>
 
             <tr>
                 <td><?= $produto['nome'] ?></td>
@@ -148,24 +148,24 @@
 
                     <div class="table-buttons">
                         <button class="btn btn-secondary view" data-bs-toggle="modal"
-                                data-bs-target="#<?= $produto['nome'] ?>ViewModal">
+                                data-bs-target="#ViewModal<?=$produto['id']?>">
                             <i class="bi bi-eye"></i>
                         </button>
 
                         <button class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#<?= $produto['nome'] ?>EditModal">
+                                data-bs-target="#EditModal<?=$produto['id']?>">
                             <i class="bi bi-pencil"></i>
                         </button>
 
                         <button class="btn btn-danger delete" data-bs-toggle="modal"
-                                data-bs-target="#<?= $produto['nome'] ?>DeleteModal">
+                                data-bs-target="#DeleteModal<?=$produto['id']?>">
                             <i class="bi bi-trash"></i>
                         </button>
                     </div>
 
                     <!-- MODAL VIEW -->
-                    <div class="modal fade" id="<?= $produto['nome'] ?>ViewModal" tabindex="-1"
-                         aria-labelledby="<?= $produto['nome'] ?>ViewModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="ViewModal<?=$produto['id']?>" tabindex="-1"
+                         aria-labelledby="ViewModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -188,17 +188,17 @@
                                             <label for="product_category"
                                                    class="col-form-label d-flex justify-content-start">Categoria:</label>
                                             <input type="text" class="form-control" id="product_category"
-                                                   value="<?= $produto['categoria'] ?>" readonly>
+                                                   value="<?=$produto['categoria']?>" readonly>
 
                                             <label for="product_description"
                                                    class="col-form-label d-flex justify-content-start">Descrição:</label>
                                             <input type="text" class="form-control" id="product_description"
-                                                   value="<?= $produto['descricao'] ?>" readonly>
+                                                   value="<?=$produto['descricao']?>" readonly>
 
                                             <label for="product_value"
                                                    class="col-form-label d-flex justify-content-start">Preço:</label>
                                             <input type="text" class="form-control" id="product_value"
-                                                   value="<?= $produto['valor'] ?>" readonly>
+                                                   value="<?=$produto['valor']?>" readonly>
 
                                             <div class="mb-3 mt-3">
                                                 <div class="card areaImagem">
@@ -229,8 +229,8 @@
 
                     <!--MODAL EDIT -->
 
-                    <div class="modal fade" id="<?= $produto['nome'] ?>EditModal" tabindex="-1"
-                         aria-labelledby="<?= $produto['nome'] ?>EditModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="EditModal<?=$produto['id']?>" tabindex="-1"
+                         aria-labelledby="EditModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -322,8 +322,8 @@
                     </form>
                     <!--MODAL DELETE-->
 
-                    <div class="modal fade" id="<?= $produto['nome'] ?>DeleteModal" tabindex="-1"
-                         aria-labelledby="<?= $produto['nome'] ?>DeleteModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="DeleteModal<?= $produto['id'] ?>" tabindex="-1"
+                         aria-labelledby="DeleteModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
 

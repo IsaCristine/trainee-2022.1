@@ -35,12 +35,12 @@ class ContatoController
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'tls';
-        $mail->Username = 'noreplybuyin@gmail.com';
-        $mail->Password = 'mzzxktdkvtzdlhka';
+        $mail->Username = 'testetraineephp@gmail.com';
+        $mail->Password = 'jbcamcrvvljgymut';
         $mail->Port = 587;
 
-        $mail->setFrom('noreplybuyin@gmail.com');
-        $mail->addAddress('noreplybuyin@gmail.com');
+        $mail->setFrom('testetraineephp@gmail.com');
+        $mail->addAddress('testetraineephp@gmail.com');
         $mail->addReplyTo($email,$nome);
 
         $mail->isHTML(true);

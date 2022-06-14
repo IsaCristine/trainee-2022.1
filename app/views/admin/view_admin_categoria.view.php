@@ -123,24 +123,24 @@
 
                                 <div class="table-buttons">
                                     <button class="btn btn-secondary view" data-bs-toggle="modal"
-                                        data-bs-target="#<?= $categoria["nome"] ?>ViewModal">
+                                        data-bs-target="#ViewModal<?= $categoria["id"] ?>">
                                         <i class="bi bi-eye"></i>
                                     </button>
 
                                     <button class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#<?= $categoria["nome"] ?>EditModal">
+                                        data-bs-target="#EditModal<?= $categoria["id"] ?>">
                                         <i class="bi bi-pencil"></i>
                                     </button>
 
                                     <button class="btn btn-danger delete" data-bs-toggle="modal"
-                                        data-bs-target="#<?= $categoria["nome"] ?>DeleteModal">
+                                        data-bs-target="#DeleteModal<?= $categoria["id"] ?>">
                                         <i class="bi bi-trash"></i>
                                     </button>
                                 </div>
 
                                 <!-- MODAL VIEW -->
-                                <div class="modal fade" id="<?= $categoria["nome"] ?>ViewModal" tabindex="-1"
-                                    aria-labelledby="<?= $categoria["nome"] ?>ViewModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="ViewModal<?= $categoria["id"] ?>" tabindex="-1"
+                                    aria-labelledby="ViewModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -177,8 +177,8 @@
 
                                 <!--MODAL EDIT -->
 
-                                <div class="modal fade" id="<?= $categoria["nome"] ?>EditModal" tabindex="-1"
-                                    aria-labelledby="<?= $categoria["nome"] ?>EditModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="EditModal<?= $categoria["id"] ?>" tabindex="-1"
+                                    aria-labelledby="EditModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -218,8 +218,8 @@
 
                                 <!--MODAL DELETE-->
 
-                                <div class="modal fade" id="<?= $categoria["nome"] ?>DeleteModal" tabindex="-1"
-                                    aria-labelledby="<?= $categoria["nome"] ?>DeleteModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="DeleteModal<?= $categoria["id"] ?>" tabindex="-1"
+                                    aria-labelledby="DeleteModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
 

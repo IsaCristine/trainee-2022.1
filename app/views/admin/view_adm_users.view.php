@@ -130,24 +130,24 @@
 
                             <div class="table-buttons">
                                 <button class="btn btn-secondary view" data-bs-toggle="modal"
-                                    data-bs-target="#<?= $usuario['nome'] ?>ViewModal">
+                                    data-bs-target="#ViewModal<?= $usuario['id'] ?>">
                                     <i class="bi bi-eye"></i>
                                 </button>
 
                                 <button class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#<?= $usuario['nome'] ?>EditModal">
+                                    data-bs-target="#EditModal<?= $usuario['id'] ?>">
                                     <i class="bi bi-pencil"></i>
                                 </button>
 
                                 <button class="btn btn-danger delete" data-bs-toggle="modal"
-                                    data-bs-target="#<?= $usuario['nome'] ?>DeleteModal">
+                                    data-bs-target="#DeleteModal<?= $usuario['id'] ?>">
                                     <i class="bi bi-trash"></i>
                                 </button>
                             </div>
 
                             <!-- MODAL VIEW -->
-                            <div class="modal fade" id="<?= $usuario['nome'] ?>ViewModal" tabindex="-1"
-                                aria-labelledby="<?= $usuario['nome'] ?>ViewModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="ViewModal<?= $usuario['id'] ?>" tabindex="-1"
+                                aria-labelledby="ViewModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -191,8 +191,8 @@
 
                             <!--MODAL EDIT -->
 
-                            <div class="modal fade" id="<?= $usuario['nome'] ?>EditModal" tabindex="-1"
-                                aria-labelledby="<?= $usuario['nome'] ?>EditModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="EditModal<?= $usuario['id'] ?>" tabindex="-1"
+                                aria-labelledby="EditModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -243,8 +243,8 @@
                             </form>
                             <!--MODAL DELETE-->
 
-                            <div class="modal fade" id="<?= $usuario['nome'] ?>DeleteModal" tabindex="-1"
-                                aria-labelledby="<?= $usuario['nome'] ?>DeleteModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="DeleteModal<?= $usuario['id'] ?>" tabindex="-1"
+                                aria-labelledby="DeleteModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
 

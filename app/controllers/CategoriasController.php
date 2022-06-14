@@ -13,6 +13,7 @@ class CategoriasController
     {
 
         if($_SESSION["userId"]){
+            $user = $this->getUser();
             $nome = filter_input(INPUT_GET,'search');
             if($nome){
                 $categorias = App::get("database")->searchCategoria($nome);
@@ -24,6 +25,11 @@ class CategoriasController
         else{
             header("Location:Home");
         }
+    }
+
+    public function getUser()
+    {
+        return App::get("database")->getUserById($_SESSION["userId"]);
     }
 
     public function createCategoria()

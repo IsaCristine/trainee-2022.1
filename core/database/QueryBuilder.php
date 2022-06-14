@@ -30,41 +30,41 @@ class QueryBuilder
         //     }
         // }
 
-        //QUERY DE PRODUTOS
-        public function selectProdutos()
-        {
-            try{
-                $query = $this->pdo->prepare("SELECT P.id, P.nome, P.valor, P.info, P.descricao, P.imagem, C.nome AS categoria FROM produto P INNER JOIN categorias C ON P.categorias_id=C.id");
-                $query->execute();
-                $produtos = $query->fetchAll(PDO::FETCH_ASSOC);
-    
-                return $produtos;
+            //QUERY DE PRODUTOS
+            public function selectProdutos()
+            {
+                try{
+                    $query = $this->pdo->prepare("SELECT P.id, P.nome, P.valor, P.info, P.descricao, P.imagem, C.nome AS categoria FROM produto P INNER JOIN categorias C ON P.categorias_id=C.id");
+                    $query->execute();
+                    $produtos = $query->fetchAll(PDO::FETCH_ASSOC);
+
+                    return $produtos;
+                }
+                catch(Exception $e){
+                    die($e->getMessage());
+                }
             }
-            catch(Exception $e){
-                die($e->getMessage());
+
+            public function insertProduto(array $product)
+            {
+
+                try {
+                    $query = $this->pdo->prepare("INSERT INTO produto (nome, valor, info, descricao, categorias_id, imagem) VALUE (:nome, :valor, :info, :descricao, :categorias_id, :imagem)");
+                    $query->bindValue(':nome', $product['nome']);
+                    $query->bindValue(':valor', $product['valor']);
+                    $query->bindValue(':info', $product['info']);
+                    $query->bindValue(':descricao', $product['descricao']);
+                    $query->bindValue(':categorias_id', $product['categorias_id']);
+                    $query->bindValue(':imagem', $product['imagem']);
+                    $query->execute();
+                }
+                catch(Exception $e) {
+                    die($e->getMessage());
+                }
             }
-        }
-    
-        public function insertProduto(array $product)
-        {
-    
-            try {
-                $query = $this->pdo->prepare("INSERT INTO produto (nome, valor, info, descricao, categorias_id, imagem) VALUE (:nome, :valor, :info, :descricao, :categorias_id, :imagem)");
-                $query->bindValue(':nome', $product['nome']);
-                $query->bindValue(':valor', $product['valor']);
-                $query->bindValue(':info', $product['info']);
-                $query->bindValue(':descricao', $product['descricao']);
-                $query->bindValue(':categorias_id', $product['categorias_id']);
-                $query->bindValue(':imagem', $product['imagem']);
-                $query->execute();
-            }
-            catch(Exception $e) {
-                die($e->getMessage());
-            }
-        }
-    
-        public function editProduto(array $product)
-        {
+
+            public function editProduto(array $product)
+            {
             try {
                 $query = $this->pdo->prepare("UPDATE produto SET nome = :nome, valor = :valor, info = :info, descricao = :descricao, categorias_id = :categorias_id, imagem = :imagem  WHERE id = :id");
                 $query->bindValue(':nome', $product['nome']);
@@ -76,23 +76,23 @@ class QueryBuilder
                 $query->bindValue(':imagem', $product['imagem']);
                 $query->execute();
             }
-            catch(Exception $e) {
-                die($e->getMessage());
+                catch(Exception $e) {
+                    die($e->getMessage());
+                }
             }
-        }
-    
-        public function deleteProduto(string $id)
-        {
-            try {
-                $query = $this->pdo->prepare("DELETE FROM produto WHERE id = :id");
-                $query->bindValue(':id', $id);
-                $query->execute();
+
+            public function deleteProduto(string $id)
+            {
+                try {
+                    $query = $this->pdo->prepare("DELETE FROM produto WHERE id = :id");
+                    $query->bindValue(':id', $id);
+                    $query->execute();
+                }
+                catch(Exception $e) {
+                    die($e->getMessage());
+                }
             }
-            catch(Exception $e) {
-                die($e->getMessage());
-            }
-        }
-    //FIM DO QUERY DE PRODUTOS
+            //FIM DO QUERY DE PRODUTOS
 
     //QUERY DE CATEGORIAS
     public function selectCategorias()
@@ -220,6 +220,56 @@ class QueryBuilder
     }
     //FIM DO QUERY DE USUARIOS
 
+    //INICIO DO QUERY DE LOGIN
+
+    public function autenticacao($email, $senha){
+        try{
+            $query = $this->pdo->prepare("SELECT id FROM usuarios WHERE email = ? AND senha = ?");
+            $query->bindValue(1, $email);
+            $query->bindValue(2, $senha);
+            $query->execute();
+            $verifica = $query->fetch(PDO::FETCH_ASSOC);
+            return $verifica;
+        } catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
+
+    //FIM DO QUERY DE LOGIN
+
+    //QUERIE BACK_END SIDEBAR
+    public function getUserById($id)
+    {
+        try {
+            $query = $this->pdo->prepare("SELECT * FROM usuarios WHERE id = ?");
+            $query->bindValue(1,$id);
+            $query->execute();
+
+            $user = $query->fetch(PDO::FETCH_ASSOC);
+
+            return $user;
+        }catch (Exception $e){
+            die($e->getMessage());
+        }
+
+    }
+
+    public function editAdmin(array $user){
+        try{
+            $query = $this->pdo->prepare("UPDATE usuarios SET nome = ?, email = ?, senha = ?, imagem = ? WHERE id = ?");
+            $query->bindValue(1, $user["nome"]);
+            $query->bindValue(2, $user["email"]);
+            $query->bindValue(3, $user["senha"]);
+            $query->bindValue(4, $user["imagem"]);
+            $query->bindValue(5, $user["id"]);
+
+            $query->execute();
+
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
     public function selectAll()
     {
         

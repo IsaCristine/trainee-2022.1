@@ -7,13 +7,15 @@ class LoginController
 {
     public function getPage():void
     {
+        
+        if(isset($_SESSION["userId"])){
+            if($_SESSION["userId"]){
+                header("Location:Admin");
+                die();
+            }
+        }
         require __DIR__ . '/../views/site/view_login.view.php';
-        if($_SESSION["userId"]){
-            header("Location:Admin");
-        }
-        else{
-            require __DIR__ . '/../views/site/view_login.view.php';
-        }
+        
     }
 
     public function verificaLogin(){

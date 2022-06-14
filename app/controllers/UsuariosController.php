@@ -16,15 +16,20 @@ class UsuariosController
     public function show()
     {
 
-        //  include __DIR__ . '/../views/admin/view_adm_users.view.php';
         if($_SESSION["userId"]){
+            $user = $this->getUser();
             $usuarios = App::get("database")-> selectUsuarios();
-            return viewAdm('view_adm_users', compact('usuarios'));
+            include __DIR__ . '/../views/admin/view_adm_users.view.php';
         }
         else{
             header("Location:Home");
         }
 
+    }
+
+    public function getUser()
+    {
+        return App::get("database")->getUserById($_SESSION["userId"]);
     }
 
     //Renderiza a página para criar de um registro:

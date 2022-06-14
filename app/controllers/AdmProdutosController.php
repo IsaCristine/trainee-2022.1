@@ -15,6 +15,7 @@ class AdmProdutosController
     {
 
         if($_SESSION["userId"]){
+            $user = $this->getUser();
             $produtos = App::get("database")->selectProdutos();
             $categorias = App::get('database')->selectCategorias();
             include __DIR__ . '/../views/admin/view_adm_produtos.view.php';
@@ -22,6 +23,11 @@ class AdmProdutosController
         else{
             header("Location:Home");
         }
+    }
+
+    public function getUser()
+    {
+        return App::get("database")->getUserById($_SESSION["userId"]);
     }
 
     public function createProduto()

@@ -15,7 +15,8 @@
 <body>
 
 <div class="sidebar-content">
-        <?php include($_SERVER["DOCUMENT_ROOT"] . "/app/views/includes" . "/sidebar.php"); ?>
+        <?php
+        include($_SERVER["DOCUMENT_ROOT"] . "/app/views/includes" . "/sidebar.php"); ?>
     </div>
 
     <div class="page-content">

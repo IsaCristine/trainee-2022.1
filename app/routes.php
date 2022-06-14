@@ -69,8 +69,13 @@ $router->get('Produto','ProdutoController@getPage');
 $router->get('Login','LoginController@getPage');
 $router->post('logar','LoginController@verificaLogin');
 $router->post('logout','LoginController@logout');
+$router->get('logout','LoginController@logout');
 
 //Fim Login
+
+//ROTA SIDEBAR_ADMIN
+
+$router->post('Admin-Editar','SidebarController@editUser');
 
 //Rotas Dashboard Adm
 

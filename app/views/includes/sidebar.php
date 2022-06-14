@@ -16,11 +16,10 @@
         integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
 
 </head>
-
 <header>
+
     <nav class="navbar navbar-light bg-light shadow">
         <div class="container-fluid">
-
             <div class="border-button">
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasNavbar">
@@ -93,8 +92,12 @@
 
                             <button type="button" class="btn dropdown-toggle text-white" data-bs-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                <img class="admin-sidebar-logo" src="../../../public/img/Macacode.jpg">
-                                <strong class="admin-username text-white">USERNAME</strong>
+                                <?php if($user["imagem"]){?>
+                                    <img class="admin-sidebar-logo" src="<?= 'data:image/jpg;base64, ' .base64_encode($user['imagem']) ?>">
+                                <?php }else{ ?>
+                                    <img class="admin-sidebar-logo" src="../../../public/img/Macacode.jpg">
+                                <?php } ?>
+                                <strong class="admin-username text-white"><?= $user["nome"] ?></strong>
                             </button>
 
                             <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
@@ -112,7 +115,7 @@
 
                                 <li>
 
-                                    <a class="dropdown-item text-white logout-link" href="Login"> <span
+                                    <a class="dropdown-item text-white logout-link" href="logout"> <span
                                             class=" me-auto">
                                             Logout </span><i class="bi bi-box-arrow-right logout-icon"></i></a>
 
@@ -138,24 +141,24 @@
 
                         </div>
 
-                        <form method="POST" action="">
+                        <form method="POST" action="Admin-Editar" enctype="multipart/form-data">
                             <div class="modal-body">
 
                                 <div class="mb-3">
                                     <label for="username" class="col-form-label">Username:</label>
                                     <input type="text" class="form-control" id="username" name="username"
-                                        value="Username">
+                                        value="<?= $user["nome"]?>">
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="email" class="col-form-label">Email:</label>
                                     <input type="email" class="form-control" id="email" name="email"
-                                        value="usermail@email.com"></input>
+                                        value="<?= $user["email"]?>">
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="password" class="col-form-label">Senha:</label>
-                                    <input type="password" class="form-control" name="password" id="password"></input>
+                                    <input type="password" class="form-control" name="password" id="password">
                                 </div>
 
                                 <div class="card mb-3 area-img">
@@ -164,7 +167,11 @@
                                     </div>
 
                                     <label for="image" id="card-label">
-                                        <img src="../../../public/img/Macacode.jpg" class="edit-img">
+                                        <?php if($user["imagem"]){?>
+                                        <img src="<?= 'data:image/jpg;base64, ' .base64_encode($user['imagem']) ?>" class="edit-img">
+                                        <?php }else{ ?>
+                                            <img src="../../../public/img/Macacode.jpg" class="edit-img">
+                                        <?php } ?>
                                     </label>
 
                                     <div class="card-body">

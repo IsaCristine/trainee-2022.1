@@ -154,21 +154,8 @@
 
                                         <h5 class="modal-title" id="exampleModalLabel">Informações do Usuário</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-
-                                        <label for="user_name"
-                                                class="col-form-label d-flex justify-content-start">Nome:</label>
-                                            <input type="text" class="form-control" id="user_name"
-                                                value="<?= $usuario['nome'] ?>" readonly>
-                                            <label for="user_email"
-                                                class="col-form-label d-flex justify-content-start">E-mail:</label>
-                                            <input type="text" class="form-control" id="user_mail"
-                                                value="<?= $usuario['email'] ?>" readonly>
-                                            <label for="user_password"
-                                                class="col-form-label d-flex justify-content-start">Senha:</label>
-                                            <input type="text" class="form-control" id="user_password"
-                                                value="<?= $usuario['senha'] ?>" readonly>
-
+                                                aria-label="Close">
+                                        </button>
                                     </div>
 
                                     <div class="modal-body">
@@ -244,6 +231,7 @@
 
                                     </div>
 
+
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-danger"
                                                 data-bs-dismiss="modal">Cancelar</button>
@@ -251,6 +239,7 @@
                                     </div>
 
                                 </div>
+                            </div>
                             </div>
                         </form>
                         <!--MODAL DELETE-->

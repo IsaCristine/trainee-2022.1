@@ -9,13 +9,19 @@ FIM DO EXEMPLO -----------------------------------------------------------------
 
 //Rotas Usuários
 $router->get('Admin-Usuarios', 'UsuariosController@show');
+$router->post('adicionarUsuario', 'UsuariosController@create');
+$router->post('editarUsuario', 'UsuariosController@edit');
+$router->post('excluirUsuario', 'UsuariosController@delete');
 //Fim Usuários
 
 
 
-//Rotas Produtos
+//Rotas Admin Produtos
 $router->get('Admin-Produtos', 'AdmProdutosController@showProdutos');
-//Fim Produtos
+$router->post('salvarProduto', 'AdmProdutosController@createProduto');
+$router->post('editarProduto', 'AdmProdutosController@editProduto');
+$router->post('excluirProduto', 'AdmProdutosController@deleteProduto');
+//Fim Admin Produtos
 
 
 
@@ -57,8 +63,6 @@ $router->get('Contato','ContatoController@getPage');
 $router->get('Produto','ProdutoController@getPage');
 
 //Fim Produto
-
-
 
 //Rotas Login
 

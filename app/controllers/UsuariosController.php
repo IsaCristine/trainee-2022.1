@@ -10,7 +10,6 @@ class UsuariosController
     //Renderiza a página para listar todos os registros:
     public function index()
     {
-
     }
 
     //Renderiza a página para exibir um registro:
@@ -64,7 +63,6 @@ class UsuariosController
     //Renderiza a página para atualizar um registro:
     public function update()
     {
-
     }
 
     //Renderiza a página para deletar um registro:

@@ -24,6 +24,10 @@
 
 <body>
 
+<div class="sidebar-content">
+        <?php include($_SERVER["DOCUMENT_ROOT"] . "/app/views/includes" . "/sidebar.php"); ?>
+</div>
+
 <div class="container">
 
     <div class="title display-3" style="font-weight: 400;">Produtos</div>
@@ -92,6 +96,15 @@
 
                         </div>
 
+                        <div class="mb-3">
+                                <label for="product_info" class="col-form-label">Informações:</label>
+                                <br>
+                                <div class="info-area">
+                                    <textarea class="form-control" id="product_info" name="product_info" rows="4"
+                                        cols="50" style="resize: none;"></textarea>
+                                </div>
+                        </div>
+
 
                         <div class="mb-3">
                             <label for="product_description" class="col-form-label">Descrição:</label>
@@ -148,24 +161,24 @@
 
                     <div class="table-buttons">
                         <button class="btn btn-secondary view" data-bs-toggle="modal"
-                                data-bs-target="#<?= $produto['nome'] ?>ViewModal">
+                                data-bs-target="#ViewModal<?= $produto['id'] ?>">
                             <i class="bi bi-eye"></i>
                         </button>
 
                         <button class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#<?= $produto['nome'] ?>EditModal">
+                                data-bs-target="#EditModal<?= $produto['id'] ?>">
                             <i class="bi bi-pencil"></i>
                         </button>
 
                         <button class="btn btn-danger delete" data-bs-toggle="modal"
-                                data-bs-target="#<?= $produto['nome'] ?>DeleteModal">
+                                data-bs-target="#DeleteModal<?= $produto['id'] ?>">
                             <i class="bi bi-trash"></i>
                         </button>
                     </div>
 
                     <!-- MODAL VIEW -->
-                    <div class="modal fade" id="<?= $produto['nome'] ?>ViewModal" tabindex="-1"
-                         aria-labelledby="<?= $produto['nome'] ?>ViewModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="ViewModal<?= $produto['id'] ?>" tabindex="-1"
+                                aria-labelledby="ViewModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -189,6 +202,16 @@
                                                    class="col-form-label d-flex justify-content-start">Categoria:</label>
                                             <input type="text" class="form-control" id="product_category"
                                                    value="<?= $produto['categoria'] ?>" readonly>
+
+                                            <label for="product_info"
+                                                class="col-form-label">Informações:
+                                            </label>
+                                            <br>
+                                            <div class="info-area">
+                                                <textarea class="form-control" id="product_info"
+                                                    name="product_info" rows="4" cols="50" style="resize: none;"
+                                                    readonly><?= $produto['info'] ?></textarea>
+                                            </div>
 
                                             <label for="product_description"
                                                    class="col-form-label d-flex justify-content-start">Descrição:</label>
@@ -229,8 +252,8 @@
 
                     <!--MODAL EDIT -->
 
-                    <div class="modal fade" id="<?= $produto['nome'] ?>EditModal" tabindex="-1"
-                         aria-labelledby="<?= $produto['nome'] ?>EditModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="EditModal<?= $produto['id'] ?>" tabindex="-1"
+                                aria-labelledby="EditModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -272,6 +295,17 @@
 
                                             </select>
 
+                                        </div>
+
+                                        <div class="mb-3">
+                                                    <label for="product_info"
+                                                        class="col-form-label">Informações:</label>
+                                                    <br>
+                                                    <div class="info-area">
+                                                        <textarea class="form-control" id="product_info"
+                                                            name="product_info" rows="4" cols="50"
+                                                            style="resize: none;"><?= $produto['info'] ?></textarea>
+                                                    </div>
                                         </div>
 
                                         <div class="mb-3">
@@ -322,8 +356,8 @@
                     </form>
                     <!--MODAL DELETE-->
 
-                    <div class="modal fade" id="<?= $produto['nome'] ?>DeleteModal" tabindex="-1"
-                         aria-labelledby="<?= $produto['nome'] ?>DeleteModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="DeleteModal<?= $produto['id'] ?>" tabindex="-1"
+                                aria-labelledby="DeleteModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
 

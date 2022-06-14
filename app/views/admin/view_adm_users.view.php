@@ -25,7 +25,11 @@
 
 <body>
 
-<div class="container">
+    <div class="sidebar-content">
+            <?php include($_SERVER["DOCUMENT_ROOT"] . "/app/views/includes" . "/sidebar.php"); ?>
+    </div>
+    
+    <div class="container">
 
     <div class="title display-3" style="font-weight: 400;">Usuários</div>
 
@@ -126,24 +130,24 @@
 
                         <div class="table-buttons">
                             <button class="btn btn-secondary view" data-bs-toggle="modal"
-                                    data-bs-target="#<?= $usuario['nome'] ?>ViewModal">
+                                    data-bs-target="#ViewModal<?= $usuario['id'] ?>">
                                 <i class="bi bi-eye"></i>
                             </button>
 
                             <button class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#<?= $usuario['nome'] ?>EditModal">
+                                    data-bs-target="#EditModal<?= $usuario['id'] ?>">
                                 <i class="bi bi-pencil"></i>
                             </button>
 
                             <button class="btn btn-danger delete" data-bs-toggle="modal"
-                                    data-bs-target="#<?= $usuario['nome'] ?>DeleteModal">
+                                    data-bs-target="#DeleteModal<?= $usuario['id'] ?>">
                                 <i class="bi bi-trash"></i>
                             </button>
                         </div>
 
                         <!-- MODAL VIEW -->
-                        <div class="modal fade" id="<?= $usuario['nome'] ?>ViewModal" tabindex="-1"
-                             aria-labelledby="<?= $usuario['nome'] ?>ViewModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="ViewModal<?= $usuario['id'] ?>" tabindex="-1"
+                                aria-labelledby="ViewModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -151,6 +155,19 @@
                                         <h5 class="modal-title" id="exampleModalLabel">Informações do Usuário</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
+
+                                        <label for="user_name"
+                                                class="col-form-label d-flex justify-content-start">Nome:</label>
+                                            <input type="text" class="form-control" id="user_name"
+                                                value="<?= $usuario['nome'] ?>" readonly>
+                                            <label for="user_email"
+                                                class="col-form-label d-flex justify-content-start">E-mail:</label>
+                                            <input type="text" class="form-control" id="user_mail"
+                                                value="<?= $usuario['email'] ?>" readonly>
+                                            <label for="user_password"
+                                                class="col-form-label d-flex justify-content-start">Senha:</label>
+                                            <input type="text" class="form-control" id="user_password"
+                                                value="<?= $usuario['senha'] ?>" readonly>
 
                                     </div>
 
@@ -187,8 +204,8 @@
 
                         <!--MODAL EDIT -->
 
-                        <div class="modal fade" id="<?= $usuario['nome'] ?>EditModal" tabindex="-1"
-                             aria-labelledby="<?= $usuario['nome'] ?>EditModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="EditModal<?= $usuario['id'] ?>" tabindex="-1"
+                                        aria-labelledby="EditModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -235,12 +252,11 @@
 
                                 </div>
                             </div>
-                        </div>
                         </form>
                         <!--MODAL DELETE-->
 
-                        <div class="modal fade" id="<?= $usuario['nome'] ?>DeleteModal" tabindex="-1"
-                             aria-labelledby="<?= $usuario['nome'] ?>DeleteModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="DeleteModal<?= $usuario['id'] ?>" tabindex="-1"
+                                aria-labelledby="DeleteModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
 
@@ -276,7 +292,7 @@
                         </div>
 
                     </td>
-
+                    </td>
 
                     </td>
 

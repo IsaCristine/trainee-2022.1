@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 session_start();
+
 use App\Core\App;
 use App\Core\Database\QueryBuilder;
 use Exception;
@@ -37,6 +38,7 @@ class AdmProdutosController
         $product = [
             "nome" => filter_input(INPUT_POST, "product_name", FILTER_SANITIZE_STRING),
             "valor" => filter_input(INPUT_POST, "product_value", FILTER_SANITIZE_STRING),
+            "info" => filter_input(INPUT_POST, "product_info", FILTER_SANITIZE_STRING),
             "descricao" => filter_input(INPUT_POST, "product_description", FILTER_SANITIZE_STRING),
             "categorias_id" => $_POST["categorias_id"],
             "imagem" => $image_content
@@ -62,15 +64,16 @@ class AdmProdutosController
         $product = [
             "nome" => filter_input(INPUT_POST, "product_name", FILTER_SANITIZE_STRING),
             "valor" => filter_input(INPUT_POST, "product_value", FILTER_SANITIZE_STRING),
+            "info" => filter_input(INPUT_POST, "product_info", FILTER_SANITIZE_STRING),
             "descricao" => filter_input(INPUT_POST, "product_description", FILTER_SANITIZE_STRING),
             "categorias_id" => filter_input(INPUT_POST, "categorias_id", FILTER_SANITIZE_STRING),
             "imagem" => $image_content,
             "id" => $_POST['id']
         ];
-
+        
         $edit = App::get("database")->editProduto($product);
         header("location:Admin-Produtos");
-
+        
     }
 
     public function deleteProduto()
@@ -82,7 +85,6 @@ class AdmProdutosController
 
         header("location:Admin-Produtos");
     }
-
     //Renderiza a página para exibir um registro:
     public function show()
     {
@@ -92,7 +94,6 @@ class AdmProdutosController
     //Renderiza a página para criar de um registro:
     public function create()
     {
-
     }
 
     //Renderiza a página para armazenar um registro:
@@ -104,18 +105,15 @@ class AdmProdutosController
     //Renderiza a página para editar um registro:
     public function edit()
     {
-
     }
 
     //Renderiza a página para atualizar um registro:
     public function update()
     {
-
     }
 
     //Renderiza a página para deletar um registro:
     public function delete()
     {
-
     }
 }

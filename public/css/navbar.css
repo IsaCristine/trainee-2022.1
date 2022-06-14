@@ -1,0 +1,55 @@
+.row {
+    margin: 0;
+}
+
+.container-fluid {
+    height: 70px;
+}
+
+header,
+.navbar {
+    background-color: #001862;
+}
+
+#nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#logo {
+    width: 142px;
+    padding-left: 20px;
+}
+
+.navbar-brand {
+    padding: 0;
+    color: #FFF;
+}
+
+.navbar-brand:hover {
+    color: #FFF;
+}
+
+.navbar {
+    padding-right: 5px;
+}
+
+.navbar-nav {
+    background-color: #001862;
+}
+
+.nav-link {
+    text-align: right;
+}
+
+#navbarToggleExternalContent a {
+    color: #BD8E01;
+}
+
+#navbarToggleExternalContent a:hover {
+    color: #DFDDDD;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem .8rem;
+}

@@ -1,65 +1,79 @@
-body{
+html {
+	overflow: hidden;
+	height: 100%;
+	padding-top: 86px;
+}
+
+body {
+	overflow: auto;
+	height: 100%;
+}
+
+body {
 	font-family: Bangers;
+	background: #DFDDDD;
+
+}
+
+.page-content {
 	margin-left: 2rem;
 	margin-right: 2rem;
-	background: #DFDDDD;
 	margin-top: 2rem;
 }
 
-.quem_somos{
+.quem_somos {
 	color: #BD8E01;
 }
 
-body p{
+body p {
 	color: #323132;
 }
 
-.quem_somos h1{
+.quem_somos h1 {
 	font-weight: bold;
 	text-align: center;
 }
 
-.quem_somos p{
+.quem_somos p {
 	margin-top: 3rem;
 	font-size: 1.5rem;
 	text-align: center;
 }
 
-.quem_somos img{
+.quem_somos img {
 	float: left;
 	width: 13rem;
 }
 
-.foto_exemplo hr{
+.foto_exemplo hr {
 	color: #9D0101;
 	height: 0.3rem;
 	opacity: 1;
 }
 
-.conteiner-1{
+.conteiner-1 {
 	text-align: center;
 	margin-top: 5rem;
-	margin-bottom: 20rem;
 }
 
-.conteiner-1 h2{
+.conteiner-1 h2 {
 	font-weight: bold;
 	color: #001862;
 	font-size: 2rem;
 	text-align: center;
 }
 
-.conteiner-1 p{
+.conteiner-1 p {
 	text-align: center;
 	font-size: 1.3rem;
 	margin-bottom: 4rem;
 }
 
-.visao{
+/* .visao{
 }
 
 .missao{
 }
 
 .valores{
-}
+} */

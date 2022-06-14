@@ -59,6 +59,7 @@ class QueryBuilder
     {
       
     }
+    //QUERY DE PRODUTOS
     public function insertProduto(array $product)
     {
 
@@ -105,6 +106,7 @@ class QueryBuilder
         }
     }
     //FIM DO QUERY DE PRODUTOS
+
 
     //**********QUERIES DE PAGINACAO**********//
 
@@ -174,4 +176,22 @@ class QueryBuilder
         }
     }
     //**********FIM QUERIES DE PAGINAÇÃO**********//
+
+    //**********QUERIES DE EXIBIÇÃO DE PRODUTO PARA USUARIO**********//
+    public function selectProdutoPorId($id)
+    {
+        try{
+            $query = $this->pdo->prepare("SELECT P.nome, P.valor, P.descricao, P.imagem,
+                                                C.nome AS categoria FROM produto P INNER JOIN categorias C 
+                                                ON P.categorias_id=C.id WHERE P.id = ?");
+            $query->bindValue(1,$id);
+            $query->execute();
+
+            $product = $query->fetch(PDO::FETCH_ASSOC);
+            return $product;
+
+        }catch (Exception $e){
+            die($e->getMessage());
+        }
+    }
 }

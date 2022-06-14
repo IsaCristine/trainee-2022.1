@@ -98,6 +98,15 @@
 
 
                             <div class="mb-3">
+                                <label for="product_info" class="col-form-label">Informações:</label>
+                                <br>
+                                <div class="info-area">
+                                    <textarea class="form-control" id="product_info" name="product_info" rows="4"
+                                        cols="50" style="resize: none;"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
                                 <label for="product_description" class="col-form-label">Descrição:</label>
                                 <input type="text" class="form-control" id="product_description"
                                     name="product_description">
@@ -194,6 +203,15 @@
                                                     <input type="text" class="form-control" id="product_category"
                                                         value="<?= $produto['categoria'] ?>" readonly>
 
+                                                    <label for="product_info"
+                                                        class="col-form-label">Informações:</label>
+                                                    <br>
+                                                    <div class="info-area">
+                                                        <textarea class="form-control" id="product_info"
+                                                            name="product_info" rows="4" cols="50" style="resize: none;"
+                                                            readonly><?= $produto['info'] ?></textarea>
+                                                    </div>
+
                                                     <label for="product_description"
                                                         class="col-form-label d-flex justify-content-start">Descrição:</label>
                                                     <input type="text" class="form-control" id="product_description"
@@ -276,6 +294,17 @@
 
                                                     </select>
 
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="product_info"
+                                                        class="col-form-label">Informações:</label>
+                                                    <br>
+                                                    <div class="info-area">
+                                                        <textarea class="form-control" id="product_info"
+                                                            name="product_info" rows="4" cols="50"
+                                                            style="resize: none;"><?= $produto['info'] ?></textarea>
+                                                    </div>
                                                 </div>
 
                                                 <div class="mb-3">

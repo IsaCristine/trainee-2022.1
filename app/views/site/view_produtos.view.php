@@ -40,7 +40,7 @@
                       <div class="categoria">
                         <h5 class="card-title"><?= $product["nome"] ?> </h5>
                       </div class>
-                      <h6 class="card-subtitle mb-2 text-muted"><?= $product["valor"] ?>></h6>
+                      <h6 class="card-subtitle mb-2 text-muted">R$ <?= $product["valor"] ?></h6>
                       <p class="card-text"><?= $product["descricao"] ?></p>
                     </div>
 

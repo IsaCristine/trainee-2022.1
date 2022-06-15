@@ -64,7 +64,7 @@ class QueryBuilder
     {
 
         try {
-            $query = $this->pdo->prepare("INSERT INTO produto (nome, valor, info, descricao, categorias_id, imagem) VALUE (:nome, :valor, :descricao, :categorias_id, :imagem)");
+            $query = $this->pdo->prepare("INSERT INTO produto (nome, valor, info, descricao, categorias_id, imagem) VALUE (:nome, :valor, :info, :descricao, :categorias_id, :imagem)");
             $query->bindValue(':nome', $product['nome']);
             $query->bindValue(':valor', $product['valor']);
             $query->bindValue(':info', $product['info']);

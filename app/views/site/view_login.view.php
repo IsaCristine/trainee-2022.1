@@ -32,7 +32,9 @@
                                 <img class="img" src="../../../public/img/MacacodeIcon.png">
                             </div>
                             <div class="col-4 divIconeClose">
-                                <img class="imgclose" src="../../../public/img/close.png">
+                                <a href="Home">
+                                    <img class="imgclose" src="../../../public/img/close.png">
+                                </a>
                             </div>
                         </div>
                     </div>

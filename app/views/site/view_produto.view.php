@@ -35,15 +35,15 @@
                     <li>></li>
                     <li><a href="Produtos">Produtos</a></li>
                     <li>></li>
-                    <li><a href="">Camisetas</a></li>
+                    <li><?=$produto["categoria"]?></li>
                     <li>></li>
-                    <li>Camiseta Pantera Negra Wakanda Forever</a></li>
+                    <li><?=$produto["nome"]?></a></li>
                 </ul>
 
                 <div class="card">
 
                     <div class="product-media">
-                        <img src="../../../public/img/Camiseta Wakanda Forever.jpg">
+                        <img src="<?= 'data:image/jpg;base64, ' .base64_encode($produto['imagem']) ?>">
                     </div>
 
                 </div>
@@ -53,7 +53,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12">
 
                 <div class="product-info-title">
-                    <h2>Camiseta Pantera Negra Wakanda Forever</h2>
+                    <h2><?= $produto["nome"] ?></h2>
                 </div>
 
                 <div class="card">
@@ -64,53 +64,40 @@
 
                             <div class="product-info-price">
                                 <h2 class="mt-1">
-                                    <span>R$25,00</span>
+                                    <span>R$<?= $produto["valor"] ?></span>
                                 </h2>
                             </div>
 
                             <hr>
 
-                            <div class="product-size">
+                            <?php if($produto["categoria"] == 'Roupa'){?>
+                                <div class="product-size">
 
-                                <h4 style="font-size: 1.25rem">Tamanho</h4>
+                                    <h4 style="font-size: 1.25rem">Tamanho</h4>
 
-                                <div class="size-buttons">
-                                    <button class="btn btn-light btn-outline-dark" data-toggle="tooltip">P</button>
-                                    <button class="btn btn-light btn-outline-dark" data-toggle="tooltip">M</button>
-                                    <button class="btn btn-light btn-outline-dark" data-toggle="tooltip">G</button>
-                                    <button class="btn btn-light btn-outline-dark" data-toggle="tooltip">GG</button>
-                                    <button class="btn btn-light btn-outline-dark" data-toggle="tooltip">XG</button>
+                                    <div class="size-buttons">
+                                        <button class="btn btn-light btn-outline-dark" data-toggle="tooltip">P</button>
+                                        <button class="btn btn-light btn-outline-dark" data-toggle="tooltip">M</button>
+                                        <button class="btn btn-light btn-outline-dark" data-toggle="tooltip">G</button>
+                                        <button class="btn btn-light btn-outline-dark" data-toggle="tooltip">GG</button>
+                                        <button class="btn btn-light btn-outline-dark" data-toggle="tooltip">XG</button>
+                                    </div>
+
                                 </div>
-
-                            </div>
+                            <?php } ?>
 
                             <button id="chart" class="btn btn-dark mr-1" title="" data-original-title="Add to cart">
-                                <span class="text-uppercase"> Camiseta </span>
+                                <span class="text-uppercase"><?= $produto["categoria"] ?></span>
                             </button>
 
                             <h3 class="box-title mt-4">Informações do produto</h3>
                             <ul class="list-unstyled">
-
+                                <?php foreach($arr as $info): ?>
                                 <li>
                                     <i class="fa fa-check text-success"></i>
-                                    Tecido 100% algodão
+                                    <?= $info ?>
                                 </li>
-
-                                <li>
-                                    <i class="fa fa-check text-success"></i>
-                                    Estampa levemente desbotada estilo Vintage
-                                </li>
-
-                                <li>
-                                    <i class="fa fa-check text-success"></i>
-                                    Costuras reforçadas no colarinho e ombros
-                                </li>
-
-                                <li>
-                                    <i class="fa fa-check text-success"></i>
-                                    Frete grátis para todo o Brasil
-                                </li>
-
+                                <?php endforeach ?>
                             </ul>
 
                             <h4 style="font-size: 1.25rem" class="mt-4">
@@ -123,10 +110,7 @@
                             </h4>
 
                             <div id="description" class="description">
-                                <p style="font-size: 1rem">Lorem Ipsum available,but the majority have suffered
-                                    alteration in some form,by injected humour,or randomised words which don't look even
-                                    slightly believable.but the majority have suffered alteration in some form,by
-                                    injected humour</p>
+                                <p style="font-size: 1rem"><?= $produto["descricao"]?></p>
                             </div>
 
                         </div>

@@ -416,6 +416,50 @@
     </div>
 
 </div>
+    <!-- PAGINACAO: -->
+    <?php if(!isset($nome)){ ?>
+    <nav aria-label="..." class="pag">
+        <ul class="pagination">
+
+            <?php if($current_page > 1){ ?>
+                <li class="page-item">
+                    <a class="page-link" href="Admin-Produtos?page=<?= $current_page - 1 ?>" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+            <?php } ?>
+
+            <?php for($previous_page = $current_page - $quantity_links; $previous_page < $current_page; $previous_page++){
+                if($previous_page > 0) {
+                    ?>
+                    <li class="page-item " aria-current="page">
+                        <a class="page-link" href="Admin-Produtos?page=<?=$previous_page?>"><?=$previous_page?></a>
+                    </li>
+
+                <?php       }
+            }
+            ?>
+
+            <li class="page-item active"><a class="page-link"><?=$current_page?></a></li>
+
+            <?php for($next_page = $current_page + 1; $next_page <= $current_page + $quantity_links; $next_page++){
+                if($next_page <= $page_quantity){
+                    ?>
+                    <li class="page-item " aria-current="page">
+                        <a class="page-link" href="Admin-Produtos?page=<?=$next_page?>"><?=$next_page?></a>
+                    </li>
+
+                <?php        }
+            }
+            ?>
+
+            <?php if($current_page < $page_quantity){ ?>
+                <li class="page-item">
+                    <a class="page-link" href="Admin-Produtos?page=<?= $current_page + 1?>">Next</a>
+                </li>
+            <?php } ?>
+
+        </ul>
+    </nav>
+    <?php } ?>
 
 </div>
 

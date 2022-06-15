@@ -6,8 +6,9 @@ session_start();
 use App\Core\App;
 use App\Core\Database\QueryBuilder;
 use Exception;
+use App\Libs\Pagination;
 
-class AdmProdutosController
+class AdmProdutosController extends Pagination
 {
 
 
@@ -22,8 +23,22 @@ class AdmProdutosController
             if($nome){
                 $produtos = App::get("database")->pesquisaProdutos($nome);
             }else{
-                $produtos = App::get("database")->selectProdutos();
+
+                //paginação //
+                $results_per_page = 10;
+
+                $page_quantity = $this->quantity_pages($results_per_page,"produto");
+
+                $current_page = ($this->get_current_page() > $page_quantity || $this->get_current_page() < 1) ? 1
+                    : $this->get_current_page();
+
+                $item_number = ($results_per_page * $current_page) - $results_per_page;
+
+                $produtos = $this->list_products($item_number, $results_per_page);
+
+                $quantity_links = 2;
             } 
+
             include __DIR__ . '/../views/admin/view_adm_produtos.view.php';
         }
         else{
@@ -34,6 +49,7 @@ class AdmProdutosController
     public function getUser()
     {
         return App::get("database")->getUserById($_SESSION["userId"]);
+
     }
 
     public function createProduto()

@@ -312,4 +312,80 @@ class QueryBuilder
     {
       
     }
+
+
+
+    //**********QUERIES DE PAGINACAO**********//
+
+    //criado exclusivamente pra pagina produtos controller
+    public function list_products($first_item, $quantity)
+    {
+        try{
+            $query = $this->pdo->prepare("SELECT P.id, P.nome, P.valor, P.descricao, P.info, P.imagem,
+                                                C.nome AS categoria FROM produto P INNER JOIN categorias C 
+                                                    ON P.categorias_id=C.id ORDER BY P.id DESC LIMIT $first_item, $quantity");
+
+            $query->execute();
+
+            $list_products = $query->fetchAll(PDO::FETCH_ASSOC);
+
+            return $list_products;
+
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+    public function list_page_products($table_name, $first_item, $quantity){
+        try{
+            $query = $this->pdo->prepare("SELECT * FROM $table_name ORDER BY id DESC 
+                                            LIMIT $first_item, $quantity");
+            $query->execute();
+
+            $products = $query->fetchAll(PDO::FETCH_ASSOC);
+
+            return $products;
+
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
+    //pega a quantidade de paginas que vai ter
+    public function quantity_pages($results_per_page, $table_name){
+        try{
+            $query = $this->pdo->prepare("SELECT COUNT(id) AS product_quantity FROM $table_name");
+            $query->execute();
+
+            $products_quantity = $query->fetch(PDO::FETCH_ASSOC);
+            $products_quantity = $products_quantity["product_quantity"];
+
+            //quantidade de produtos total / quantidade de produtos em uma pagina
+            $quantity_pages = ceil($products_quantity/$results_per_page);
+
+            return $quantity_pages;
+
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
+    //**********FIM QUERIES DE PAGINAÇÃO**********//
+
+    //**********QUERIES DE EXIBIÇÃO DE PRODUTO PARA USUARIO**********//
+    public function selectProdutoPorId($id)
+    {
+        try{
+            $query = $this->pdo->prepare("SELECT P.nome, P.valor, P.info, P.descricao, P.imagem,
+                                                C.nome AS categoria FROM produto P INNER JOIN categorias C 
+                                                ON P.categorias_id=C.id WHERE P.id = ?");
+            $query->bindValue(1,$id);
+            $query->execute();
+
+            $product = $query->fetch(PDO::FETCH_ASSOC);
+            return $product;
+
+        }catch (Exception $e){
+            die($e->getMessage());
+        }
+    }
 }

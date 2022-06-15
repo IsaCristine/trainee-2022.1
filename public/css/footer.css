@@ -3,7 +3,7 @@
 }
 
 .container {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
 }
 
 .nav-link {
@@ -12,7 +12,8 @@
 
 footer {
     background-color: #001862;
-    position: relative;
+    /*position: relative;*/
+    margin-top:auto;
     bottom: 0;
     left: 0;
     right: 0;

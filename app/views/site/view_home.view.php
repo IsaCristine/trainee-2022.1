@@ -86,19 +86,20 @@
 
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
 
+                    <?php foreach($produtos as $produto):?>
                     <div class="col product">
                         <div class="card card-border">
 
-                            <label>
-                                <img src="../../../public/img/Macacode.jpg" alt="..." class="product-image">
-
+                            <label> 
+                                <img src="<?= 'data:image/jpg;base64, ' .base64_encode($produto['imagem']) ?>"  class="product-image">
+                            
 
                                 <div class="card-body">
-                                    <h5 class="card-title">Produto 001</h5>
-                                    <p class="card-text">Este é um produto de teste</p>
-
-                                    <form method="GET" action="">
-                                        <input type="hidden" name="id" value="1">
+                                    <h5 class="card-title"><?= $produto["nome"] ?></h5>
+                                    <p class="card-text"><?= $produto["descricao"] ?></p>
+                                    
+                                    <form method="GET" action="Produto">
+                                        <input type="hidden" name="id" value="<?= $produto["id"] ?>">
                                         <input type="submit" value="ver produto" id="send" class="btn btn-primary">
                                     </form>
 
@@ -107,161 +108,7 @@
                             </label>
                         </div>
                     </div>
-
-                    <div class="col">
-                        <div class="card">
-
-                            <label>
-                                <img src="../../../public/img/carrossel-teste1.jpg" alt="..." class="product-image">
-
-
-                                <div class="card-body">
-                                    <h5 class="card-title">Produto 002</h5>
-                                    <p class="card-text">Este é um produto de teste</p>
-
-                                    <form method="GET" action="">
-                                        <input type="hidden" name="id" value="2">
-                                        <input type="submit" value="ver produto" id="send" class="btn btn-primary">
-                                    </form>
-
-                                </div>
-
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card">
-
-                            <label>
-                                <img src="../../../public/assets/Logo iluminada.png" alt="..." class="product-image">
-
-
-                                <div class="card-body">
-                                    <h5 class="card-title">Produto 003</h5>
-                                    <p class="card-text">Este é um produto de teste</p>
-
-                                    <form method="GET" action="">
-                                        <input type="hidden" name="id" value="3">
-                                        <input type="submit" value="ver produto" id="send" class="btn btn-primary">
-                                    </form>
-
-                                </div>
-
-                            </label>
-                        </div>
-                    </div>
-
-
-                    <div class="col">
-                        <div class="card">
-
-                            <label>
-                                <img src="../../../public/assets/Logo escrita com flecha e retângulo.png" alt="..."
-                                    class="product-image">
-
-
-                                <div class="card-body">
-                                    <h5 class="card-title">Produto 004</h5>
-                                    <p class="card-text">Este é um produto de teste</p>
-
-                                    <form method="GET" action="">
-                                        <input type="hidden" name="id" value="4">
-                                        <input type="submit" value="ver produto" id="send" class="btn btn-primary">
-                                    </form>
-
-                                </div>
-
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card">
-
-                            <label>
-                                <img src="../../../public/img/batman-img-teste.png" alt="..." class="product-image">
-
-
-                                <div class="card-body">
-                                    <h5 class="card-title">Produto 005</h5>
-                                    <p class="card-text">Este é um produto de teste</p>
-
-                                    <form method="GET" action="">
-                                        <input type="hidden" name="id" value="5">
-                                        <input type="submit" value="ver produto" id="send" class="btn btn-primary">
-                                    </form>
-                                </div>
-
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card">
-
-                            <label>
-                                <img src="../../../public/img/quadro-batman-teste.png" alt="..." class="product-image">
-
-
-                                <div class="card-body">
-                                    <h5 class="card-title">Produto 006</h5>
-                                    <p class="card-text">Este é um produto de teste</p>
-
-                                    <form method="GET" action="">
-                                        <input type="hidden" name="id" value="6">
-                                        <input type="submit" value="ver produto" id="send" class="btn btn-primary">
-                                    </form>
-                                </div>
-
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card">
-
-                            <label>
-                                <img src="../../../public/img/quadro-spider-teste.png" alt="..." class="product-image">
-
-
-                                <div class="card-body">
-                                    <h5 class="card-title">Produto 007</h5>
-                                    <p class="card-text">Este é um produto de teste</p>
-
-                                    <form method="GET" action="">
-                                        <input type="hidden" name="id" value="7">
-                                        <input type="submit" value="ver produto" id="send" class="btn btn-primary">
-                                    </form>
-                                </div>
-
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card">
-
-                            <label>
-                                <img src="../../../public/img/png-transparent-superhero-action-toy-figures-others-superhero-fictional-character-tablet.png"
-                                    alt="..." class="product-image">
-
-
-                                <div class="card-body">
-                                    <h5 class="card-title">Produto 008</h5>
-                                    <p class="card-text">Este é um produto de teste</p>
-
-                                    <form method="GET" action="">
-                                        <input type="hidden" name="id" value="8">
-                                        <input type="submit" value="ver produto" id="send" class="btn btn-primary">
-                                    </form>
-                                </div>
-
-                            </label>
-                        </div>
-                    </div>
-
-
+                    <?php endforeach; ?>
 
                 </div>
 

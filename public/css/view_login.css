@@ -12,7 +12,14 @@ body {
 .login-content {
     font-family: 'Roboto', sans-serif;
 }
-
+.area-login{
+    margin: 0 auto;
+    border: 0.1rem solid #DFDDDD;
+    border-radius: 0.7rem;
+    height:50vh;
+    width:60vh;
+    
+}
 .tela {
     padding: 2rem 2rem 2rem 2rem;
     border: 0.1rem solid #DFDDDD;
@@ -63,7 +70,6 @@ body {
 h1 {
     color: #BD8E01;
 }
-
 /********************** @MEDIA **********************/
 @media(max-width: 430px) {
     .tela {

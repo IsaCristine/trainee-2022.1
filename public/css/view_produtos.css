@@ -113,13 +113,23 @@ body {
 
 
 /* PAG: */
+.page-active{
+    z-index:-2;
+}
 .pag {
     margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
     display: flex;
     justify-content: center;
+}
+
+.footer-content{
 
 }
 
+.espacamento{
+    height:1vh;
+}
 /************ TRATAMENTO DA IMG: ************/
 
 @media (max-width: 1280px) {

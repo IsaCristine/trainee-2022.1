@@ -33,31 +33,15 @@
 
     <div class="title display-3" style="font-weight: 400;">Usuários</div>
 
-    <div class="row row-cols-1 row-cols-sm-2 justify-content-around mb-4">
+    <div class="row row-cols-1 row-cols-sm-2 mb-4">
 
-        <div class="col-3">
+        <div>
             <button type="button" class="btn btn-secondary add" data-bs-toggle="modal"
                     data-bs-target="#NewUserModal" data-bs-whatever="@mdo">
 
                 <i class="bi bi-plus"></i>
 
             </button>
-        </div>
-
-        <div class="col-9">
-            <div class="search-area">
-
-                <form method="GET" action="" class="search-form">
-
-                    <input type="text" class="form-control input-search" name="search"
-                           placeholder="Pesquisar usuário">
-                    <button type="submit" class="btn btn-primary ms-3">
-                        <i class="bi bi-search"></i>
-                    </button>
-
-                </form>
-
-            </div>
         </div>
 
     </div>
@@ -281,17 +265,57 @@
                         </div>
 
                     </td>
-                    </td>
-
-                    </td>
 
                 </tr>
 
             <?php endforeach; ?>
 
             </tbody>
-
+            
         </table>
+
+        <!-- PAGINACAO: -->
+        <nav aria-label="..." class="pag">
+            <ul class="pagination">
+
+                <?php if($current_page > 1){ ?>
+                    <li class="page-item">
+                        <a class="page-link" href="Admin-Usuarios?page=<?= $current_page - 1 ?>" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                <?php } ?>
+
+                <?php for($previous_page = $current_page - $quantity_links; $previous_page < $current_page; $previous_page++){
+                    if($previous_page > 0) {
+                        ?>
+                        <li class="page-item " aria-current="page">
+                            <a class="page-link" href="Admin-Usuarios?page=<?=$previous_page?>"><?=$previous_page?></a>
+                        </li>
+
+                    <?php       }
+                }
+                ?>
+
+                <li class="page-item active"><a class="page-link"><?=$current_page?></a></li>
+
+                <?php for($next_page = $current_page + 1; $next_page <= $current_page + $quantity_links; $next_page++){
+                    if($next_page <= $page_quantity){
+                        ?>
+                        <li class="page-item " aria-current="page">
+                            <a class="page-link" href="Admin-Usuarios?page=<?=$next_page?>"><?=$next_page?></a>
+                        </li>
+
+                    <?php        }
+                }
+                ?>
+
+                <?php if($current_page < $page_quantity){ ?>
+                    <li class="page-item">
+                        <a class="page-link" href="Admin-Usuarios?page=<?= $current_page + 1?>">Next</a>
+                    </li>
+                <?php } ?>
+
+            </ul>
+        </nav>
 
     </div>
 

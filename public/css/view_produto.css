@@ -20,6 +20,7 @@ body {
 
 .product-media img {
     width: 75%;
+    max-height: 65vh;
 }
 
 .product-info-title {
@@ -101,4 +102,10 @@ body {
 #chart:hover {
     cursor: default;
     opacity: 100%;
+}
+
+.footer-content{
+    position:absolute;
+    width:100%;
+    bottom: 0px;
 }

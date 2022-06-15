@@ -4,8 +4,9 @@ namespace App\Controllers;
 session_start();
 use App\Core\App;
 use Exception;
+use App\Libs\Pagination;
 
-class UsuariosController
+class UsuariosController extends Pagination
 {
     //Renderiza a página para listar todos os registros:
     public function index()
@@ -18,7 +19,24 @@ class UsuariosController
 
         if($_SESSION["userId"]){
             $user = $this->getUser();
-            $usuarios = App::get("database")-> selectUsuarios();
+                        //paginação
+            $results_per_page = 10;
+
+            $page_quantity = $this->quantity_pages($results_per_page,"usuarios");
+
+            $current_page = ($this->get_current_page() > $page_quantity || $this->get_current_page() < 1) ? 1
+                            : $this->get_current_page();
+
+
+            $item_number = ($results_per_page * $current_page) - $results_per_page;
+
+            $list_users = $this->list_page_products("usuarios",$item_number, $results_per_page);
+
+
+            $quantity_links = 2;
+            //fim paginação
+            $usuarios = $list_users;
+        
             include __DIR__ . '/../views/admin/view_adm_users.view.php';
         }
         else{
@@ -79,4 +97,5 @@ class UsuariosController
 
         header("location:Admin-Usuarios");
     }
+
 }

@@ -1,4 +1,4 @@
-.row {
+/* .row {
     margin: 0;
 }
 
@@ -14,11 +14,6 @@ header,
 #nav-container {
     padding-top: 0;
     padding-bottom: 0;
-}
-
-#logo {
-    width: 142px;
-    padding-left: 20px;
 }
 
 .navbar-brand {
@@ -42,14 +37,33 @@ header,
     text-align: right;
 }
 
-#navbarToggleExternalContent a {
-    color: #BD8E01;
-}
 
-#navbarToggleExternalContent a:hover {
-    color: #DFDDDD;
-}
 
 .navbar-expand-lg .navbar-nav .nav-link {
     padding: 1rem .8rem;
+} */
+
+.nav-item,
+.nav-link,
+.navbar-expand-lg {
+    background-color: #001862;
+}
+
+.nav-link {
+    margin-right: 1rem;
+}
+
+#navbarToggleExternalContent a,
+#externalNavbar a {
+    color: #BD8E01;
+}
+
+#navbarToggleExternalContent a:hover,
+#externalNavbar a:hover {
+    color: #DFDDDD;
+}
+
+#logo {
+    width: 130px;
+    padding-left: 20px;
 }

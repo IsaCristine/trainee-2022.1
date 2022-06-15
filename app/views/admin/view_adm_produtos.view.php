@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
           integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
 
+    <script type="text/javascript" src="../../../public/js/filterInput.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
@@ -106,11 +108,17 @@
                         </div>
 
 
-                        <div class="mb-3">
-                            <label for="product_description" class="col-form-label">Descrição:</label>
-                            <input type="text" class="form-control" id="product_description"
-                                   name="product_description">
-                        </div>
+                            <div class="mb-3">
+                                <label for="product_description" class="col-form-label">Descrição:</label>
+                                <input type="text" class="form-control" id="product_description"
+                                    name="product_description">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="product_value" class="col-form-label">Preço:</label>
+                                <input type="text" class="form-control" id="product_value" name="product_value"
+                                    onkeypress="filterInput(event)">
+                            </div>
 
                         <div class="mb-3">
                             <label for="product_value" class="col-form-label">Preço:</label>
@@ -279,9 +287,9 @@
 
                                         <div class="btn-group">
 
-                                            <select name="categorias_id" class="btn dropdown-toggle"
+                                                <select name="categorias_id" class="btn dropdown-toggle"
                                                     aria-haspopup="true" aria-expanded="false">
-                                                Categoria
+                                                    Categoria:
 
                                                 <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
                                                     <?php foreach($categorias as $cat){ ?>

@@ -75,14 +75,14 @@
                         <form method="POST" action="/salvarCategoria">
 
                             <div class="mb-3">
-                                <label for="category-name" class="col-form-label">nome:</label>
+                                <label for="category-name" class="col-form-label">Nome:</label>
                                 <input type="text" class="form-control" id="category-name" name="category_name">
                             </div>
 
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">cancelar</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
                         <button type="submit" class="btn btn-primary">Adicionar</button>
                     </div>
 
@@ -103,7 +103,7 @@
                     <thead>
                         <tr>
 
-                            <th style="width: 40%" scope="col">nome</th>
+                            <th style="width: 40%" scope="col">Nome</th>
                             <th style="width: 15%" scope="col">Ações</th>
 
                         </tr>
@@ -157,7 +157,7 @@
                                                     <div class="mb-3">
 
                                                         <label for="category-name"
-                                                            class="col-form-label d-flex justify-content-start">nome:</label>
+                                                            class="col-form-label d-flex justify-content-start">Nome:</label>
                                                         <input type="text" class="form-control" id="category-name"
                                                             value="<?= $categoria['nome'] ?>" readonly>
 
@@ -195,7 +195,7 @@
 
                                                     <div class="mb-3">
                                                         <label for="category-name"
-                                                            class="col-form-label d-flex justify-content-start">nome:</label>
+                                                            class="col-form-label d-flex justify-content-start">Nome:</label>
                                                         <input type="hidden" name="id" value="<?= $categoria['id'] ?>">
                                                         <input type="text" class="form-control" id="category-name"
                                                             name="category-name" value="<?= $categoria['nome'] ?>">

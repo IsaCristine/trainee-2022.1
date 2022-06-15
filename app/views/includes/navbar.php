@@ -29,7 +29,7 @@
 
         <div class="navbar-collapse collapse">
 
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto" id="externalNavbar">
                 <li class="nav-item"><a href="Home" class="nav-item nav-link">Home</a></li>
                 <li class="nav-item"><a href="Produtos" class="nav-item nav-link">Produtos</a></li>
                 <li class="nav-item"><a href="Quem-somos" class="nav-item nav-link">Quem somos</a></li>

@@ -53,11 +53,13 @@ header,
     margin-right: 1rem;
 }
 
-#navbarToggleExternalContent a {
+#navbarToggleExternalContent a,
+#externalNavbar a {
     color: #BD8E01;
 }
 
-#navbarToggleExternalContent a:hover {
+#navbarToggleExternalContent a:hover,
+#externalNavbar a:hover {
     color: #DFDDDD;
 }
 

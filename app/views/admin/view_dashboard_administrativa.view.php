@@ -20,14 +20,14 @@
     </div>
 
     <div class="page-content">
-        <section class="text-h1 conteiner">
-            <h1 class="text-center fs-1">Gerenciamento</h1>
+        <section class="text-h1 container">
+            <h1 class="text-center fs-1 mt-5">Gerenciamento</h1>
         </section>
         
         <section class="linhas"><hr></section>
-        <div class="conteiner conteiner-ajuste ustify-content-center">
-            <div class="row g-3 text-center">
-                <div class="col-12 col-lg-4">
+        <div class="container conteiner-ajuste">
+            <div class="row row-cols-auto text-center justify-content-center">
+                <div class="col">
                     <div class="card card_ajuste border border-primary border-3">
                         <img src="../../../public/img/caminhao.gif" class="card-img-top p-2" alt="...">
                         <div class="card-body">
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4">
+                <div class="col">
                     <div class="card card_ajuste border border-primary border-3">
                         <img src="../../../public/img/lista-de-controle.gif" class="card-img-top p-2" alt="...">
                         <div class="card-body">
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4">
+                <div class="col">
                     <div class="card card_ajuste border border-primary border-3">
                         <img src="../../../public/img/midia-social.gif" class="card-img-top p-2" alt="...">
                         <div class="card-body">

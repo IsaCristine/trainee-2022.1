@@ -120,10 +120,6 @@
                                     onkeypress="filterInput(event)">
                             </div>
 
-                        <div class="mb-3">
-                            <label for="product_value" class="col-form-label">Preço:</label>
-                            <input type="text" class="form-control" id="product_value" name="product_value">
-                        </div>
 
                         <div class="mb-3">
                             <label for="image" class="col-form-label">Imagem: </label>
@@ -329,7 +325,7 @@
                                                    class="col-form-label d-flex justify-content-start">Preço:</label>
                                             <input type="hidden" name="id" value="<?= $produto['id'] ?>">
                                             <input type="text" class="form-control" id="product_value"
-                                                   name="product_value" value="<?= $produto['valor'] ?>">
+                                                   name="product_value" value="<?= $produto['valor'] ?>" onkeypress="filterInput(event)">
                                         </div>
 
                                         <div class="mb-3">

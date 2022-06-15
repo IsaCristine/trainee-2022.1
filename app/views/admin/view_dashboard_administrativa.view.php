@@ -33,7 +33,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Produtos</h5>
                             <p class="card-text"></p>
-                            <a href="#" class="btn btn-primary">Entrar</a>
+                            <a href="Admin-Produtos" class="btn btn-primary">Entrar</a>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Categorias</h5>
                             <p class="card-text"></p>
-                            <a href="#" class="btn btn-primary">Entrar</a>
+                            <a href="Admin-Categorias" class="btn btn-primary">Entrar</a>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Usuários</h5>
                             <p class="card-text"></p>
-                            <a href="#" class="btn btn-primary">Entrar</a>
+                            <a href="Admin-Usuarios" class="btn btn-primary">Entrar</a>
                         </div>
                     </div>
                 </div>

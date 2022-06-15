@@ -37,13 +37,7 @@ header,
     text-align: right;
 }
 
-#navbarToggleExternalContent a {
-    color: #BD8E01;
-}
 
-#navbarToggleExternalContent a:hover {
-    color: #DFDDDD;
-}
 
 .navbar-expand-lg .navbar-nav .nav-link {
     padding: 1rem .8rem;
@@ -57,6 +51,14 @@ header,
 
 .nav-link {
     margin-right: 1rem;
+}
+
+#navbarToggleExternalContent a {
+    color: #BD8E01;
+}
+
+#navbarToggleExternalContent a:hover {
+    color: #DFDDDD;
 }
 
 #logo {

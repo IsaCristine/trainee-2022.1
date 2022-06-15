@@ -27,19 +27,16 @@
             </button>
         </div>
 
-        <div class="pos-f-t justify-content-end">
+        <div class="navbar-collapse collapse">
 
-            <div class="navbar-collapse collapse justify-content-end">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a href="Home" class="nav-item nav-link">Home</a></li>
+                <li class="nav-item"><a href="Produtos" class="nav-item nav-link">Produtos</a></li>
+                <li class="nav-item"><a href="Quem-somos" class="nav-item nav-link">Quem somos</a></li>
+                <li class="nav-item"><a href="Contato" class="nav-item nav-link">Contato</a></li>
+                <li class="nav-item"><a href="Login" class="nav-item nav-link">Login</a></li>
+            </ul>
 
-                <ul class="navbar-nav justify-content-end">
-                    <li class="nav-item"><a href="Home" class="nav-item nav-link">Home</a></li>
-                    <li class="nav-item"><a href="Produtos" class="nav-item nav-link">Produtos</a></li>
-                    <li class="nav-item"><a href="Quem-somos" class="nav-item nav-link">Quem somos</a></li>
-                    <li class="nav-item"><a href="Contato" class="nav-item nav-link">Contato</a></li>
-                    <li class="nav-item"><a href="Login" class="nav-item nav-link">Login</a></li>
-                </ul>
-
-            </div>
         </div>
     </nav>
 

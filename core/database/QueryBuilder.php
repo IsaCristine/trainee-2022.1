@@ -45,6 +45,19 @@ class QueryBuilder
                 }
             }
 
+            public function pesquisaProdutos($nome){
+                try{
+                    $query = $this->pdo->prepare("SELECT P.id, P.nome, P.valor, P.info, P.descricao, P.imagem, C.nome AS categoria FROM produto P INNER JOIN categorias C ON P.categorias_id=C.id WHERE P.nome LIKE '%$nome%'");
+                    $query->execute();
+                    $produtos = $query->fetchAll(PDO::FETCH_ASSOC);
+        
+                    return $produtos;
+                }
+                catch(Exception $e){
+                    die($e->getMessage());
+                }        
+            }
+
             public function insertProduto(array $product)
             {
 

@@ -80,13 +80,20 @@ class AdmProdutosController extends Pagination
 
     public function editProduto()
     {
-        $image_name = basename($_FILES["image"]["name"]);
-        $image_size = $_FILES["image"]["size"];
-        $image_type = pathinfo($image_name, PATHINFO_EXTENSION);
-        $image = $_FILES["image"]["tmp_name"];
+        if(!$_FILES["image"]["name"]){
+            $image = App::get("database")->selectImagemProdutosById($_POST["id"]);
+            $image_content = $image["imagem"];
+        } else {
+            if (isset($_FILES["image"]["name"])) {
+                $image_name = basename($_FILES["image"]["name"]);
+                $image_size = $_FILES["image"]["size"];
+                $image_type = pathinfo($image_name, PATHINFO_EXTENSION);
+                $image = $_FILES["image"]["tmp_name"];
 
-        if(in_array($image_type, array('png', 'jpg', 'gif', 'jpeg'))){
-            $image_content = file_get_contents($_FILES["image"]["tmp_name"]);
+                if (in_array($image_type, array('png', 'jpg', 'gif', 'jpeg'))) {
+                    $image_content = file_get_contents($_FILES["image"]["tmp_name"]);
+                }
+            }
         }
 
         $product = [

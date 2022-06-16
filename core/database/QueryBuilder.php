@@ -45,6 +45,21 @@ class QueryBuilder
                 }
             }
 
+            public function selectImagemProdutosById($id)
+            {
+                try{
+                    $query = $this->pdo->prepare("SELECT imagem FROM produto WHERE id = ?");
+                    $query->bindValue(1,$id);
+                    $query->execute();
+
+                    $imagem = $query->fetch(PDO::FETCH_ASSOC);
+
+                    return $imagem;
+                }catch (Exception $e){
+                    die($e->getMessage());
+                }
+            }
+
             public function pesquisaProdutos($nome){
                 try{
                     $query = $this->pdo->prepare("SELECT P.id, P.nome, P.valor, P.info, P.descricao, P.imagem, C.nome AS categoria FROM produto P INNER JOIN categorias C ON P.categorias_id=C.id WHERE P.nome LIKE '%$nome%'");

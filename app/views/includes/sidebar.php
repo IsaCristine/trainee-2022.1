@@ -158,7 +158,7 @@
 
                                 <div class="mb-3">
                                     <label for="password" class="col-form-label">Senha:</label>
-                                    <input type="password" class="form-control" name="password" id="password">
+                                    <input type="password" class="form-control" name="password" id="password" value="<?= $user["senha"] ?>">
                                 </div>
 
                                 <div class="card mb-3 area-img">
@@ -176,7 +176,7 @@
 
                                     <div class="card-body">
                                         <input type="file" name="image" accept="image/*" class="form-control"
-                                            id="image">
+                                        id="image" value="<?= 'data:image/jpg;base64, ' .base64_encode($user['imagem'])?>">
                                     </div>
 
                                 </div>

@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
     <script type="text/javascript" src="../../../public/js/scripts.js"></script>
-    <title>Camiseta Pantera Negra Wakanda Forever</title>
+    <title>Produto</title>
 </head>
 
 

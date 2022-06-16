@@ -5,7 +5,7 @@ body {
 
 html {
     overflow: hidden;
-    height: 100%;
+    height:100%;
     padding-top: 86px;
 }
 
@@ -20,7 +20,7 @@ body {
 
 .product-media img {
     width: 75%;
-    max-height: 65vh;
+    max-height: 60vh;
 }
 
 .product-info-title {
@@ -103,6 +103,14 @@ body {
     cursor: default;
     opacity: 100%;
 }
+
+
+.footer-content{
+    margin-top:auto;
+    max-height:18vh;
+}
+
+
 
 @media(min-width: 768px){
     .footer-content{

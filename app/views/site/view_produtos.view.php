@@ -70,8 +70,10 @@
 
         <nav aria-label="..." class="pag">
             <ul class="pagination">
+
                 <?php
-                    if($current_page > 1){ ?>
+                if (!isset($search)) {
+                if($current_page > 1){ ?>
                       <li class="page-item">
                         <a class="page-link" href="Produtos?page=<?= $current_page - 1 ?>" tabindex="-1" aria-disabled="true">Previous</a>
                       </li>
@@ -88,9 +90,9 @@
                         }
                 ?>
 
-                <?php if(!isset($search)) { ?>
+
                      <li class="page-item active page-active"><a class="page-link"><?=$current_page?></a></li>
-                <?php } ?>
+
 
                 <?php for($next_page = $current_page + 1; $next_page <= $current_page + $quantity_links; $next_page++){
                             if($next_page <= $page_quantity){
@@ -107,10 +109,10 @@
                       <li class="page-item">
                         <a class="page-link" href="Produtos?page=<?= $current_page + 1?>">Next</a>
                       </li>
-                <?php } ?>
+                <?php }
+                }?>
             </ul>
         </nav>
-
     </div>
 
     <div class="espacamento"></div>

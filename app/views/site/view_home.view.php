@@ -45,17 +45,17 @@
                 <div class="carousel-inner">
 
                     <div class="carousel-item active">
-                        <img src="../../../public/img/carrossel-teste1.jpg" class="d-block w-100 carousel-img"
+                        <img src="../../../public/img/3.png" class="d-block w-100 carousel-img"
                             alt="...">
                     </div>
 
                     <div class="carousel-item">
-                        <img src="../../../public/img/Macacode-modificado.jpg" class="d-block w-100 carousel-img"
+                        <img src="../../../public/img/2.png" class="d-block w-100 carousel-img"
                             alt="...">
                     </div>
 
                     <div class="carousel-item">
-                        <img src="../../../public/img/series-marvel-disney.png" class="d-block w-100 carousel-img"
+                        <img src="../../../public/img/moletom1.png" class="d-block w-100 carousel-img"
                             alt="...">
                     </div>
 
